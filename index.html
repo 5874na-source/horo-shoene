@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>horo省エネ住宅設計｜省エネ計算代行・WEBPRO入力外注【全国対応・一級建築士】</title>
+<meta name="description" content="全国対応の省エネ計算代行サービス。一級建築士が直接対応。外皮計算・一次エネルギー計算・長期優良住宅申請・WEBPRO入力（非住宅・公共物件）まで対応。寒冷地（地域区分1・2）の実績多数。">
+<meta name="keywords" content="省エネ計算 代行,省エネ計算 外注,外皮計算 代行,WEBPRO 入力,長期優良住宅 申請,BELS 申請,省エネ計算 全国,UA値 計算,一級建築士 省エネ計算,非住宅 省エネ,公共物件 省エネ,省エネ計算 北海道,寒冷地 省エネ,地域区分1 2">
+<meta property="og:title" content="horo省エネ住宅設計｜省エネ計算代行【全国対応・一級建築士】">
+<meta property="og:description" content="全国対応の省エネ計算代行。一級建築士が直接対応。外皮計算・長期優良住宅・WEBPRO入力に対応。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="horo省エネ住宅設計">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%230e1f3a'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='42' font-weight='900' fill='%23f7f8fa' text-anchor='middle' letter-spacing='-2'%3Eh%3C/text%3E%3Crect x='46' y='46' width='6' height='6' fill='%236ea3ff'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"horo省エネ住宅設計","description":"省エネ計算代行サービス。全国対応。長期優良住宅・BELS・WEBPRO入力に対応。","areaServed":{"@type":"Country","name":"日本"},"serviceType":["省エネ計算代行","外皮計算","長期優良住宅申請補助","BELS申請補助","WEBPRO入力代行"],"priceRange":"¥15,000 - ¥100,000","provider":{"@type":"Person","jobTitle":"一級建築士"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-bg: #eef0f3;
+  --color-bg-pure: #f7f8fa;
+  --color-bg-deep: #e1e4ea;
+  --color-navy: #0e1f3a;
+  --color-navy-deep: #08152a;
+  --color-blue-accent: #1d4ed8;
+  --color-blue-light: #6ea3ff;
+  --color-ink: #1a2332;
+  --color-ink-soft: #4a5568;
+  --color-ink-mute: #8b95a3;
+  --color-line: #c8cdd5;
+  --color-card: #ffffff;
+  --font-display: 'Noto Sans JP', sans-serif;
+  --font-sans: 'Noto Sans JP', sans-serif;
+  --font-en: 'Inter', sans-serif;
+  --max-width: 1180px;
+  --section-pad: clamp(70px, 9vw, 130px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);font-weight:400;color:var(--color-ink);background:var(--color-bg);line-height:1.85;font-feature-settings:"palt";-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ナビ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(238,240,243,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--color-line)}
+.nav-inner{max-width:var(--max-width);margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo .horo{font-family:var(--font-en);font-weight:800;font-size:26px;color:var(--color-navy);letter-spacing:-0.03em;line-height:1}
+.nav-logo .divider{width:1px;height:22px;background:var(--color-blue-accent)}
+.nav-logo .sub{font-family:var(--font-display);font-size:12px;color:var(--color-ink-soft);letter-spacing:0.12em;font-weight:500}
+.nav-links{display:flex;gap:36px;font-size:13px;letter-spacing:0.08em;font-weight:500}
+.nav-links a{color:var(--color-ink-soft);transition:color 0.2s}
+.nav-links a:hover{color:var(--color-blue-accent)}
+.nav-cta{font-size:13px;padding:10px 22px;background:var(--color-navy);color:var(--color-bg-pure);border:1px solid var(--color-navy);border-radius:2px;transition:all 0.2s;font-weight:500;letter-spacing:0.04em}
+.nav-cta:hover{background:var(--color-blue-accent);border-color:var(--color-blue-accent)}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .nav-inner{padding:14px 20px}
+  .nav-logo .sub,.nav-logo .divider{display:none}
+}
+
+/* ヒーロー */
+.hero{padding:160px 32px 100px;max-width:var(--max-width);margin:0 auto;position:relative}
+.hero-tag{font-family:var(--font-en);font-size:12px;letter-spacing:0.3em;color:var(--color-blue-accent);text-transform:uppercase;font-weight:600;margin-bottom:36px;opacity:0;animation:fadeUp 0.8s ease forwards;display:inline-flex;align-items:center;gap:14px}
+.hero-tag::before{content:'';width:36px;height:1px;background:var(--color-blue-accent)}
+.hero-title{font-family:var(--font-display);font-weight:900;font-size:clamp(36px,5.5vw,72px);line-height:1.25;letter-spacing:0.02em;margin-bottom:32px;color:var(--color-navy);opacity:0;animation:fadeUp 0.8s ease 0.15s forwards}
+.hero-title .accent{color:var(--color-blue-accent)}
+.hero-title .sub-en{display:block;font-family:var(--font-en);font-size:clamp(11px,1.2vw,14px);font-weight:500;letter-spacing:0.2em;color:var(--color-ink-mute);margin-top:20px}
+.hero-sub{font-size:16px;line-height:2.1;color:var(--color-ink-soft);max-width:580px;margin-bottom:48px;opacity:0;animation:fadeUp 0.8s ease 0.3s forwards}
+.hero-badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px;opacity:0;animation:fadeUp 0.8s ease 0.38s forwards}
+.hero-badge{font-size:12px;padding:6px 14px;background:var(--color-card);border:1px solid var(--color-line);color:var(--color-ink-soft);border-radius:2px;font-weight:500}
+.hero-badge.em{background:var(--color-navy);color:var(--color-bg-pure);border-color:var(--color-navy)}
+.hero-cta-group{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fadeUp 0.8s ease 0.5s forwards}
+.btn-primary{display:inline-flex;align-items:center;gap:12px;padding:18px 36px;background:var(--color-navy);color:var(--color-bg-pure);font-size:14px;font-weight:600;letter-spacing:0.1em;border-radius:2px;transition:all 0.3s;border:1px solid var(--color-navy)}
+.btn-primary:hover{background:var(--color-blue-accent);border-color:var(--color-blue-accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(29,78,216,0.25)}
+.btn-primary::after{content:'→';transition:transform 0.3s;font-family:var(--font-en)}
+.btn-primary:hover::after{transform:translateX(4px)}
+.btn-secondary{display:inline-flex;align-items:center;gap:12px;padding:18px 36px;border:1px solid var(--color-navy);color:var(--color-navy);font-size:14px;letter-spacing:0.1em;font-weight:600;border-radius:2px;transition:all 0.3s}
+.btn-secondary:hover{background:var(--color-navy);color:var(--color-bg-pure)}
+.hero-mark{position:absolute;top:170px;right:32px;text-align:right;opacity:0;animation:fadeUp 1s ease 0.6s forwards}
+.hero-mark-num{font-family:var(--font-en);font-size:clamp(56px,7vw,96px);font-weight:700;color:var(--color-navy);line-height:1;letter-spacing:-0.04em;margin-bottom:4px}
+.hero-mark-num .plus{color:var(--color-blue-accent);font-size:0.55em;vertical-align:top;margin-left:4px}
+.hero-mark-label{font-size:11px;letter-spacing:0.2em;font-family:var(--font-en);color:var(--color-ink-mute);text-transform:uppercase;font-weight:500}
+@media(max-width:900px){
+  .hero{padding:130px 20px 70px}
+  .hero-mark{display:none}
+  .hero-sub br{display:none}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* 全国対応バナー */
+.nationwide-bar{background:var(--color-blue-accent);color:#fff;text-align:center;padding:12px 20px;font-size:13px;font-weight:600;letter-spacing:0.12em}
+.nationwide-bar span{opacity:0.8;font-weight:400;margin:0 8px}
+
+/* セクション共通 */
+.section{padding:var(--section-pad) 32px;max-width:var(--max-width);margin:0 auto}
+.section-alt{background:var(--color-bg-deep);border-top:1px solid var(--color-line);border-bottom:1px solid var(--color-line)}
+.section-inner{max-width:var(--max-width);margin:0 auto;padding:var(--section-pad) 32px}
+.section-label{font-family:var(--font-en);font-size:12px;letter-spacing:0.3em;color:var(--color-blue-accent);text-transform:uppercase;font-weight:600;margin-bottom:24px;display:inline-flex;align-items:center;gap:14px}
+.section-label::before{content:'';width:36px;height:1px;background:var(--color-blue-accent)}
+.section-title{font-family:var(--font-display);font-weight:700;font-size:clamp(26px,4vw,44px);line-height:1.45;margin-bottom:24px;letter-spacing:0.02em;color:var(--color-navy)}
+.section-lead{font-size:15px;line-height:2.1;color:var(--color-ink-soft);max-width:720px;margin-bottom:64px}
+@media(max-width:768px){
+  .section{padding:clamp(50px,8vw,100px) 20px}
+  .section-inner{padding:clamp(50px,8vw,100px) 20px}
+  .section-lead{margin-bottom:40px}
+}
+
+/* お悩み */
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:48px}
+.pain-item{padding:32px 28px;background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;transition:all 0.3s;position:relative;overflow:hidden;display:flex;gap:20px;align-items:flex-start}
+.pain-item::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--color-blue-accent);transition:height 0.4s ease}
+.pain-item:hover::before{height:100%}
+.pain-item:hover{border-color:var(--color-navy);transform:translateY(-3px);box-shadow:0 10px 30px rgba(14,31,58,0.08)}
+.pain-icon{flex-shrink:0;width:40px;height:40px;background:var(--color-bg-deep);border-radius:3px;display:flex;align-items:center;justify-content:center}
+.pain-icon svg{width:22px;height:22px}
+.pain-body{}
+.pain-num{font-family:var(--font-en);font-size:11px;color:var(--color-blue-accent);letter-spacing:0.18em;margin-bottom:8px;font-weight:600}
+.pain-text{font-family:var(--font-display);font-size:15px;font-weight:700;line-height:1.7;color:var(--color-navy);letter-spacing:0.02em}
+
+/* サービス */
+.service-grid{display:grid;gap:24px;margin-top:48px}
+.service-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:4px;padding:48px;display:grid;grid-template-columns:1fr 300px;gap:48px;transition:all 0.3s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:5px;height:100%;background:var(--color-blue-accent);transform:scaleY(0);transform-origin:top;transition:transform 0.4s ease}
+.service-card:hover::before{transform:scaleY(1)}
+.service-card:hover{border-color:var(--color-navy);box-shadow:0 12px 36px rgba(14,31,58,0.08)}
+.service-header{display:flex;align-items:flex-start;gap:18px;margin-bottom:20px}
+.service-icon{flex-shrink:0;width:52px;height:52px;background:var(--color-navy);border-radius:3px;display:flex;align-items:center;justify-content:center}
+.service-icon svg{width:28px;height:28px}
+.service-num{font-family:var(--font-en);font-size:11px;letter-spacing:0.25em;color:var(--color-blue-accent);font-weight:600;margin-bottom:6px}
+.service-title{font-family:var(--font-display);font-weight:800;font-size:22px;line-height:1.5;color:var(--color-navy);letter-spacing:0.02em}
+.service-desc{font-size:14px;line-height:2;color:var(--color-ink-soft);margin-bottom:24px}
+.service-features{list-style:none;display:flex;flex-direction:column;gap:9px}
+.service-features li{font-size:13px;color:var(--color-ink-soft);padding-left:20px;position:relative;line-height:1.8}
+.service-features li::before{content:'';width:5px;height:5px;background:var(--color-blue-accent);position:absolute;left:0;top:10px;border-radius:50%}
+.service-price{background:var(--color-bg-pure);padding:28px;border-radius:3px;border:1px solid var(--color-line);display:flex;flex-direction:column;justify-content:center}
+.price-label{font-family:var(--font-en);font-size:11px;color:var(--color-ink-mute);letter-spacing:0.25em;margin-bottom:10px;font-weight:600;text-transform:uppercase}
+.price-amount{font-family:var(--font-en);font-size:44px;font-weight:700;color:var(--color-navy);letter-spacing:-0.03em;line-height:1}
+.price-amount .yen{font-size:18px;margin-right:3px;color:var(--color-ink-soft);font-weight:500}
+.price-amount .unit{font-size:13px;color:var(--color-ink-soft);font-family:var(--font-sans);font-weight:500;margin-left:3px;letter-spacing:0.05em}
+.price-note{font-size:12px;color:var(--color-ink-mute);margin-top:12px;line-height:1.7}
+.price-tier{display:flex;justify-content:space-between;padding:10px 0;font-size:13px;border-bottom:1px solid var(--color-line)}
+.price-tier:last-of-type{border-bottom:none}
+.price-tier-label{color:var(--color-ink-soft);font-weight:500}
+.price-tier-value{font-family:var(--font-en);color:var(--color-navy);font-weight:700}
+@media(max-width:900px){
+  .service-card{grid-template-columns:1fr;padding:28px 20px;gap:24px}
+}
+
+/* 数値バナー */
+.stats-bar{background:var(--color-navy);padding:clamp(40px,6vw,80px) 32px}
+.stats-bar-inner{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:40px;text-align:center}
+.stat-item{}
+.stat-val{font-family:var(--font-en);font-size:clamp(40px,5vw,64px);font-weight:700;color:var(--color-blue-light);line-height:1;letter-spacing:-0.03em;margin-bottom:10px}
+.stat-lab{font-size:12px;letter-spacing:0.15em;color:rgba(247,248,250,0.7);font-weight:500;text-transform:uppercase}
+@media(max-width:768px){
+  .stats-bar{padding:clamp(40px,6vw,80px) 20px}
+}
+
+/* 寒冷地 */
+.cold-region{background:var(--color-navy);color:var(--color-bg-pure);padding:var(--section-pad) 32px;position:relative;overflow:hidden}
+.cold-region::before{content:'';position:absolute;top:-150px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(29,78,216,0.18) 0%,transparent 65%);pointer-events:none}
+.cold-inner{max-width:var(--max-width);margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1fr 360px;gap:64px;align-items:center}
+.cold-label{font-family:var(--font-en);font-size:12px;letter-spacing:0.3em;color:var(--color-blue-light);text-transform:uppercase;font-weight:600;margin-bottom:20px;display:inline-flex;align-items:center;gap:14px}
+.cold-label::before{content:'';width:36px;height:1px;background:var(--color-blue-light)}
+.cold-title{font-family:var(--font-display);font-weight:800;font-size:clamp(26px,3.5vw,44px);line-height:1.45;margin-bottom:28px;letter-spacing:0.02em}
+.cold-title .accent{color:var(--color-blue-light)}
+.cold-body{font-size:15px;line-height:2.1;color:rgba(247,248,250,0.8)}
+.cold-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:4px;padding:32px}
+.cold-card-title{font-family:var(--font-en);font-size:11px;letter-spacing:0.25em;color:var(--color-blue-light);text-transform:uppercase;font-weight:600;margin-bottom:20px}
+.cold-ua-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1);font-size:13px}
+.cold-ua-row:last-child{border-bottom:none}
+.cold-ua-label{color:rgba(247,248,250,0.7)}
+.cold-ua-val{font-family:var(--font-en);font-weight:700;color:var(--color-bg-pure)}
+.cold-ua-val.em{color:var(--color-blue-light);font-size:18px}
+.cold-note{font-size:12px;color:rgba(247,248,250,0.5);margin-top:16px;line-height:1.7}
+@media(max-width:900px){
+  .cold-inner{grid-template-columns:1fr}
+  .cold-region{padding:var(--section-pad) 20px}
+}
+
+/* 選ばれる理由 */
+.reason-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;margin-top:56px}
+.reason-item{position:relative;display:flex;gap:20px;align-items:flex-start}
+.reason-icon-wrap{flex-shrink:0;width:52px;height:52px;background:var(--color-bg-deep);border-radius:3px;display:flex;align-items:center;justify-content:center;border:1px solid var(--color-line)}
+.reason-icon-wrap svg{width:26px;height:26px}
+.reason-body{}
+.reason-num{font-family:var(--font-en);font-size:11px;color:var(--color-blue-accent);letter-spacing:0.2em;font-weight:600;margin-bottom:6px}
+.reason-title{font-family:var(--font-display);font-weight:700;font-size:17px;margin-bottom:10px;line-height:1.6;color:var(--color-navy);letter-spacing:0.02em}
+.reason-desc{font-size:13px;line-height:1.95;color:var(--color-ink-soft)}
+
+/* 流れ */
+.flow{margin-top:48px;position:relative}
+.flow-item{display:grid;grid-template-columns:80px 1fr;gap:32px;padding:28px 0;border-bottom:1px solid var(--color-line);align-items:start}
+.flow-item:last-child{border-bottom:none}
+.flow-step{display:flex;flex-direction:column;align-items:center;gap:8px}
+.flow-step-icon{width:44px;height:44px;background:var(--color-navy);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.flow-step-icon svg{width:22px;height:22px}
+.flow-num{font-family:var(--font-en);font-size:11px;letter-spacing:0.2em;color:var(--color-blue-accent);font-weight:600}
+.flow-content h4{font-family:var(--font-display);font-weight:700;font-size:18px;margin-bottom:8px;color:var(--color-navy);letter-spacing:0.02em}
+.flow-content p{font-size:14px;color:var(--color-ink-soft);line-height:2}
+@media(max-width:600px){
+  .flow-item{grid-template-columns:56px 1fr;gap:16px}
+  .flow-step-icon{width:36px;height:36px}
+  .flow-step-icon svg{width:18px;height:18px}
+}
+
+/* FAQ */
+.faq{margin-top:48px}
+.faq-item{border-bottom:1px solid var(--color-line)}
+.faq-item:first-child{border-top:1px solid var(--color-line)}
+.faq-q{padding:24px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;font-family:var(--font-display);font-weight:700;font-size:15px;list-style:none;transition:color 0.2s;color:var(--color-navy);letter-spacing:0.02em}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q:hover{color:var(--color-blue-accent)}
+.faq-q-content{display:flex;gap:16px;align-items:baseline}
+.faq-q-mark{font-family:var(--font-en);color:var(--color-blue-accent);font-size:13px;font-weight:700;letter-spacing:0.1em}
+.faq-icon{width:16px;height:16px;position:relative;flex-shrink:0}
+.faq-icon::before,.faq-icon::after{content:'';position:absolute;background:var(--color-blue-accent);transition:transform 0.3s}
+.faq-icon::before{top:50%;left:0;width:100%;height:1px;transform:translateY(-50%)}
+.faq-icon::after{top:0;left:50%;width:1px;height:100%;transform:translateX(-50%)}
+details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
+.faq-a{padding:0 0 24px 28px;font-size:14px;line-height:2.1;color:var(--color-ink-soft)}
+
+/* About */
+.about{background:var(--color-card);border:1px solid var(--color-line);border-radius:4px;padding:48px;display:grid;grid-template-columns:180px 1fr;gap:48px;align-items:center;margin-top:48px}
+.about-logo{width:160px;height:160px;background:var(--color-navy);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.about-logo .h{font-family:var(--font-en);font-weight:900;font-size:96px;color:var(--color-bg-pure);letter-spacing:-0.05em;line-height:1}
+.about-logo .horo-sub{font-family:var(--font-en);font-size:10px;font-weight:500;letter-spacing:0.25em;color:var(--color-blue-light);margin-top:12px}
+.about-content h3{font-family:var(--font-display);font-weight:800;font-size:22px;margin-bottom:6px;color:var(--color-navy);letter-spacing:0.02em}
+.about-content .about-role{font-family:var(--font-en);font-size:11px;letter-spacing:0.2em;color:var(--color-blue-accent);margin-bottom:18px;font-weight:600;text-transform:uppercase}
+.about-content p{font-size:14px;line-height:2.1;color:var(--color-ink-soft);margin-bottom:14px}
+.about-content p:last-of-type{margin-bottom:0}
+.about-notice{margin-top:20px;padding:16px 20px;background:var(--color-bg-pure);border-left:3px solid var(--color-blue-accent);border-radius:2px;font-size:12px;line-height:1.9;color:var(--color-ink-soft)}
+@media(max-width:768px){
+  .about{grid-template-columns:1fr;padding:32px 20px;gap:28px;text-align:center}
+  .about-logo{margin:0 auto}
+  .about-notice{text-align:left}
+}
+
+/* お問い合わせ */
+.contact{text-align:center}
+.contact .section-label,.contact .section-lead{margin-left:auto;margin-right:auto}
+.contact-form-area{margin-top:48px;background:var(--color-card);border:1px solid var(--color-line);border-radius:4px;padding:16px;max-width:840px;margin-left:auto;margin-right:auto;overflow:hidden}
+.contact-form-area iframe{width:100%;border:0;min-height:1400px;display:block}
+@media(max-width:768px){
+  .contact-form-area{padding:8px}
+  .contact-form-area iframe{min-height:1600px}
+}
+.contact-note{font-size:12px;color:var(--color-ink-mute);margin-top:20px;line-height:1.9}
+.coconala-link{margin:40px auto 0;padding:24px 28px;background:var(--color-bg-pure);border:1px solid var(--color-line);border-radius:3px;max-width:600px;font-size:13px;color:var(--color-ink-soft);line-height:1.9}
+.coconala-link a{color:var(--color-blue-accent);font-weight:700;text-decoration:underline}
+.coconala-services{display:flex;flex-direction:column;gap:6px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--color-line);text-align:left}
+.coconala-services a{font-size:13px;text-decoration:none;padding:5px 0;display:inline-block;transition:color 0.2s,transform 0.2s}
+.coconala-services a:hover{text-decoration:underline;transform:translateX(4px)}
+
+/* フッター */
+.footer{background:var(--color-navy-deep);color:rgba(247,248,250,0.65);padding:64px 32px 32px}
+.footer-inner{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
+.footer-logo{margin-bottom:18px}
+.footer-logo .horo{font-family:var(--font-en);font-weight:800;font-size:28px;color:var(--color-bg-pure);letter-spacing:-0.03em;line-height:1;display:block;margin-bottom:8px}
+.footer-logo .divider{width:36px;height:1.5px;background:var(--color-blue-light);margin-bottom:8px}
+.footer-logo .sub{font-family:var(--font-display);font-size:12px;color:rgba(247,248,250,0.7);letter-spacing:0.2em;font-weight:500}
+.footer-text{font-size:13px;line-height:2}
+.footer-col h5{font-family:var(--font-en);font-size:11px;letter-spacing:0.25em;color:var(--color-bg-pure);margin-bottom:16px;font-weight:700;text-transform:uppercase}
+.footer-col ul{list-style:none}
+.footer-col li{font-size:13px;margin-bottom:9px}
+.footer-col a:hover{color:var(--color-blue-light)}
+.footer-bottom{max-width:var(--max-width);margin:48px auto 0;padding-top:20px;border-top:1px solid rgba(247,248,250,0.1);font-size:11px;text-align:center;color:rgba(247,248,250,0.4);letter-spacing:0.1em;font-family:var(--font-en)}
+@media(max-width:768px){
+  .footer{padding:48px 20px 24px}
+  .footer-inner{grid-template-columns:1fr;gap:32px}
+}
+</style>
+</head>
+<body>
+
+<!-- 全国対応バナー -->
+<div class="nationwide-bar">
+  全国対応 <span>|</span> オンライン完結 <span>|</span> 一級建築士が直接対応 <span>|</span> 寒冷地（地域区分1・2）の実績多数
+</div>
+
+<!-- ナビ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="horo">horo</span>
+      <span class="divider"></span>
+      <span class="sub">省エネ住宅設計</span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">サービス</a>
+      <a href="#cold">寒冷地対応</a>
+      <a href="#reasons">選ばれる理由</a>
+      <a href="#flow">依頼の流れ</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#contact" class="nav-cta">お問い合わせ</a>
+  </div>
+</nav>
+
+<!-- ヒーロー -->
+<section class="hero">
+  <div class="hero-tag">全国対応 · 一級建築士直接対応</div>
+  <h1 class="hero-title">
+    省エネ計算を、<br>
+    <span class="accent">外注できます。</span>
+    <span class="sub-en">ENERGY CALCULATION SUPPORT — NATIONWIDE</span>
+  </h1>
+  <p class="hero-sub">
+    一級建築士が外皮計算・一次エネルギー計算・長期優良住宅申請・WEBPRO入力代行まで直接対応。北海道を拠点に、全国の工務店・設計事務所様をサポートします。
+  </p>
+  <div class="hero-badge-row">
+    <span class="hero-badge em">全国対応</span>
+    <span class="hero-badge">省エネ計算</span>
+    <span class="hero-badge">外皮計算</span>
+    <span class="hero-badge">長期優良住宅</span>
+    <span class="hero-badge">BELS対応</span>
+    <span class="hero-badge">WEBPRO入力</span>
+    <span class="hero-badge">非住宅・公共物件</span>
+    <span class="hero-badge em">寒冷地実績多数</span>
+  </div>
+  <div class="hero-cta-group">
+    <a href="#contact" class="btn-primary">無料で見積もりを依頼</a>
+    <a href="#services" class="btn-secondary">サービス内容を見る</a>
+  </div>
+  <div class="hero-mark">
+    <div class="hero-mark-num">10<span class="plus">+</span></div>
+    <div class="hero-mark-label">Years of Practice</div>
+  </div>
+</section>
+
+<!-- 数値バナー -->
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stat-item"><div class="stat-val">10<span style="font-size:0.55em">+</span></div><div class="stat-lab">実務歴（年）</div></div>
+    <div class="stat-item"><div class="stat-val">1〜8</div><div class="stat-lab">全地域区分対応</div></div>
+    <div class="stat-item"><div class="stat-val">★5.0</div><div class="stat-lab">ココナラ評価</div></div>
+    <div class="stat-item"><div class="stat-val">3日〜</div><div class="stat-lab">最短納期</div></div>
+  </div>
+</div>
+
+<!-- お悩み -->
+<section class="section-alt">
+  <div class="section-inner">
+    <div class="section-label">Pain Points</div>
+    <h2 class="section-title">こんなお悩み、ありませんか？</h2>
+    <p class="section-lead">省エネ基準の適合義務化（2025年4月〜）以降、計算業務に追われる工務店・設計事務所が増えています。本業の設計・現場管理と並行して、毎回ゼロから計算を回すのは大きな負担です。</p>
+    <div class="pain-grid">
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="pain-body"><div class="pain-num">01</div><div class="pain-text">省エネ計算に時間が取られ、本業の設計に集中できない</div></div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="pain-body"><div class="pain-num">02</div><div class="pain-text">外注先はあるが、信頼できる担当者になかなか出会えない</div></div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="pain-body"><div class="pain-num">03</div><div class="pain-text">長期優良住宅・BELSの申請書類整備が煩雑で時間がかかる</div></div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="pain-body"><div class="pain-num">04</div><div class="pain-text">非住宅WEBPROの外皮入力だけ切り出して任せたい</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- サービス -->
+<section class="section" id="services">
+  <div class="section-label">Services</div>
+  <h2 class="section-title">3つのサービス</h2>
+  <p class="section-lead">住宅・非住宅、計算から申請書類整備まで、必要な部分だけ柔軟に対応します。すべてオンラインで完結。図面と仕様のご共有のみでご依頼いただけます。</p>
+
+  <div class="service-grid">
+    <div class="service-card">
+      <div>
+        <div class="service-header">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#f7f8fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <div class="service-num">SERVICE 01</div>
+            <h3 class="service-title">住宅の省エネ計算<br>外皮計算 ＋ 一次エネルギー消費量計算</h3>
+          </div>
+        </div>
+        <p class="service-desc">戸建住宅の省エネ基準適合に必要な計算を一式承ります。地域区分1〜8まで全国対応。寒冷地（1・2地域）の付加断熱・高性能サッシ仕様にも精通しており、仕様提案も可能です。</p>
+        <ul class="service-features">
+          <li>外皮面積拾い・UA値／ηAC値の計算</li>
+          <li>一次エネルギー消費量計算</li>
+          <li>計算書一式の納品（PDF・XML）</li>
+          <li>基準未達時の仕様変更提案を1回まで含む</li>
+          <li>長期優良住宅・BELS基準にも対応</li>
+          <li>全国対応（地域区分1〜8）</li>
+        </ul>
+      </div>
+      <div class="service-price">
+        <div class="price-label">PRICE</div>
+        <div class="price-amount"><span class="yen">¥</span>35,000<span class="unit">／件</span></div>
+        <p class="price-note">納期：5〜7営業日<br>プラン段階の検討も対応可<br>部分計算（外皮のみ等）はご相談</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div>
+        <div class="service-header">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#f7f8fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="16 13 12 17 8 13"/><line x1="12" y1="12" x2="12" y2="17"/></svg>
+          </div>
+          <div>
+            <div class="service-num">SERVICE 02</div>
+            <h3 class="service-title">申請書類フルサポート<br>長期優良住宅・性能評価 等</h3>
+          </div>
+        </div>
+        <p class="service-desc">省エネ計算の結果を踏まえ、申請に必要な書類一式を整備します。各メーカーの試験成績書・カタログ等の根拠資料の収集・添付までフルサポート。</p>
+        <ul class="service-features">
+          <li>設計内容説明書の整備</li>
+          <li>長期優良住宅 技術的審査依頼書等の申請書類作成</li>
+          <li>各メーカー根拠資料の収集・添付（建材／サッシ／設備）</li>
+          <li>申請窓口提出用フォーマットでの納品</li>
+        </ul>
+      </div>
+      <div class="service-price">
+        <div class="price-label">PRICE</div>
+        <div class="price-amount"><span class="yen">¥</span>45,000<span class="unit">／件</span></div>
+        <p class="price-note">納期：5〜10営業日<br>住宅セット（①＋②）：¥70,000</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div>
+        <div class="service-header">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#f7f8fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="7" y1="8" x2="7" y2="13"/><line x1="12" y1="7" x2="12" y2="13"/><line x1="17" y1="9" x2="17" y2="13"/></svg>
+          </div>
+          <div>
+            <div class="service-num">SERVICE 03</div>
+            <h3 class="service-title">非住宅 WEBPRO入力代行<br>標準入力法・外皮入力</h3>
+          </div>
+        </div>
+        <p class="service-desc">非住宅・公共物件のWEBPRO（標準入力法）について、外皮面積拾いと外皮・窓仕様の入力を代行します。設備設計者と分業したい事務所に最適です。公共物件の実績あり。</p>
+        <ul class="service-features">
+          <li>外皮面積拾い（図面読み取り）</li>
+          <li>WEBPRO非住宅版への外皮データ入力</li>
+          <li>窓仕様・断熱仕様の入力</li>
+          <li>入力済データ（XML）の納品</li>
+          <li>設備入力は対象外（設計者側で対応）</li>
+        </ul>
+      </div>
+      <div class="service-price">
+        <div class="price-label">PRICE — by Area</div>
+        <div class="price-tier"><span class="price-tier-label">〜1,000㎡</span><span class="price-tier-value">¥60,000</span></div>
+        <div class="price-tier"><span class="price-tier-label">1,000〜2,000㎡</span><span class="price-tier-value">¥80,000</span></div>
+        <div class="price-tier"><span class="price-tier-label">2,000㎡〜</span><span class="price-tier-value">¥100,000</span></div>
+        <p class="price-note">納期：7〜14営業日</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 寒冷地特化 -->
+<section class="cold-region" id="cold">
+  <div class="cold-inner">
+    <div>
+      <div class="cold-label">Why Cold Regions</div>
+      <h2 class="cold-title">地域区分 1・2 の<span class="accent">外皮基準</span>に、実務で向き合ってきました。</h2>
+      <p class="cold-body">北海道は全国で最も厳しい外皮基準が課せられています。付加断熱・高性能サッシ・基礎断熱の組み合わせなど、寒冷地特有の仕様検討が必要です。設計・施工・申請を10年以上現場で扱ってきた知見をもとに、全国どこからでも対応します。</p>
+    </div>
+    <div class="cold-card">
+      <div class="cold-card-title">UA値 基準値の比較</div>
+      <div class="cold-ua-row"><span class="cold-ua-label">1・2地域（北海道等）</span><span class="cold-ua-val em">0.46</span></div>
+      <div class="cold-ua-row"><span class="cold-ua-label">3地域</span><span class="cold-ua-val">0.56</span></div>
+      <div class="cold-ua-row"><span class="cold-ua-label">4地域</span><span class="cold-ua-val">0.75</span></div>
+      <div class="cold-ua-row"><span class="cold-ua-label">5〜7地域（一般地域）</span><span class="cold-ua-val">0.87</span></div>
+      <div class="cold-ua-row"><span class="cold-ua-label">8地域（沖縄等）</span><span class="cold-ua-val">—</span></div>
+      <p class="cold-note">単位：W/㎡K（値が小さいほど厳しい基準）<br>全地域区分に対応しています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 選ばれる理由 -->
+<section class="section" id="reasons">
+  <div class="section-label">Reasons</div>
+  <h2 class="section-title">選ばれる理由</h2>
+  <p class="section-lead">省エネ計算「だけ」を機械的にこなす業者ではなく、設計実務を理解した一級建築士が、図面から仕様提案まで一貫してサポートします。</p>
+  <div class="reason-grid">
+    <div class="reason-item">
+      <div class="reason-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+      <div class="reason-body"><div class="reason-num">01</div><h3 class="reason-title">設計・施工・申請の現場経験10年以上</h3><p class="reason-desc">木造住宅の設計から現場管理、各種申請業務まで実務を通して身につけた知見があります。図面が不完全でも、設計意図を読み取って計算を進められます。</p></div>
+    </div>
+    <div class="reason-item">
+      <div class="reason-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="reason-body"><div class="reason-num">02</div><h3 class="reason-title">寒冷地（地域区分1・2）の仕様に精通</h3><p class="reason-desc">北海道を拠点に、地域区分1・2の厳しい外皮基準のもとで実務を重ねてきました。付加断熱・高性能サッシ・基礎断熱など、寒冷地特有の検討にも対応可能です。</p></div>
+    </div>
+    <div class="reason-item">
+      <div class="reason-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+      <div class="reason-body"><div class="reason-num">03</div><h3 class="reason-title">計算だけでなく、仕様提案まで</h3><p class="reason-desc">基準を満たさない場合、断熱材・窓・設備の代替案をご提案します。「計算して終わり」ではなく、設計に活きる外注先として伴走します。プラン段階の検討も可能です。</p></div>
+    </div>
+    <div class="reason-item">
+      <div class="reason-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="reason-body"><div class="reason-num">04</div><h3 class="reason-title">長期優良住宅・BELS の実績</h3><p class="reason-desc">ココナラでも長期優良住宅の申請補助で高評価をいただいています。技術的審査依頼書から根拠資料の添付まで、申請窓口で求められる粒度を理解しています。</p></div>
+    </div>
+    <div class="reason-item">
+      <div class="reason-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+      <div class="reason-body"><div class="reason-num">05</div><h3 class="reason-title">非住宅・公共物件にも対応</h3><p class="reason-desc">非住宅のWEBPRO標準入力法（外皮入力）にも対応。公共物件の実績もあり、設備設計者との分業を前提とした柔軟な対応が可能です。</p></div>
+    </div>
+    <div class="reason-item">
+      <div class="reason-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+      <div class="reason-body"><div class="reason-num">06</div><h3 class="reason-title">オンライン完結・全国対応</h3><p class="reason-desc">図面と仕様の共有から納品まで、すべてオンラインで完結します。北海道・東北はもちろん、関東・関西・九州からのご依頼も歓迎します。地域区分1〜8、全国対応です。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 流れ -->
+<section class="section-alt" id="flow">
+  <div class="section-inner">
+    <div class="section-label">Flow</div>
+    <h2 class="section-title">ご依頼の流れ</h2>
+    <p class="section-lead">お問い合わせから納品まで、おおよそ1〜2週間程度。着手前に必ずお見積りをご提示し、ご納得いただいてから業務を開始します。</p>
+    <div class="flow">
+      <div class="flow-item">
+        <div class="flow-step">
+          <div class="flow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f7f8fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <span class="flow-num">STEP 01</span>
+        </div>
+        <div class="flow-content"><h4>お問い合わせ・図面のご共有</h4><p>お問い合わせフォームより、ご依頼内容と図面（PDF推奨）をお送りください。仕様一覧があれば併せてご共有ください。</p></div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step">
+          <div class="flow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f7f8fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <span class="flow-num">STEP 02</span>
+        </div>
+        <div class="flow-content"><h4>お見積りのご提示</h4><p>図面と仕様を確認のうえ、お見積り・納期をご提示します（通常1〜2営業日以内）。</p></div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step">
+          <div class="flow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f7f8fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <span class="flow-num">STEP 03</span>
+        </div>
+        <div class="flow-content"><h4>業務開始・着手金のお支払い</h4><p>ご発注後、着手金（お見積りの50%）をお支払いいただき、業務を開始します。</p></div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step">
+          <div class="flow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f7f8fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <span class="flow-num">STEP 04</span>
+        </div>
+        <div class="flow-content"><h4>中間報告・確認</h4><p>計算結果の中間報告を行い、必要に応じて仕様調整のご提案をします。</p></div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-step">
+          <div class="flow-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#f7f8fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span class="flow-num">STEP 05</span>
+        </div>
+        <div class="flow-content"><h4>納品・残金のお支払い</h4><p>計算書・申請書類一式をPDF／XMLで納品。残金をお支払いいただき、業務完了となります。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="section-label">FAQ</div>
+  <h2 class="section-title">よくあるご質問</h2>
+  <div class="faq">
+    <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>北海道以外の地域でも対応可能ですか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">はい、全国対応です。地域区分1〜8まですべて対応可能です。図面と仕様のご共有はオンラインで完結するため、場所を問わずご依頼いただけます。</div></details>
+    <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>仕様が確定していない段階でも依頼できますか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">はい、仕様未確定でもご依頼いただけます。プラン段階でのご相談・代表的な仕様での試算もお引き受け可能です。基準クリアに必要な仕様をご提案します。</div></details>
+    <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>非住宅の設備入力もお願いできますか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">申し訳ありませんが、サービス03（非住宅 WEBPRO入力）では設備関係の入力は対象外です。外皮面積拾いと外皮・窓仕様の入力に特化しております。設備設計者のいる事務所様との分業を想定したサービスです。</div></details>
+    <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>納期はどのくらいですか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">住宅の省エネ計算は5〜7営業日、申請書類フルサポートは5〜10営業日、非住宅WEBPRO入力は7〜14営業日が目安です。お急ぎの場合はご相談ください。</div></details>
+    <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>継続的な発注を検討しています。割引はありますか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">月2件以上の継続発注をご検討の場合、月額契約プランをご用意できます。御社専用の仕様マスター・入力テンプレートを作成し、2件目以降の発注を効率化します。詳細はお問い合わせください。</div></details>
+    <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>お支払い方法は？</span></span><span class="faq-icon"></span></summary><div class="faq-a">原則として銀行振込（着手時50%・納品後50%）でお願いしております。継続契約の場合は月末締め翌月末払いで対応可能です。</div></details>
+    <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>ココナラの料金とこちらの料金が違うのはなぜですか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">ココナラは「お試し・スポット依頼向け」、当サイト経由は「工務店・設計事務所様向けの本格対応」と位置付けており、対応範囲・修正回数・継続サポートの内容が異なります。当サイト経由では仕様提案・継続割引などを標準で含んでおります。お試しでご依頼の場合はココナラを、継続的な発注をご検討の場合は当サイト経由をお勧めいたします。</div></details>
+    <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>運営者の氏名や事務所名は公開されないのですか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">本サービスは本業を持つ一級建築士による副業のため、運営者情報は屋号「horo省エネ住宅設計」での公開としております。お見積り・ご発注時には、必要に応じて一級建築士登録番号等を個別にご提示いたします。</div></details>
+    <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>機密情報の取り扱いは？</span></span><span class="faq-icon"></span></summary><div class="faq-a">ご依頼内容・図面・仕様等すべての情報は厳重に管理します。必要に応じてNDA（秘密保持契約）の締結にも対応いたします。本業との情報遮断を徹底しております。</div></details>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section">
+  <div class="section-label">About</div>
+  <h2 class="section-title">horo省エネ住宅設計について</h2>
+  <div class="about">
+    <div class="about-logo">
+      <span class="h">h</span>
+      <span class="horo-sub">horo</span>
+    </div>
+    <div class="about-content">
+      <h3>horo省エネ住宅設計</h3>
+      <div class="about-role">Energy Calculation Studio · Nationwide</div>
+      <p>全国対応の省エネ計算代行サービスです。一級建築士による実務歴10年以上の知見をもとに、住宅から非住宅・公共物件まで、設計者目線での外注先として伴走します。</p>
+      <p>計算「だけ」を機械的にこなすのではなく、図面の読み取り・仕様の検討・基準クリアへの提案まで、設計実務を理解した立場でお手伝いするのが特徴です。</p>
+      <div class="about-notice">※ 本サービスは本業を持つ一級建築士による副業のため、運営者情報は屋号での公開としております。お見積り・ご発注時には、必要に応じて一級建築士登録番号を個別にご提示いたします。お客様情報は本業との情報遮断を徹底し、厳重に管理いたします。</div>
+    </div>
+  </div>
+</section>
+
+<!-- お問い合わせ -->
+<section class="section-alt">
+  <div class="section-inner contact" id="contact">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">お問い合わせ・お見積り依頼</h2>
+    <p class="section-lead">下記フォームよりお気軽にお問い合わせください。お見積りは無料です。1〜2営業日以内にご返信いたします。</p>
+    <div class="contact-form-area">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJ-QKJNhhLIWooKJksp7WcPtSB3D3_6OFc7kBkJGb6cZEXWg/viewform?embedded=true" width="760" height="1400" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+    </div>
+    <p class="contact-note">※ 図面（PDF）等の大容量ファイルは、お問い合わせ後にメールにてご共有ください。</p>
+    <div class="coconala-link">
+      <strong>ココナラからのご依頼も承っております。</strong><br>
+      お試し依頼・スポット依頼・小規模案件はココナラ経由が便利です（料金体系・対応範囲が異なります）。★5.0評価のレビューもご覧いただけます。
+      <div class="coconala-services">
+        <a href="https://coconala.com/services/3688361" target="_blank" rel="noopener">→ 省エネ計算代行（外皮+一次エネ）</a>
+        <a href="https://coconala.com/services/4095960" target="_blank" rel="noopener">→ 外皮計算代行（UA値・最短3日）</a>
+        <a href="https://coconala.com/services/4126990" target="_blank" rel="noopener">→ WEBPRO代行（非住宅・公共物件）</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">
+        <span class="horo">horo</span>
+        <div class="divider"></div>
+        <span class="sub">省エネ住宅設計</span>
+      </div>
+      <p class="footer-text">省エネ計算・長期優良住宅申請補助・WEBPRO入力代行を一級建築士が承ります。全国対応・オンライン完結。</p>
+    </div>
+    <div class="footer-col">
+      <h5>SERVICES</h5>
+      <ul>
+        <li><a href="#services">住宅 省エネ計算</a></li>
+        <li><a href="#services">申請書類フルサポート</a></li>
+        <li><a href="#services">非住宅 WEBPRO入力</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>INFO</h5>
+      <ul>
+        <li><a href="#cold">寒冷地対応</a></li>
+        <li><a href="#reasons">選ばれる理由</a></li>
+        <li><a href="#flow">依頼の流れ</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 horo省エネ住宅設計 — ALL RIGHTS RESERVED.</div>
+</footer>
+
+<script>
+document.querySelectorAll('details.faq-item').forEach(d=>{
+  d.addEventListener('toggle',()=>{
+    if(d.open)document.querySelectorAll('details.faq-item').forEach(o=>{if(o!==d)o.open=false});
+  });
+});
+const nav=document.querySelector('.nav');
+window.addEventListener('scroll',()=>{
+  nav.style.boxShadow=window.scrollY>20?'0 1px 12px rgba(14,31,58,0.06)':'none';
+});
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}
+  });
+},{threshold:0.08});
+document.querySelectorAll('.pain-item,.service-card,.reason-item,.flow-item,.stat-item').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(20px)';
+  el.style.transition='opacity 0.7s ease,transform 0.7s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>

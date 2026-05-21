@@ -264,6 +264,16 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
 .coconala-services a{font-size:13px;text-decoration:none;padding:5px 0;display:inline-block;transition:color 0.2s,transform 0.2s}
 .coconala-services a:hover{text-decoration:underline;transform:translateX(4px)}
 
+/* お問い合わせ：3つのMETHODカード */
+.contact-methods{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px;margin-top:48px;text-align:left}
+.contact-method{background:var(--color-card);border:1px solid var(--color-line);border-radius:4px;padding:32px 28px;display:flex;flex-direction:column;transition:transform 0.25s ease,box-shadow 0.25s ease}
+.contact-method:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(14,31,58,0.08)}
+.method-num{font-family:var(--font-en);font-size:11px;letter-spacing:0.25em;color:var(--color-blue-accent);font-weight:700;margin-bottom:14px}
+.method-title{font-family:var(--font-display);font-weight:800;font-size:18px;color:var(--color-navy);margin-bottom:12px;letter-spacing:0.02em}
+.method-desc{font-size:13.5px;color:var(--color-ink-soft);line-height:1.85;margin-bottom:24px;flex-grow:1}
+.method-btn{display:inline-flex;align-items:center;justify-content:center;background:var(--color-navy);color:var(--color-bg-pure);font-size:14px;font-weight:700;padding:14px 22px;border-radius:3px;text-decoration:none;letter-spacing:0.04em;transition:background 0.2s}
+.method-btn:hover{background:var(--color-blue-accent);text-decoration:none}
+
 /* フッター */
 .footer{background:var(--color-navy-deep);color:rgba(247,248,250,0.65);padding:64px 32px 32px}
 .footer-inner{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
@@ -649,6 +659,7 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
     <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>非住宅の設備入力もお願いできますか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">申し訳ありませんが、サービス03（非住宅 WEBPRO入力）では設備関係の入力は対象外です。外皮面積拾いと外皮・窓仕様の入力に特化しております。設備設計者のいる事務所様との分業を想定したサービスです。</div></details>
     <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>納期はどのくらいですか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">住宅の省エネ計算は5〜7営業日、申請書類フルサポートは5〜10営業日、非住宅WEBPRO入力は7〜14営業日が目安です。お急ぎの場合はご相談ください。</div></details>
     <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>継続的な発注を検討しています。割引はありますか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">月2件以上の継続発注をご検討の場合、月額契約プランをご用意できます。御社専用の仕様マスター・入力テンプレートを作成し、2件目以降の発注を効率化します。詳細はお問い合わせください。</div></details>
+    <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>メールで直接問い合わせできますか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">はい、お問い合わせフォームのほか、メールでも承っております。Contactセクションの「メールで問い合わせ」ボタンよりお送りください。図面PDF等の添付も可能です。1〜2営業日以内にご返信いたします。</div></details>
     <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>お支払い方法は？</span></span><span class="faq-icon"></span></summary><div class="faq-a">原則として銀行振込（着手時50%・納品後50%）でお願いしております。継続契約の場合は月末締め翌月末払いで対応可能です。</div></details>
     <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>ココナラの料金とこちらの料金が違うのはなぜですか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">ココナラは「お試し・スポット依頼向け」、当サイト経由は「工務店・設計事務所様向けの本格対応」と位置付けており、対応範囲・修正回数・継続サポートの内容が異なります。当サイト経由では仕様提案・継続割引などを標準で含んでおります。お試しでご依頼の場合はココナラを、継続的な発注をご検討の場合は当サイト経由をお勧めいたします。</div></details>
     <details class="faq-item"><summary class="faq-q"><span class="faq-q-content"><span class="faq-q-mark">Q.</span><span>運営者の氏名や事務所名は公開されないのですか？</span></span><span class="faq-icon"></span></summary><div class="faq-a">本サービスは本業を持つ一級建築士による副業のため、運営者情報は屋号「horo省エネ住宅設計」での公開としております。お見積り・ご発注時には、必要に応じて一級建築士登録番号等を個別にご提示いたします。</div></details>
@@ -680,12 +691,39 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
   <div class="section-inner contact" id="contact">
     <div class="section-label">Contact</div>
     <h2 class="section-title">お問い合わせ・お見積り依頼</h2>
-    <p class="section-lead">下記フォームよりお気軽にお問い合わせください。お見積りは無料です。1〜2営業日以内にご返信いたします。</p>
-    <div class="contact-form-area">
+    <p class="section-lead">3つの方法からお選びいただけます。お見積りは無料、1〜2営業日以内にご返信いたします。</p>
+
+    <div class="contact-methods">
+      <!-- METHOD 01：フォーム -->
+      <div class="contact-method">
+        <div class="method-num">METHOD 01</div>
+        <h3 class="method-title">お問い合わせフォーム</h3>
+        <p class="method-desc">必要事項をフォームから入力してお送りください。一番丁寧にお返事できる方法です。</p>
+        <a href="#contact-form" class="method-btn">フォームを開く</a>
+      </div>
+
+      <!-- METHOD 02：メール -->
+      <div class="contact-method">
+        <div class="method-num">METHOD 02</div>
+        <h3 class="method-title">メールで問い合わせ</h3>
+        <p class="method-desc">直接メールでのお問い合わせも受け付けています。図面PDFの添付も可能です。</p>
+        <a href="#" id="mail-btn" class="method-btn" rel="nofollow">メールを送る</a>
+      </div>
+
+      <!-- METHOD 03：ココナラ -->
+      <div class="contact-method">
+        <div class="method-num">METHOD 03</div>
+        <h3 class="method-title">ココナラから依頼</h3>
+        <p class="method-desc">お試し依頼・スポット依頼はココナラ経由が便利です。★5.0評価のレビューもご覧いただけます。</p>
+        <a href="#coconala-detail" class="method-btn">ココナラを見る</a>
+      </div>
+    </div>
+
+    <div class="contact-form-area" id="contact-form">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJ-QKJNhhLIWooKJksp7WcPtSB3D3_6OFc7kBkJGb6cZEXWg/viewform?embedded=true" width="760" height="1400" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
     </div>
     <p class="contact-note">※ 図面（PDF）等の大容量ファイルは、お問い合わせ後にメールにてご共有ください。</p>
-    <div class="coconala-link">
+    <div class="coconala-link" id="coconala-detail">
       <strong>ココナラからのご依頼も承っております。</strong><br>
       お試し依頼・スポット依頼・小規模案件はココナラ経由が便利です（料金体系・対応範囲が異なります）。★5.0評価のレビューもご覧いただけます。
       <div class="coconala-services">
@@ -696,6 +734,19 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
     </div>
   </div>
 </section>
+
+<!-- mailto: 動的生成（スパム対策：HTMLソースにアドレス文字列を残さない） -->
+<script>
+(function(){
+  var p = ['Y29udGFjdA==', 'aG9yby1zaG9lbmU=', 'Y29t'];
+  var d = p.map(function(s){ return atob(s); });
+  var addr = d[0] + String.fromCharCode(64) + d[1] + '.' + d[2];
+  var btn = document.getElementById('mail-btn');
+  if(btn){
+    btn.setAttribute('href', 'mailto:' + addr + '?subject=' + encodeURIComponent('【お問い合わせ】horo省エネ住宅設計'));
+  }
+})();
+</script>
 
 <!-- フッター -->
 <footer class="footer">

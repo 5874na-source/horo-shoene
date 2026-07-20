@@ -520,6 +520,7 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
 
       <!-- 比較・説明 -->
       <div style="display:flex;flex-direction:column;gap:24px">
+        <!-- 比較ボックス -->
         <div style="background:var(--color-card);border:1px solid var(--color-line);border-radius:4px;padding:28px">
           <div style="font-family:var(--font-en);font-size:11px;letter-spacing:0.25em;color:var(--color-ink-mute);font-weight:700;margin-bottom:20px">COST COMPARISON / 月2件の場合</div>
           <div style="display:flex;flex-direction:column;gap:14px">
@@ -535,6 +536,7 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
           </div>
         </div>
 
+        <!-- こんな方に -->
         <div style="background:var(--color-card);border:1px solid var(--color-line);border-radius:4px;padding:28px">
           <div style="font-family:var(--font-en);font-size:11px;letter-spacing:0.25em;color:var(--color-ink-mute);font-weight:700;margin-bottom:16px">BEST FOR</div>
           <div style="display:flex;flex-direction:column;gap:10px">
@@ -544,6 +546,7 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
           </div>
         </div>
 
+        <!-- CTA -->
         <a href="#contact" class="btn-primary" style="justify-content:center">まずはご相談ください</a>
       </div>
     </div>
@@ -738,7 +741,8 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
 <!-- mailto: 動的生成（スパム対策：HTMLソースにアドレス文字列を残さない） -->
 <script>
 (function(){
-  var p = ['Y29udGFjdA==', 'aG9yby1zaG9lbmU=', 'Y29t'];
+  // 配列分割 + base64 二重で bot 収集を回避
+  var p = ['Y29udGFjdA==', 'aG9yby1zaG9lbmU=', 'Y29t']; // base64: contact / horo-shoene / com
   var d = p.map(function(s){ return atob(s); });
   var addr = d[0] + String.fromCharCode(64) + d[1] + '.' + d[2];
   var btn = document.getElementById('mail-btn');
@@ -776,6 +780,7 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">お問い合わせ</a></li>
         <li><a href="/privacy.html">プライバシーポリシー</a></li>
+        <li><a href="/terms.html">利用規約</a></li>
       </ul>
     </div>
   </div>

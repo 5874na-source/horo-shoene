@@ -168,6 +168,28 @@ a{color:inherit;text-decoration:none}
   .stats-bar{padding:clamp(40px,6vw,80px) 20px}
 }
 
+/* 実績 */
+.result-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:48px}
+.result-stat{background:var(--color-navy);border-radius:4px;padding:26px 24px;text-align:center}
+.result-stat .rs-val{font-family:var(--font-en);font-size:clamp(30px,4vw,44px);font-weight:700;color:var(--color-blue-light);line-height:1.05;letter-spacing:-0.02em;margin-bottom:8px}
+.result-stat .rs-val.rs-text{font-family:var(--font-display);font-size:clamp(20px,2.6vw,26px);letter-spacing:0.02em}
+.result-stat .rs-lab{font-size:12px;letter-spacing:0.12em;color:rgba(247,248,250,0.72);font-weight:500}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:20px}
+.result-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:26px;transition:all 0.3s;position:relative;overflow:hidden}
+.result-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--color-blue-accent);transition:height 0.4s ease}
+.result-card:hover::before{height:100%}
+.result-card:hover{border-color:var(--color-navy);transform:translateY(-3px);box-shadow:0 10px 30px rgba(14,31,58,0.08)}
+.result-card-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+.result-case{font-family:var(--font-en);font-size:11px;letter-spacing:0.18em;color:var(--color-ink-mute);font-weight:600}
+.result-badge{font-size:11px;background:#e7edfb;color:var(--color-blue-accent);font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:0.02em;white-space:nowrap}
+.result-attrs{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
+.result-attrs li{display:flex;font-size:13px;line-height:1.6}
+.result-attrs .k{color:var(--color-ink-mute);width:72px;flex-shrink:0}
+.result-attrs .v{color:var(--color-navy);font-weight:500}
+.result-note{padding-top:14px;border-top:1px solid var(--color-line);font-size:13px;color:var(--color-ink-soft);line-height:1.7}
+.result-review{margin-top:36px;font-size:14px;color:var(--color-ink-soft)}
+.result-review a{color:var(--color-blue-accent);font-weight:600;white-space:nowrap}
+
 /* 寒冷地 */
 .cold-region{background:var(--color-navy);color:var(--color-bg-pure);padding:var(--section-pad) 32px;position:relative;overflow:hidden}
 .cold-region::before{content:'';position:absolute;top:-150px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(29,78,216,0.18) 0%,transparent 65%);pointer-events:none}
@@ -312,6 +334,7 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
       <a href="#services">サービス</a>
       <a href="#cold">寒冷地対応</a>
       <a href="#reasons">選ばれる理由</a>
+      <a href="#results">実績</a>
       <a href="#flow">依頼の流れ</a>
       <a href="#faq">FAQ</a>
     </div>
@@ -606,6 +629,68 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
   </div>
 </section>
 
+<!-- 実績 -->
+<section class="section-alt" id="results">
+  <div class="section-inner">
+    <div class="section-label">Track Record</div>
+    <h2 class="section-title">実績</h2>
+    <p class="section-lead">ココナラ・クラウドワークス等を含む累計実績です。守秘のため、各案件は用途・構造・地域区分などの属性のみを掲載しています（企業名・物件名は非公開）。住宅から非住宅まで、全国対応・オンライン完結でご依頼いただけます。</p>
+    <div class="result-summary">
+      <div class="result-stat"><div class="rs-val">8<span style="font-size:0.5em;margin-left:2px;">件</span></div><div class="rs-lab">対応案件</div></div>
+      <div class="result-stat"><div class="rs-val">6<span style="font-size:0.5em;margin-left:2px;">社</span></div><div class="rs-lab">対応事業者</div></div>
+      <div class="result-stat"><div class="rs-val rs-text">住宅・非住宅</div><div class="rs-lab">対応領域</div></div>
+    </div>
+    <div class="result-grid">
+      <div class="result-card">
+        <div class="result-card-head"><span class="result-case">CASE 01</span><span class="result-badge">外皮＋一次エネ計算</span></div>
+        <ul class="result-attrs">
+          <li><span class="k">建物</span><span class="v">木造2階建て 戸建住宅</span></li>
+          <li><span class="k">地域区分</span><span class="v">6地域</span></li>
+          <li><span class="k">依頼元</span><span class="v">設計事務所</span></li>
+        </ul>
+        <div class="result-note">質疑応答・資料の再作成から対応</div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-head"><span class="result-case">CASE 02</span><span class="result-badge">申請フルサポート</span></div>
+        <ul class="result-attrs">
+          <li><span class="k">建物</span><span class="v">木造3階建て 戸建住宅</span></li>
+          <li><span class="k">地域区分</span><span class="v">6地域</span></li>
+          <li><span class="k">依頼元</span><span class="v">設計事務所</span></li>
+        </ul>
+        <div class="result-note">長期優良住宅の申請書類を作成</div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-head"><span class="result-case">CASE 03</span><span class="result-badge">申請フルサポート</span></div>
+        <ul class="result-attrs">
+          <li><span class="k">建物</span><span class="v">木造2階建て 戸建住宅</span></li>
+          <li><span class="k">地域区分</span><span class="v">7地域</span></li>
+          <li><span class="k">依頼元</span><span class="v">工務店</span></li>
+        </ul>
+        <div class="result-note">外皮・一次エネ＋資料整備まで一式</div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-head"><span class="result-case">CASE 04</span><span class="result-badge">非住宅WEBPRO入力</span></div>
+        <ul class="result-attrs">
+          <li><span class="k">建物</span><span class="v">RC造 大規模公共施設</span></li>
+          <li><span class="k">地域区分</span><span class="v">6地域</span></li>
+          <li><span class="k">依頼元</span><span class="v">設計事務所</span></li>
+        </ul>
+        <div class="result-note">外皮面積の拾い〜WEBPRO入力を分業で対応</div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-head"><span class="result-case">CASE 05</span><span class="result-badge">非住宅WEBPRO入力</span></div>
+        <ul class="result-attrs">
+          <li><span class="k">建物</span><span class="v">S造 公共施設（改修）</span></li>
+          <li><span class="k">地域区分</span><span class="v">6地域</span></li>
+          <li><span class="k">依頼元</span><span class="v">設計事務所</span></li>
+        </ul>
+        <div class="result-note">改修案件のWEBPRO入力を継続対応</div>
+      </div>
+    </div>
+    <p class="result-review">ココナラでは高評価をいただいています。 <a href="https://coconala.com/users/5193402" target="_blank" rel="noopener">ココナラのプロフィールを見る →</a></p>
+  </div>
+</section>
+
 <!-- 流れ -->
 <section class="section-alt" id="flow">
   <div class="section-inner">
@@ -776,6 +861,7 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
       <ul>
         <li><a href="#cold">寒冷地対応</a></li>
         <li><a href="#reasons">選ばれる理由</a></li>
+        <li><a href="#results">実績</a></li>
         <li><a href="#flow">依頼の流れ</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">お問い合わせ</a></li>
@@ -802,7 +888,7 @@ const obs=new IntersectionObserver(entries=>{
     if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}
   });
 },{threshold:0.08});
-document.querySelectorAll('.pain-item,.service-card,.reason-item,.flow-item,.stat-item').forEach(el=>{
+document.querySelectorAll('.pain-item,.service-card,.reason-item,.flow-item,.stat-item,.result-card').forEach(el=>{
   el.style.opacity='0';el.style.transform='translateY(20px)';
   el.style.transition='opacity 0.7s ease,transform 0.7s ease';
   obs.observe(el);

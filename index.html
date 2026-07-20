@@ -170,10 +170,10 @@ a{color:inherit;text-decoration:none}
 
 /* 実績 */
 .result-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:48px}
-.result-stat{background:var(--color-navy);border-radius:4px;padding:26px 24px;text-align:center}
-.result-stat .rs-val{font-family:var(--font-en);font-size:clamp(30px,4vw,44px);font-weight:700;color:var(--color-blue-light);line-height:1.05;letter-spacing:-0.02em;margin-bottom:8px}
-.result-stat .rs-val.rs-text{font-family:var(--font-display);font-size:clamp(20px,2.6vw,26px);letter-spacing:0.02em}
-.result-stat .rs-lab{font-size:12px;letter-spacing:0.12em;color:rgba(247,248,250,0.72);font-weight:500}
+.result-stat{background:var(--color-navy);border-radius:4px;padding:28px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:128px}
+.result-stat .rs-val{font-family:var(--font-en);font-weight:700;color:var(--color-blue-light);letter-spacing:-0.02em;font-size:clamp(32px,3.2vw,40px);height:48px;line-height:48px;margin-bottom:10px}
+.result-stat .rs-val.rs-text{font-family:var(--font-display);font-size:clamp(24px,2.6vw,30px);letter-spacing:0.04em}
+.result-stat .rs-lab{font-size:12px;letter-spacing:0.14em;color:rgba(247,248,250,0.72);font-weight:500}
 .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:20px}
 .result-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:26px;transition:all 0.3s;position:relative;overflow:hidden}
 .result-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--color-blue-accent);transition:height 0.4s ease}
@@ -636,7 +636,7 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
     <h2 class="section-title">実績</h2>
     <p class="section-lead">ココナラ・クラウドワークス等を含む累計実績です。守秘のため、各案件は用途・構造・地域区分などの属性のみを掲載しています（企業名・物件名は非公開）。住宅から非住宅まで、全国対応・オンライン完結でご依頼いただけます。</p>
     <div class="result-summary">
-      <div class="result-stat"><div class="rs-val">8<span style="font-size:0.5em;margin-left:2px;">件</span></div><div class="rs-lab">対応案件</div></div>
+      <div class="result-stat"><div class="rs-val">15<span style="font-size:0.5em;margin-left:2px;">棟</span></div><div class="rs-lab">実施棟数</div></div>
       <div class="result-stat"><div class="rs-val">6<span style="font-size:0.5em;margin-left:2px;">社</span></div><div class="rs-lab">対応事業者</div></div>
       <div class="result-stat"><div class="rs-val rs-text">住宅・非住宅</div><div class="rs-lab">対応領域</div></div>
     </div>

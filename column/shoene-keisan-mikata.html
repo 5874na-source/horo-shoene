@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHNBB4097Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WHNBB4097Z');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>省エネ計算書の見方｜外皮計算＋一次エネ計算の中身を実例で解説【一級建築士】</title>
+<meta name="description" content="住宅の省エネ計算書には何が書かれているのか。外皮計算（UA値）と一次エネルギー計算の読み方を、一級建築士がサンプルの計算書で解説します。工務店・設計事務所の外注検討に。">
+<meta name="keywords" content="省エネ計算書 見方,外皮計算 とは,UA値 とは,一次エネルギー計算,省エネ計算 外注,断熱等性能等級,BEI">
+<meta property="og:title" content="省エネ計算書の見方｜外皮計算＋一次エネ計算の中身を実例で解説">
+<meta property="og:description" content="省エネ計算書に何が書かれているのか、一級建築士がサンプルの計算書で読み方を解説します。">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://horo-shoene.com/column/shoene-keisan-mikata.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%230e1f3a'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='42' font-weight='900' fill='%23f7f8fa' text-anchor='middle' letter-spacing='-2'%3Eh%3C/text%3E%3Crect x='46' y='46' width='6' height='6' fill='%236ea3ff'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"省エネ計算書の見方｜外皮計算＋一次エネ計算の中身を実例で解説","description":"住宅の省エネ計算書の読み方を、一級建築士がサンプルの計算書で解説。外皮計算（UA値）と一次エネルギー計算の中身をわかりやすく説明します。","author":{"@type":"Organization","name":"horo省エネ住宅設計"},"publisher":{"@type":"Organization","name":"horo省エネ住宅設計"},"mainEntityOfPage":"https://horo-shoene.com/column/shoene-keisan-mikata.html"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --color-bg:#eef0f3; --color-bg-pure:#f7f8fa; --color-bg-deep:#e1e4ea;
+  --color-navy:#0e1f3a; --color-navy-deep:#08152a; --color-blue-accent:#1d4ed8;
+  --color-blue-light:#6ea3ff; --color-ink:#1a2332; --color-ink-soft:#4a5568;
+  --color-ink-mute:#8b95a3; --color-line:#c8cdd5; --color-card:#ffffff;
+  --font-display:'Noto Sans JP',sans-serif; --font-sans:'Noto Sans JP',sans-serif;
+  --font-en:'Inter',sans-serif; --max:760px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);color:var(--color-ink);background:var(--color-bg);
+  line-height:1.95;font-feature-settings:"palt";-webkit-font-smoothing:antialiased}
+a{color:var(--color-blue-accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(238,240,243,0.92);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--color-line)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo .horo{font-family:var(--font-en);font-weight:800;font-size:22px;color:var(--color-navy);letter-spacing:-0.03em}
+.nav-logo .divider{width:1px;height:18px;background:var(--color-blue-accent)}
+.nav-logo .sub{font-size:11px;color:var(--color-ink-soft);letter-spacing:0.1em}
+.nav-cta{font-size:12px;padding:9px 18px;background:var(--color-navy);color:var(--color-bg-pure);border-radius:2px}
+.nav-cta:hover{background:var(--color-blue-accent);text-decoration:none}
+
+.article{max-width:var(--max);margin:0 auto;padding:48px 24px 40px}
+.crumb{font-size:12px;color:var(--color-ink-mute);margin-bottom:24px;font-family:var(--font-en)}
+.crumb a{color:var(--color-ink-mute)}
+.tag{display:inline-block;font-family:var(--font-en);font-size:11px;letter-spacing:0.2em;
+  color:var(--color-blue-accent);font-weight:700;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:var(--font-display);font-weight:900;font-size:clamp(24px,4vw,34px);
+  line-height:1.5;color:var(--color-navy);letter-spacing:0.01em;text-wrap:balance;margin-bottom:20px}
+.lead{font-size:15px;line-height:2.05;color:var(--color-ink-soft);margin-bottom:8px}
+
+h2{font-family:var(--font-display);font-weight:700;font-size:clamp(19px,3vw,24px);
+  color:var(--color-navy);line-height:1.5;margin:52px 0 18px;padding-top:20px;
+  border-top:1px solid var(--color-line)}
+h3{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--color-navy);margin:28px 0 10px}
+.article p{font-size:15px;margin-bottom:16px}
+.article ul{margin:0 0 18px 0;padding-left:0;list-style:none}
+.article ul li{font-size:15px;padding-left:22px;position:relative;margin-bottom:9px;line-height:1.85}
+.article ul li::before{content:'';position:absolute;left:2px;top:13px;width:6px;height:6px;
+  background:var(--color-blue-accent);border-radius:50%}
+strong{color:var(--color-navy);font-weight:700}
+.hl{background:linear-gradient(transparent 62%,#cfe0ff 62%);font-weight:700}
+
+.callout{background:var(--color-card);border:1px solid var(--color-line);border-left:3px solid var(--color-blue-accent);
+  border-radius:3px;padding:18px 20px;margin:22px 0;font-size:14px;color:var(--color-ink-soft);line-height:1.9}
+.callout b{color:var(--color-navy)}
+
+/* figures / sample sheets */
+figure{margin:26px 0}
+figcaption{font-size:12px;color:var(--color-ink-mute);margin-top:8px;text-align:center}
+.num{font-family:var(--font-en);font-variant-numeric:tabular-nums}
+
+.sample{position:relative;background:#fff;border:1px solid var(--color-line);border-radius:6px;
+  padding:22px 22px 16px;overflow:hidden;box-shadow:0 8px 26px rgba(14,31,58,0.07)}
+.sample::after{content:"SAMPLE";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-24deg);
+  font-family:var(--font-en);font-weight:800;font-size:100px;color:rgba(29,78,216,0.05);
+  pointer-events:none;white-space:nowrap;z-index:0}
+.sample>*{position:relative;z-index:1}
+.sample-h{font-size:13px;font-weight:700;color:var(--color-navy);text-align:center;margin-bottom:14px}
+
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.kpi{border:1px solid var(--color-line);border-radius:6px;padding:14px}
+.kpi .l{font-size:10.5px;color:var(--color-ink-mute)}
+.kpi .v{font-family:var(--font-en);font-weight:800;font-size:26px;color:var(--color-navy);margin:5px 0 2px}
+.kpi .v small{font-size:11px;color:var(--color-ink-soft);font-weight:600;margin-left:2px}
+.kpi .n{font-size:11px;color:var(--color-ink-soft)}
+.badge{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:20px;
+  background:#e7edfb;color:var(--color-blue-accent);margin-top:6px}
+
+table.st{width:100%;border-collapse:collapse;font-size:12.5px}
+.st-wrap{overflow-x:auto}
+.st th,.st td{padding:7px 10px;border-bottom:1px solid var(--color-line);text-align:right;white-space:nowrap}
+.st th:first-child,.st td:first-child{text-align:left}
+.st thead th{font-size:10.5px;letter-spacing:0.04em;color:var(--color-ink-mute);text-transform:uppercase}
+.st td.d{font-family:var(--font-en);color:var(--color-blue-accent);font-weight:700}
+.st td.b{font-family:var(--font-en);color:var(--color-ink-soft)}
+.st tfoot td{font-weight:800;border-top:2px solid var(--color-navy);font-family:var(--font-en)}
+.st tfoot td:first-child{font-family:var(--font-sans)}
+.compare-bar{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:12px;margin:6px 0}
+.compare-bar .nm{font-size:12px;color:var(--color-ink-soft)}
+.track{height:22px;background:var(--color-bg);border:1px solid var(--color-line);border-radius:3px;overflow:hidden}
+.track i{display:block;height:100%}
+.track i.d{background:linear-gradient(90deg,var(--color-blue-accent),var(--color-blue-light))}
+.track i.b{background:#c3ccda}
+.compare-bar .am{font-family:var(--font-en);font-weight:700;font-size:12.5px;text-align:right;min-width:74px}
+
+.cta{background:var(--color-navy);border-radius:8px;padding:34px 30px;margin:48px 0 20px;text-align:center;color:#f7f8fa}
+.cta h2{border:none;color:#fff;margin:0 0 10px;padding:0}
+.cta p{color:rgba(247,248,250,0.82);font-size:14px;margin-bottom:22px}
+.cta a.btn{display:inline-block;background:var(--color-blue-accent);color:#fff;font-weight:700;
+  padding:15px 34px;border-radius:3px;font-size:14px;letter-spacing:0.04em}
+.cta a.btn:hover{background:#2a5ae6;text-decoration:none}
+
+.related{margin-top:28px;padding-top:20px;border-top:1px solid var(--color-line)}
+.related h3{margin-top:0}
+.related a{display:inline-block;margin-right:20px;font-size:14px;font-weight:600}
+
+.reflinks{margin:18px 0 0;padding:0;list-style:none}
+.reflinks li{padding:14px 0;border-bottom:1px solid var(--color-line)}
+.reflinks li:first-child{border-top:1px solid var(--color-line)}
+.reflinks li::before{display:none}
+.reflinks a{font-size:14.5px;font-weight:700;display:inline-block}
+.reflinks a::after{content:' ↗';font-family:var(--font-en);font-size:12px;color:var(--color-ink-mute)}
+.reflinks span{display:block;font-size:12.5px;color:var(--color-ink-soft);margin-top:3px;line-height:1.7}
+.dlbox{display:flex;align-items:center;gap:16px;background:var(--color-card);border:1px solid var(--color-line);
+  border-radius:8px;padding:18px 20px;margin:26px 0;flex-wrap:wrap}
+.dl-ic{flex-shrink:0;width:46px;height:46px;border-radius:6px;background:var(--color-blue-accent);color:#fff;
+  font-family:var(--font-en);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;letter-spacing:0.03em}
+.dl-body{flex:1;min-width:200px}
+.dl-t{font-weight:700;font-size:14.5px;color:var(--color-navy);line-height:1.5}
+.dl-d{font-size:12.5px;color:var(--color-ink-soft);margin-top:3px;line-height:1.7}
+.dl-btn{flex-shrink:0;background:var(--color-navy);color:#fff;font-weight:700;font-size:13px;
+  padding:12px 22px;border-radius:3px;letter-spacing:0.03em}
+.dl-btn:hover{background:var(--color-blue-accent);text-decoration:none}
+.disc{font-size:11.5px;color:var(--color-ink-mute);line-height:1.8;margin-top:26px;
+  padding:14px 16px;background:var(--color-bg-deep);border-radius:4px}
+
+footer{background:var(--color-navy-deep);color:rgba(247,248,250,0.6);padding:36px 24px;margin-top:40px;
+  text-align:center;font-size:12px}
+footer a{color:rgba(247,248,250,0.7)}
+footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8fa;letter-spacing:-0.02em;margin-bottom:8px}
+
+@media(max-width:560px){
+  .kpis{grid-template-columns:1fr}
+  .sample::after{font-size:64px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="horo">horo</span><span class="divider"></span><span class="sub">省エネ住宅設計</span>
+    </a>
+    <a href="/#contact" class="nav-cta">お問い合わせ</a>
+  </div>
+</nav>
+
+<article class="article">
+  <div class="crumb"><a href="/">HOME</a> ／ COLUMN ／ 省エネ計算書の見方</div>
+  <span class="tag">Column</span>
+  <h1>省エネ計算書の見方<br>― 外皮計算＋一次エネ計算の中身を実例で解説</h1>
+
+  <p class="lead">2025年4月から、原則すべての新築住宅で省エネ基準への適合が義務化されました。一方で「省エネ計算書を受け取ったが、どこを見ればいいのか分からない」という工務店・設計事務所の声も少なくありません。この記事では、一級建築士が<strong>サンプルの計算書</strong>を使って、省エネ計算書に書かれている内容とその読み方を解説します。</p>
+
+  <figure>
+    <div class="sample">
+      <div class="sample-h">サンプルモデルプラン（木造2階建て・2地域）の計算結果サマリー</div>
+      <div class="kpis">
+        <div class="kpi"><div class="l">外皮平均熱貫流率 U<sub>A</sub></div><div class="v">0.28<small>W/㎡K</small></div><div class="n">基準0.28に適合</div><span class="badge">断熱等級6</span></div>
+        <div class="kpi"><div class="l">一次エネルギー（設計値）</div><div class="v">110,281<small>MJ</small></div><div class="n">基準177,303MJ 未満</div><span class="badge">基準比 約42%減</span></div>
+        <div class="kpi"><div class="l">BEI（一次エネの指標）</div><div class="v">0.58</div><div class="n">1.0未満で適合</div><span class="badge">省エネ性 良好</span></div>
+      </div>
+    </div>
+    <figcaption>※ 説明用サンプル。物件名・寸法・識別情報を除いた架空モデルの表示です。</figcaption>
+  </figure>
+
+  <div class="dlbox">
+    <div class="dl-ic">PDF</div>
+    <div class="dl-body">
+      <div class="dl-t">サンプル計算書（一次エネ＋外皮＋部位U値・全12ページ）をダウンロード</div>
+      <div class="dl-d">実際に納品される計算書と同じ様式のサンプルです（架空のモデルプラン／QR・ID等は除去済み）。</div>
+    </div>
+    <a class="dl-btn" href="/column/shoene-keisan-sample.pdf" target="_blank" rel="noopener" download>ダウンロード →</a>
+  </div>
+
+  <h2>省エネ計算書は大きく2つ ― 外皮計算と一次エネルギー計算</h2>
+  <p>住宅の省エネ計算は、性格の異なる<strong>2つの計算</strong>で構成されます。</p>
+  <ul>
+    <li><strong>① 外皮計算</strong>：建物の「断熱・日射」の性能を評価する（＝どれだけ熱が逃げにくいか）</li>
+    <li><strong>② 一次エネルギー計算</strong>：暖房・給湯などの設備も含めた「消費エネルギー量」を評価する</li>
+  </ul>
+  <p>この2つが揃って、はじめて省エネ基準に適合しているかを判定できます。計算書もこの2部構成になっているので、まずは「今どちらを見ているか」を意識すると、ぐっと読みやすくなります。</p>
+
+  <h2>① 外皮計算 ―「UA値」で断熱性能を表す</h2>
+  <p>外皮計算の主役が <strong>U<sub>A</sub>値（外皮平均熱貫流率）</strong>です。建物全体から逃げる熱の量を床面積あたりで表した数値で、<span class="hl">値が小さいほど熱が逃げにくい＝高断熱</span>を意味します。</p>
+  <p>あわせて、日射の入りやすさを表す <strong>η（イータ）値</strong>も算出します（冷房期 η<sub>AC</sub>・暖房期 η<sub>AH</sub>）。夏は日射を入れすぎない、冬は取り込む、というバランスを見る指標です。</p>
+  <div class="callout">
+    <b>地域区分で基準が変わります。</b> 寒冷地ほど基準は厳しく、北海道など<strong>2地域の等級6基準は U<sub>A</sub>=0.28</strong>。全国で最も厳しい水準です。同じ断熱仕様でも、地域が違えば合否が変わります。
+  </div>
+
+  <figure>
+    <div class="sample">
+      <div class="sample-h">外皮平均熱貫流率 計算書（結果部分・サンプル）</div>
+      <div class="st-wrap">
+        <table class="st">
+          <tbody>
+            <tr><td>外皮等面積の合計 ΣA</td><td class="d">335.71 ㎡</td></tr>
+            <tr><td>外皮平均熱貫流率 U<sub>A</sub></td><td class="d">0.28 W/㎡K</td></tr>
+            <tr><td>冷房期の平均日射熱取得率 η<sub>AC</sub></td><td class="d">1.2</td></tr>
+            <tr><td>暖房期の平均日射熱取得率 η<sub>AH</sub></td><td class="d">0.9</td></tr>
+            <tr><td>基準値（2地域・等級6）</td><td class="b">U<sub>A</sub> 0.28</td></tr>
+            <tr><td>判定</td><td class="d" style="color:#0b7a3b">適合（断熱等性能等級 6）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <figcaption>UA値が基準値以下なら、その等級に「適合」。このサンプルは2地域の等級6基準ちょうどで適合。</figcaption>
+  </figure>
+
+  <p>なお、この結果を出すまでには<strong>外皮面積の「拾い」</strong>（各部位の面積計算）と<strong>部位ごとのU値計算</strong>が必要です。図面から一つひとつ面積を拾い、断熱材・サッシの仕様から熱の通しやすさを積み上げる――ここが実務でいちばん手間と経験を要する部分です。</p>
+
+  <figure>
+    <div class="sample">
+      <div class="sample-h">方位別の入力イメージ（北面・記入例）</div>
+      <div class="st-wrap">
+        <table class="st">
+          <thead><tr><th>窓番号（室）</th><th>幅[m]</th><th>高さ[m]</th><th>熱貫流率[W/㎡K]</th><th>面積[㎡]</th></tr></thead>
+          <tbody>
+            <tr><td>W1（LDK）</td><td class="b">2.00</td><td class="b">1.20</td><td class="b">1.30</td><td class="d">2.40</td></tr>
+            <tr><td>W2（主寝室）</td><td class="b">1.60</td><td class="b">1.20</td><td class="b">1.30</td><td class="d">1.92</td></tr>
+            <tr><td>W3（洋室1）</td><td class="b">1.60</td><td class="b">1.10</td><td class="b">1.30</td><td class="d">1.76</td></tr>
+            <tr><td>W4（洋室2）</td><td class="b">1.60</td><td class="b">1.10</td><td class="b">1.30</td><td class="d">1.76</td></tr>
+            <tr><td>W5（階段）</td><td class="b">0.60</td><td class="b">1.10</td><td class="b">1.30</td><td class="d">0.66</td></tr>
+          </tbody>
+          <tfoot><tr><td>北面 窓 合計</td><td class="b" colspan="3">（例）</td><td>8.50</td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+    <figcaption>方位ごとに、窓・壁の寸法を一つずつ入力して面積と熱損失を積み上げます。<strong>※ 上表は数値をすべてダミーにした記入イメージ</strong>（実在の建物ではありません／説明のため全窓を北面に置いた例）。</figcaption>
+  </figure>
+
+  <h2>② 一次エネルギー計算 ― 設備も含めた消費量を評価</h2>
+  <p>もう一方の一次エネルギー計算では、<strong>暖房・冷房・換気・給湯・照明</strong>など設備ごとのエネルギー消費を、共通のものさし「一次エネルギー量［MJ］」に換算して合計します。</p>
+  <p>ポイントはシンプルで、<span class="hl">設計値が基準値を下回れば適合</span>。省エネ性能の指標 <strong>BEI</strong>（設計値÷基準値）が 1.0 未満なら基準クリア、数値が小さいほど高性能です。</p>
+
+  <figure>
+    <div class="sample">
+      <div class="sample-h">一次エネルギー消費量 計算結果（サンプル・1戸当り）</div>
+      <div class="compare-bar"><span class="nm">設計値</span><span class="track"><i class="d" style="width:62%"></i></span><span class="am" style="color:var(--color-blue-accent)"><span class="num">110,281</span> MJ</span></div>
+      <div class="compare-bar"><span class="nm">基準値</span><span class="track"><i class="b" style="width:100%"></i></span><span class="am"><span class="num">177,303</span> MJ</span></div>
+      <p style="text-align:center;font-size:12.5px;color:#0b7a3b;font-weight:700;margin:6px 0 16px">基準より 約42%削減 ／ BEI 0.58</p>
+      <div class="st-wrap">
+        <table class="st">
+          <thead><tr><th>設備用途</th><th>設計一次[MJ]</th><th>基準一次[MJ]</th></tr></thead>
+          <tbody>
+            <tr><td>暖房設備</td><td class="d">49,756</td><td class="b">101,972</td></tr>
+            <tr><td>冷房設備</td><td class="d">948</td><td class="b">1,378</td></tr>
+            <tr><td>換気設備</td><td class="d">6,010</td><td class="b">4,678</td></tr>
+            <tr><td>給湯設備</td><td class="d">25,292</td><td class="b">30,746</td></tr>
+            <tr><td>照明設備</td><td class="d">7,034</td><td class="b">17,288</td></tr>
+            <tr><td>その他の設備</td><td class="d">21,241</td><td class="b">21,241</td></tr>
+          </tbody>
+          <tfoot><tr><td>合計</td><td>110,281</td><td>177,303</td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+    <figcaption>※ 説明用サンプル。QRコード・XML ID等の識別情報は除いています。寒冷地のため暖房の比重が大きいのが特徴。</figcaption>
+  </figure>
+
+  <p>寒冷地では暖房のエネルギーが大きな割合を占めます。だからこそ①の外皮性能（断熱）を高めておくと、暖房の一次エネルギーが下がり、②の結果も良くなる――2つの計算はこのようにつながっています。高効率給湯機（エコキュート等）や太陽光発電も設計値を下げる要素です。</p>
+
+  <h2>計算に使う「根拠資料」の例</h2>
+  <p>設備や建具の性能は、メーカーが公表する性能値を根拠として計算します。実際の申請では、次のような資料を収集・添付します（申請書類フルサポートでは、この収集・整理も代行します）。</p>
+  <ul>
+    <li><strong>窓・玄関ドア</strong>：サッシメーカーの熱貫流率・日射熱取得率がわかる性能証明／宣言書・付属書</li>
+    <li><strong>給湯・暖房設備</strong>：給湯機・ボイラーの効率がわかるカタログ・仕様書</li>
+    <li><strong>節湯・節水</strong>：節湯水栓・節水シャワーの宣言書・確認書</li>
+    <li><strong>浴室</strong>：高断熱浴槽の自己適合宣言書</li>
+    <li><strong>換気</strong>：換気設備（床下換気口等）の仕様資料</li>
+  </ul>
+  <div class="callout">
+    これらは各<b>メーカーが発行する資料</b>です。1つでも性能値の根拠が欠けると申請で差し戻しになるため、「どの製品の・どの資料が・どこに必要か」を把握して漏れなく揃えることが、実務ではとても重要になります。
+  </div>
+
+  <h2>省エネ計算書を読むときのチェックポイント</h2>
+  <ul>
+    <li><strong>地域区分は合っているか</strong>：建設地の区分（例：北海道=2地域）で基準値が決まります</li>
+    <li><strong>UA値が目標等級の基準を満たすか</strong>：等級6・7など、狙う等級の基準値と見比べる</li>
+    <li><strong>一次エネは設計値＜基準値か</strong>：BEIが1.0未満（＝適合）かを確認</li>
+    <li><strong>仕様の根拠がそろっているか</strong>：断熱材・サッシ・設備の性能値の出どころ（試験成績書等）</li>
+  </ul>
+  <div class="callout">
+    <b>非住宅（WEBPRO）は別の計算です。</b> 事務所・店舗・公共施設などの非住宅は、住宅とは異なる「標準入力法（WEBPRO）」で評価します。用途が非住宅の場合はお問い合わせ時にお知らせください。
+  </div>
+
+  <h2>参考リンク（公式の資料・計算プログラム）</h2>
+  <p>省エネ計算に使う公式の計算プログラムや、様式・計算シートの配布元です。実務でのご確認や、DIYで計算される場合の入口としてご活用ください。</p>
+  <ul class="reflinks">
+    <li><a href="https://www.mlit.go.jp/jutakukentiku/house/04.html" target="_blank" rel="noopener">国土交通省 ｜ 住宅：資料ライブラリー</a><span>省エネ基準の設計資料・マニュアル・関連告示</span></li>
+    <li><a href="https://house.lowenergy.jp/program" target="_blank" rel="noopener">エネルギー消費性能計算プログラム（住宅版）</a><span>住宅の一次エネルギー計算を行う公式Webプログラム</span></li>
+    <li><a href="https://building.lowenergy.jp/" target="_blank" rel="noopener">エネルギー消費性能計算プログラム（非住宅版・WEBPRO）</a><span>非住宅（事務所・店舗・公共物件等）の一次エネルギー計算</span></li>
+    <li><a href="https://hyoukakyoukai.ezas.jp/a/seminar/keisansheet/" target="_blank" rel="noopener">住宅性能評価・表示協会 ｜ 申請補助ツール（各種計算書）</a><span>外皮計算シート・部位U値計算シートの配布</span></li>
+  </ul>
+
+  <div class="cta">
+    <h2>省エネ計算は、外注できます。</h2>
+    <p>外皮計算＋一次エネルギー計算を、一級建築士が直接対応。全国対応・寒冷地（地域区分1・2）の実績多数。<br>「計算して終わり」ではなく、基準クリアに向けた仕様提案まで伴走します。</p>
+    <a href="/#contact" class="btn">無料で見積もりを依頼する →</a>
+  </div>
+
+  <div class="related">
+    <h3>関連情報</h3>
+    <a href="/#services">→ サービス・料金を見る</a>
+    <a href="/#cold">→ 寒冷地対応について</a>
+    <a href="/#faq">→ よくあるご質問</a>
+  </div>
+
+  <p class="disc">※ 掲載しているサンプルは、実案件の計算結果をもとに物件名・入力責任者・QRコード・XML ID・再出力コード等を除去し、名称を架空のモデルプランに置き換えた説明用の表示です。実在の物件・顧客とは関係ありません。実際の計算書の様式・数値は案件ごとに異なります。</p>
+</article>
+
+<footer>
+  <div class="fl">horo</div>
+  <p>horo省エネ住宅設計 ― 省エネ計算・長期優良住宅申請補助・WEBPRO入力代行<br>
+  全国対応・オンライン完結 ／ <a href="/">サイトトップ</a> ・ <a href="/#contact">お問い合わせ</a></p>
+  <p style="margin-top:14px;font-size:11px;color:rgba(247,248,250,0.4)">© 2026 horo省エネ住宅設計</p>
+</footer>
+
+</body>
+</html>

@@ -75,6 +75,15 @@ strong{color:var(--color-navy);font-weight:700}
 .callout{background:var(--color-card);border:1px solid var(--color-line);border-left:3px solid var(--color-blue-accent);
   border-radius:3px;padding:18px 20px;margin:22px 0;font-size:14px;color:var(--color-ink-soft);line-height:1.9}
 .callout b{color:var(--color-navy)}
+.subtitle{font-family:var(--font-display);font-weight:700;font-size:clamp(15px,2.2vw,18px);
+  color:var(--color-ink-soft);line-height:1.7;margin:-8px 0 20px;text-wrap:balance}
+.dtable-wrap{overflow-x:auto;margin:20px 0}
+table.dtable{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6}
+.dtable th,.dtable td{border:1px solid var(--color-line);padding:9px 11px;text-align:left;vertical-align:top}
+.dtable thead th{background:var(--color-bg-deep);font-weight:700;color:var(--color-navy);white-space:nowrap}
+.dtable td.c,.dtable th.c{text-align:center;font-family:var(--font-en);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dtable tbody th{background:var(--color-bg-pure);font-weight:700;color:var(--color-navy);white-space:nowrap}
+.tnote{font-size:12px;color:var(--color-ink-mute);line-height:1.75;margin-top:8px}
 
 /* figures / sample sheets */
 figure{margin:26px 0}
@@ -171,7 +180,8 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
 <article class="article">
   <div class="crumb"><a href="/">HOME</a> ／ COLUMN ／ 省エネ計算書の見方</div>
   <span class="tag">Column</span>
-  <h1>省エネ計算書の見方<br>― 外皮計算＋一次エネ計算の中身を実例で解説</h1>
+  <h1>省エネ計算書の見方</h1>
+  <p class="subtitle">外皮計算＋一次エネ計算の中身を、実例でやさしく解説します。</p>
 
   <p class="lead">2025年4月から、原則すべての新築住宅で省エネ基準への適合が義務化されました。一方で「省エネ計算書を受け取ったが、どこを見ればいいのか分からない」という工務店・設計事務所の声も少なくありません。この記事では、一級建築士が<strong>サンプルの計算書</strong>を使って、省エネ計算書に書かれている内容とその読み方を解説します。</p>
 
@@ -208,7 +218,25 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   <p>外皮計算の主役が <strong>U<sub>A</sub>値（外皮平均熱貫流率）</strong>です。建物全体から逃げる熱の量を床面積あたりで表した数値で、<span class="hl">値が小さいほど熱が逃げにくい＝高断熱</span>を意味します。</p>
   <p>あわせて、日射の入りやすさを表す <strong>η（イータ）値</strong>も算出します（冷房期 η<sub>AC</sub>・暖房期 η<sub>AH</sub>）。夏は日射を入れすぎない、冬は取り込む、というバランスを見る指標です。</p>
   <div class="callout">
-    <b>地域区分で基準が変わります。</b> 寒冷地ほど基準は厳しく、北海道など<strong>2地域の等級6基準は U<sub>A</sub>=0.28</strong>。全国で最も厳しい水準です。同じ断熱仕様でも、地域が違えば合否が変わります。
+    <b>地域区分で基準が変わります。</b> 省エネ基準では全国を<strong>地域区分1〜8</strong>に分け、寒冷地ほど厳しい基準を課しています（数値が小さいほど高断熱）。北海道は<strong>1・2地域</strong>にまたがり、全国で最も厳しい水準です。同じ断熱仕様でも、地域が違えば合否が変わります。
+  </div>
+
+  <p>地域区分は市町村ごとに定められています。代表例と、<strong>省エネ基準（断熱等性能等級4）</strong>のU<sub>A</sub>基準は次のとおりです（2025年に義務化された最低ライン）。</p>
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th class="c">地域区分</th><th>主な地域（例）</th><th class="c">省エネ基準（等級4）<br>の U<sub>A</sub>基準</th></tr></thead>
+      <tbody>
+        <tr><td class="c">1</td><td>北海道（名寄 など）</td><td class="c">0.46</td></tr>
+        <tr><td class="c">2</td><td>北海道（札幌 など）</td><td class="c">0.46</td></tr>
+        <tr><td class="c">3</td><td>岩手（盛岡）、青森・秋田 など</td><td class="c">0.56</td></tr>
+        <tr><td class="c">4</td><td>長野、宮城・山形・福島 など</td><td class="c">0.75</td></tr>
+        <tr><td class="c">5</td><td>新潟、関東・中部の山沿い など</td><td class="c">0.87</td></tr>
+        <tr><td class="c">6</td><td>東京、関東・近畿の平野部 など</td><td class="c">0.87</td></tr>
+        <tr><td class="c">7</td><td>鹿児島・宮崎、九州南部 など</td><td class="c">0.87</td></tr>
+        <tr><td class="c">8</td><td>沖縄・奄美 など</td><td class="c">―</td></tr>
+      </tbody>
+    </table>
+    <p class="tnote">※ 地域区分は建設地の市町村で決まります。U<sub>A</sub>は省エネ基準（断熱等性能等級4）の基準値［W/㎡K］で、数値が小さいほど高断熱。等級5・6・7ではさらに小さい値が求められます。8地域はU<sub>A</sub>基準がなく、日射遮蔽（η<sub>AC</sub>）で評価します。</p>
   </div>
 
   <figure>
@@ -231,6 +259,9 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   </figure>
 
   <p>なお、この結果を出すまでには<strong>外皮面積の「拾い」</strong>（各部位の面積計算）と<strong>部位ごとのU値計算</strong>が必要です。図面から一つひとつ面積を拾い、断熱材・サッシの仕様から熱の通しやすさを積み上げる――ここが実務でいちばん手間と経験を要する部分です。</p>
+  <div class="callout">
+    <b>計算方法は一つではありません。</b> 省エネ性能の評価には、部位ごとに積み上げる<strong>標準計算ルート</strong>のほか、簡易な<strong>仕様ルート・モデル住宅法</strong>などもあります。本記事は、最も一般的で数値が明確に出る標準計算ルートに沿って説明しています。
+  </div>
 
   <figure>
     <div class="sample">
@@ -283,13 +314,12 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   <p>寒冷地では暖房のエネルギーが大きな割合を占めます。だからこそ①の外皮性能（断熱）を高めておくと、暖房の一次エネルギーが下がり、②の結果も良くなる――2つの計算はこのようにつながっています。高効率給湯機（エコキュート等）や太陽光発電も設計値を下げる要素です。</p>
 
   <h2>計算に使う「根拠資料」の例</h2>
-  <p>設備や建具の性能は、メーカーが公表する性能値を根拠として計算します。実際の申請では、次のような資料を収集・添付します（申請書類フルサポートでは、この収集・整理も代行します）。</p>
+  <p>設備や建具の性能は、メーカーが公表する性能値を根拠として計算します（標準計算ルートの場合）。実際の申請では、次のような資料を収集・添付します（申請書類フルサポートでは、この収集・整理も代行します）。</p>
   <ul>
     <li><strong>窓・玄関ドア</strong>：サッシメーカーの熱貫流率・日射熱取得率がわかる性能証明／宣言書・付属書</li>
     <li><strong>給湯・暖房設備</strong>：給湯機・ボイラーの効率がわかるカタログ・仕様書</li>
     <li><strong>節湯・節水</strong>：節湯水栓・節水シャワーの宣言書・確認書</li>
     <li><strong>浴室</strong>：高断熱浴槽の自己適合宣言書</li>
-    <li><strong>換気</strong>：換気設備（床下換気口等）の仕様資料</li>
   </ul>
   <div class="callout">
     これらは各<b>メーカーが発行する資料</b>です。1つでも性能値の根拠が欠けると申請で差し戻しになるため、「どの製品の・どの資料が・どこに必要か」を把握して漏れなく揃えることが、実務ではとても重要になります。
@@ -297,9 +327,9 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
 
   <h2>省エネ計算書を読むときのチェックポイント</h2>
   <ul>
-    <li><strong>地域区分は合っているか</strong>：建設地の区分（例：北海道=2地域）で基準値が決まります</li>
+    <li><strong>地域区分は合っているか</strong>：建設地の区分（北海道なら1・2地域）で基準値が決まります</li>
     <li><strong>UA値が目標等級の基準を満たすか</strong>：等級6・7など、狙う等級の基準値と見比べる</li>
-    <li><strong>一次エネは設計値＜基準値か</strong>：BEIが1.0未満（＝適合）かを確認</li>
+    <li><strong>一次エネは設計値＜基準値か</strong>：BEIが1.0未満（＝省エネ基準に適合）かを確認。ただしZEH・長期優良住宅などは<strong>より厳しいBEI</strong>が求められるため、狙う水準に応じて確認が必要です</li>
     <li><strong>仕様の根拠がそろっているか</strong>：断熱材・サッシ・設備の性能値の出どころ（試験成績書等）</li>
   </ul>
   <div class="callout">
@@ -307,7 +337,7 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   </div>
 
   <h2>参考リンク（公式の資料・計算プログラム）</h2>
-  <p>省エネ計算に使う公式の計算プログラムや、様式・計算シートの配布元です。実務でのご確認や、DIYで計算される場合の入口としてご活用ください。</p>
+  <p>省エネ計算に使う公式の計算プログラムや、様式・計算シートの配布元です。実務でのご確認にご活用ください。</p>
   <ul class="reflinks">
     <li><a href="https://www.mlit.go.jp/jutakukentiku/house/04.html" target="_blank" rel="noopener">国土交通省 ｜ 住宅：資料ライブラリー</a><span>省エネ基準の設計資料・マニュアル・関連告示</span></li>
     <li><a href="https://house.lowenergy.jp/program" target="_blank" rel="noopener">エネルギー消費性能計算プログラム（住宅版）</a><span>住宅の一次エネルギー計算を行う公式Webプログラム</span></li>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHNBB4097Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WHNBB4097Z');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>省エネ計算のやり方｜初めての実務者向けに手順を6ステップで解説【一級建築士】</title>
+<meta name="description" content="初めて住宅の省エネ計算を行う工務店・設計事務所向けに、地域区分の確認から外皮計算・一次エネルギー計算・判定までの手順を6ステップで解説。必要な資料・つまずきやすい点・工数の目安まで一級建築士がまとめました。">
+<meta name="keywords" content="省エネ計算 やり方,省エネ計算 手順,外皮計算 やり方,WEBプログラム 使い方,省エネ計算 初めて,省エネ計算 外注,一次エネルギー計算">
+<meta property="og:title" content="省エネ計算のやり方｜初めての実務者向けに手順を6ステップで解説">
+<meta property="og:description" content="地域区分の確認から外皮計算・一次エネルギー計算・判定までの流れを6ステップで解説。必要な資料と工数の目安つき。">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://horo-shoene.com/column/shoene-keisan-tejun.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%230e1f3a'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='42' font-weight='900' fill='%23f7f8fa' text-anchor='middle' letter-spacing='-2'%3Eh%3C/text%3E%3Crect x='46' y='46' width='6' height='6' fill='%236ea3ff'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"省エネ計算のやり方｜初めての実務者向けに手順を6ステップで解説","description":"住宅の省エネ計算の手順を、地域区分の確認から外皮計算・一次エネルギー計算・判定まで6ステップで解説。","author":{"@type":"Organization","name":"horo省エネ住宅設計"},"publisher":{"@type":"Organization","name":"horo省エネ住宅設計"},"mainEntityOfPage":"https://horo-shoene.com/column/shoene-keisan-tejun.html"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --color-bg:#eef0f3; --color-bg-pure:#f7f8fa; --color-bg-deep:#e1e4ea;
+  --color-navy:#0e1f3a; --color-navy-deep:#08152a; --color-blue-accent:#1d4ed8;
+  --color-blue-light:#6ea3ff; --color-ink:#1a2332; --color-ink-soft:#4a5568;
+  --color-ink-mute:#8b95a3; --color-line:#c8cdd5; --color-card:#ffffff;
+  --font-display:'Noto Sans JP',sans-serif; --font-sans:'Noto Sans JP',sans-serif;
+  --font-en:'Inter',sans-serif; --max:760px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);color:var(--color-ink);background:var(--color-bg);
+  line-height:1.95;font-feature-settings:"palt";-webkit-font-smoothing:antialiased}
+a{color:var(--color-blue-accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(238,240,243,0.92);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--color-line)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo .horo{font-family:var(--font-en);font-weight:800;font-size:22px;color:var(--color-navy);letter-spacing:-0.03em}
+.nav-logo .divider{width:1px;height:18px;background:var(--color-blue-accent)}
+.nav-logo .sub{font-size:11px;color:var(--color-ink-soft);letter-spacing:0.1em}
+.nav-cta{font-size:12px;padding:9px 18px;background:var(--color-navy);color:var(--color-bg-pure);border-radius:2px}
+.nav-cta:hover{background:var(--color-blue-accent);text-decoration:none}
+
+.article{max-width:var(--max);margin:0 auto;padding:48px 24px 40px}
+.crumb{font-size:12px;color:var(--color-ink-mute);margin-bottom:24px;font-family:var(--font-en)}
+.crumb a{color:var(--color-ink-mute)}
+.tag{display:inline-block;font-family:var(--font-en);font-size:11px;letter-spacing:0.2em;
+  color:var(--color-blue-accent);font-weight:700;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:var(--font-display);font-weight:900;font-size:clamp(24px,4vw,34px);
+  line-height:1.5;color:var(--color-navy);letter-spacing:0.01em;text-wrap:balance;margin-bottom:12px}
+.subtitle{font-family:var(--font-display);font-weight:700;font-size:clamp(15px,2.2vw,18px);
+  color:var(--color-ink-soft);line-height:1.7;margin:0 0 20px;text-wrap:balance}
+.lead{font-size:15px;line-height:2.05;color:var(--color-ink-soft);margin-bottom:8px}
+
+h2{font-family:var(--font-display);font-weight:700;font-size:clamp(19px,3vw,24px);
+  color:var(--color-navy);line-height:1.5;margin:52px 0 18px;padding-top:20px;
+  border-top:1px solid var(--color-line)}
+h3{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--color-navy);margin:28px 0 10px}
+.article p{font-size:15px;margin-bottom:16px}
+.article ul{margin:0 0 18px 0;padding-left:0;list-style:none}
+.article ul li{font-size:15px;padding-left:22px;position:relative;margin-bottom:9px;line-height:1.85}
+.article ul li::before{content:'';position:absolute;left:2px;top:13px;width:6px;height:6px;
+  background:var(--color-blue-accent);border-radius:50%}
+strong{color:var(--color-navy);font-weight:700}
+.hl{background:linear-gradient(transparent 62%,#cfe0ff 62%);font-weight:700}
+
+.callout{background:var(--color-card);border:1px solid var(--color-line);border-left:3px solid var(--color-blue-accent);
+  border-radius:3px;padding:18px 20px;margin:22px 0;font-size:14px;color:var(--color-ink-soft);line-height:1.9}
+.callout b{color:var(--color-navy)}
+
+/* flow overview */
+.flowbox{background:var(--color-card);border:1px solid var(--color-line);border-radius:8px;padding:22px;margin:26px 0}
+.flowbox h3{margin:0 0 14px;font-size:14px;text-align:center}
+.flowrow{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--color-line)}
+.flowrow:last-child{border-bottom:none}
+.fnum{flex-shrink:0;width:62px;font-family:var(--font-en);font-weight:800;font-size:11px;
+  color:#fff;background:var(--color-navy);border-radius:3px;text-align:center;padding:5px 0;letter-spacing:0.05em}
+.fnum.s0{background:var(--color-ink-mute)}
+.ftext{flex:1;font-size:13.5px;line-height:1.7}
+.ftext b{color:var(--color-navy)}
+.fout{flex-shrink:0;font-size:11.5px;color:var(--color-blue-accent);font-weight:700;text-align:right;min-width:96px}
+
+/* step blocks */
+.step{background:var(--color-card);border:1px solid var(--color-line);border-radius:8px;padding:24px;margin:24px 0}
+.step-h{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.step-n{font-family:var(--font-en);font-weight:800;font-size:11px;color:#fff;background:var(--color-blue-accent);
+  padding:5px 12px;border-radius:20px;letter-spacing:0.08em;white-space:nowrap}
+.step-t{font-family:var(--font-display);font-weight:700;font-size:17px;color:var(--color-navy);line-height:1.5}
+.step p{font-size:14.5px;margin-bottom:12px}
+.step ul li{font-size:14px}
+.deliver{display:inline-block;font-size:12px;background:var(--color-bg-deep);color:var(--color-ink-soft);
+  padding:5px 12px;border-radius:3px;margin-top:6px}
+.deliver b{color:var(--color-navy)}
+
+.dtable-wrap{overflow-x:auto;margin:20px 0}
+table.dtable{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6}
+.dtable th,.dtable td{border:1px solid var(--color-line);padding:9px 11px;text-align:left;vertical-align:top}
+.dtable thead th{background:var(--color-bg-deep);font-weight:700;color:var(--color-navy);white-space:nowrap}
+.dtable td.c,.dtable th.c{text-align:center;font-family:var(--font-en);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dtable tbody th{background:var(--color-bg-pure);font-weight:700;color:var(--color-navy);white-space:nowrap}
+.tnote{font-size:12px;color:var(--color-ink-mute);line-height:1.75;margin-top:8px}
+
+.cta{background:var(--color-navy);border-radius:8px;padding:34px 30px;margin:48px 0 20px;text-align:center;color:#f7f8fa}
+.cta h2{border:none;color:#fff;margin:0 0 10px;padding:0}
+.cta p{color:rgba(247,248,250,0.82);font-size:14px;margin-bottom:22px}
+.cta a.btn{display:inline-block;background:var(--color-blue-accent);color:#fff;font-weight:700;
+  padding:15px 34px;border-radius:3px;font-size:14px;letter-spacing:0.04em}
+.cta a.btn:hover{background:#2a5ae6;text-decoration:none}
+
+.related{margin-top:28px;padding-top:20px;border-top:1px solid var(--color-line)}
+.related h3{margin-top:0}
+.related a{display:inline-block;margin-right:20px;font-size:14px;font-weight:600}
+
+.disc{font-size:11.5px;color:var(--color-ink-mute);line-height:1.8;margin-top:26px;
+  padding:14px 16px;background:var(--color-bg-deep);border-radius:4px}
+
+footer{background:var(--color-navy-deep);color:rgba(247,248,250,0.6);padding:36px 24px;margin-top:40px;
+  text-align:center;font-size:12px}
+footer a{color:rgba(247,248,250,0.7)}
+footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8fa;letter-spacing:-0.02em;margin-bottom:8px}
+
+@media(max-width:560px){
+  .flowrow{flex-wrap:wrap}
+  .fout{text-align:left;min-width:0;width:100%;padding-left:72px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="horo">horo</span><span class="divider"></span><span class="sub">省エネ住宅設計</span>
+    </a>
+    <a href="/#contact" class="nav-cta">お問い合わせ</a>
+  </div>
+</nav>
+
+<article class="article">
+  <div class="crumb"><a href="/">HOME</a> ／ <a href="/column/">COLUMN</a> ／ 省エネ計算のやり方</div>
+  <span class="tag">Column</span>
+  <h1>省エネ計算のやり方</h1>
+  <p class="subtitle">初めての実務者向けに、手順を6ステップで解説します。</p>
+
+  <p class="lead">2025年4月から原則すべての新築住宅で省エネ基準への適合が義務化され、「初めて自社で省エネ計算に向き合うことになった」という工務店・設計事務所が急増しています。この記事では、<strong>何を・どの順番で進めるのか</strong>という全体像を、一級建築士が6つのステップに分けて整理しました。細かな計算手法ではなく、<span class="hl">進め方と必要な準備、そして工数の目安</span>がつかめることを目的としています。</p>
+
+  <div class="flowbox">
+    <h3>省エネ計算の全体フロー</h3>
+    <div class="flowrow"><span class="fnum s0">STEP 0</span><span class="ftext"><b>前提を決める</b>／地域区分の確認・評価ルートの選択</span><span class="fout">区分・ルート</span></div>
+    <div class="flowrow"><span class="fnum">STEP 1</span><span class="ftext"><b>資料を揃える</b>／図面・断熱仕様・設備仕様・性能証明</span><span class="fout">資料一式</span></div>
+    <div class="flowrow"><span class="fnum">STEP 2</span><span class="ftext"><b>外皮面積を拾う</b>／部位別・方位別に集計</span><span class="fout">求積表</span></div>
+    <div class="flowrow"><span class="fnum">STEP 3</span><span class="ftext"><b>部位U値を計算</b>／断熱仕様から熱の通しやすさを算出</span><span class="fout">部位U値</span></div>
+    <div class="flowrow"><span class="fnum">STEP 4</span><span class="ftext"><b>U<sub>A</sub>値・η<sub>AC</sub>値を算出</b>／基準値と照合</span><span class="fout">外皮計算書</span></div>
+    <div class="flowrow"><span class="fnum">STEP 5</span><span class="ftext"><b>一次エネルギー計算</b>／WEBプログラムに設備を入力</span><span class="fout">計算結果</span></div>
+    <div class="flowrow"><span class="fnum">STEP 6</span><span class="ftext"><b>判定・帳票出力</b>／BEIを確認し提出書類を整える</span><span class="fout">提出書類</span></div>
+  </div>
+
+  <h2>STEP 0｜前提を決める（地域区分と評価ルート）</h2>
+  <div class="step">
+    <div class="step-h"><span class="step-n">STEP 0</span><span class="step-t">計算を始める前に決めておくこと</span></div>
+    <p>最初に決めるのは<strong>「どこに建てるか（地域区分）」</strong>と<strong>「どの方法で評価するか（評価ルート）」</strong>の2つです。ここを取り違えると、後工程がすべてやり直しになります。</p>
+    <h3>① 地域区分を確認する</h3>
+    <p>省エネ基準では全国を<strong>地域区分1〜8</strong>に分け、寒冷地ほど厳しい基準を課しています。区分は<strong>市町村単位</strong>で定められており、同じ県内でも分かれます（例：福島県は2〜5地域、千葉県は5〜7地域）。必ず建設地の市町村で確認してください。</p>
+    <h3>② 評価ルートを選ぶ</h3>
+    <p>住宅の評価方法には次の3つのルートがあります。</p>
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead><tr><th class="c">ルート</th><th>外皮性能</th><th>一次エネ性能</th><th>特徴</th></tr></thead>
+        <tbody>
+          <tr><td class="c">①</td><td>標準計算ルート</td><td>標準計算ルート</td><td>部位ごとに積み上げる精緻な方法。数値が明確に出る</td></tr>
+          <tr><td class="c">②</td><td>仕様ルート</td><td>仕様ルート</td><td>仕様で判断する方法。省エネ適合性判定は不要</td></tr>
+          <tr><td class="c">③</td><td>仕様ルート</td><td>標準計算ルート</td><td>2023年10月から。外皮面積を図面から計算する必要がない</td></tr>
+        </tbody>
+      </table>
+      <p class="tnote">※ ①と③は省エネ適合性判定が必要です。本記事は、数値が明確に出て応用も利く<strong>①標準計算ルート</strong>を前提に解説します。</p>
+    </div>
+    <span class="deliver"><b>成果物：</b>地域区分の決定・評価ルートの決定</span>
+  </div>
+
+  <h2>STEP 1｜必要な資料を揃える</h2>
+  <div class="step">
+    <div class="step-h"><span class="step-n">STEP 1</span><span class="step-t">計算に入る前の資料集め（ここが一番時間を食う）</span></div>
+    <p>省エネ計算は<strong>資料が揃っているかどうかで所要時間が何倍も変わります</strong>。着手前に次を確認してください。</p>
+    <ul>
+      <li><strong>図面</strong>：平面図・立面図・断面図・矩計図（寸法が確定していること）</li>
+      <li><strong>建具表</strong>：窓・玄関ドアの品番、寸法、ガラス仕様、付属部材（シャッター等）</li>
+      <li><strong>断熱仕様</strong>：部位ごとの断熱材の種類・厚さ、下地・構造材の構成</li>
+      <li><strong>設備仕様</strong>：暖冷房・換気・給湯・照明の機器品番と効率</li>
+      <li><strong>メーカーの性能証明</strong>：サッシの熱貫流率・日射熱取得率、給湯機の効率、節湯水栓・高断熱浴槽の証明書 など</li>
+    </ul>
+    <div class="callout">
+      <b>差し戻しの多くはここが原因です。</b> 1つでも性能値の根拠資料が欠けると申請で止まります。「どの製品の・どの資料が・どこに必要か」を最初に洗い出しておくのが結果的に最短です。
+    </div>
+    <span class="deliver"><b>成果物：</b>図面・仕様・性能証明の資料一式</span>
+  </div>
+
+  <h2>STEP 2｜外皮面積を拾う</h2>
+  <div class="step">
+    <div class="step-h"><span class="step-n">STEP 2</span><span class="step-t">部位別・方位別に面積を集計する</span></div>
+    <p>図面から、外気に接するすべての部位の面積を拾います。対象は<strong>屋根・天井／外壁／床・外気床／土間・基礎／窓・ドア</strong>です。</p>
+    <p>ポイントは<strong>「方位別に分けて拾う」</strong>こと。窓や外壁は方位によって日射の入り方が変わるため、東西南北などの方位ごとに集計する必要があります。方位を意識せずに面積だけ拾ってしまうと、後で全部やり直しになります。</p>
+    <span class="deliver"><b>成果物：</b>部位別・方位別の求積表</span>
+  </div>
+
+  <h2>STEP 3｜部位U値を計算する</h2>
+  <div class="step">
+    <div class="step-h"><span class="step-n">STEP 3</span><span class="step-t">断熱仕様から「熱の通しやすさ」を求める</span></div>
+    <p>外壁・天井・床などの部位ごとに、断熱材や下地材の<strong>熱伝導率λと厚さd</strong>から熱の伝わりにくさを積み上げ、部位の<strong>熱貫流率U値</strong>を算出します。</p>
+    <p>木造では柱や間柱などの<strong>熱橋（ヒートブリッジ）</strong>が必ず存在するため、一般部と熱橋部を面積比で加重平均する<strong>面積比率法</strong>で求めるのが一般的です。断熱材が同じでも下地構成が違えばU値は変わります。</p>
+    <span class="deliver"><b>成果物：</b>部位ごとのU値（W/(㎡・K)）</span>
+  </div>
+
+  <h2>STEP 4｜U<sub>A</sub>値・η<sub>AC</sub>値を算出する</h2>
+  <div class="step">
+    <div class="step-h"><span class="step-n">STEP 4</span><span class="step-t">建物全体の外皮性能を出し、基準値と照合する</span></div>
+    <p>STEP 2の面積とSTEP 3のU値を外皮計算シートに入力すると、建物全体の<strong>U<sub>A</sub>値（外皮平均熱貫流率）</strong>と<strong>η<sub>AC</sub>値（冷房期の平均日射熱取得率）</strong>が算出されます。</p>
+    <div class="callout">
+      <b>U<sub>A</sub> ＝ 外皮熱損失量 q ［W/K］ ÷ 外皮面積の合計 ΣA ［㎡］</b><br>
+      ※ 床面積ではなく「外皮面積」で割ります。値が小さいほど高断熱。
+    </div>
+    <p>算出したU<sub>A</sub>値を、地域区分ごとの基準値と照合します。省エネ基準（外皮基準）のU<sub>A</sub>基準値は、この値<strong>以下</strong>であることが求められます。</p>
+    <div class="dtable-wrap">
+      <table class="dtable">
+        <thead><tr><th class="c">地域区分</th><th class="c">1</th><th class="c">2</th><th class="c">3</th><th class="c">4</th><th class="c">5</th><th class="c">6</th><th class="c">7</th><th class="c">8</th></tr></thead>
+        <tbody>
+          <tr><th>省エネ基準 U<sub>A</sub></th><td class="c">0.46</td><td class="c">0.46</td><td class="c">0.56</td><td class="c">0.75</td><td class="c">0.87</td><td class="c">0.87</td><td class="c">0.87</td><td class="c">―</td></tr>
+          <tr><th>誘導基準 U<sub>A</sub></th><td class="c">0.40</td><td class="c">0.40</td><td class="c">0.50</td><td class="c">0.60</td><td class="c">0.60</td><td class="c">0.60</td><td class="c">0.60</td><td class="c">―</td></tr>
+        </tbody>
+      </table>
+      <p class="tnote">※ 単位はW/(㎡・K)。8地域はU<sub>A</sub>の基準がなく、冷房期の日射熱取得率（η<sub>AC</sub>）で評価します。誘導基準はZEH水準に相当します。</p>
+    </div>
+    <p>基準を満たさない場合は、断熱材の厚み・サッシのグレード・日射遮蔽などの<strong>仕様変更を検討して再計算</strong>します。ここが設計としての腕の見せどころです。</p>
+    <span class="deliver"><b>成果物：</b>外皮計算書（U<sub>A</sub>値・η<sub>AC</sub>値と判定）</span>
+  </div>
+
+  <h2>STEP 5｜一次エネルギー消費量を計算する</h2>
+  <div class="step">
+    <div class="step-h"><span class="step-n">STEP 5</span><span class="step-t">設備も含めた消費エネルギー量を評価する</span></div>
+    <p>STEP 4で得た外皮性能に加え、<strong>暖房・冷房・換気・給湯・照明</strong>などの設備仕様を、国が提供する<strong>エネルギー消費性能計算プログラム（住宅版）</strong>に入力します。太陽光発電やコージェネレーションを設置する場合はそれも入力します。</p>
+    <p>入力が終わると、設備用途ごとの<strong>設計一次エネルギー消費量</strong>と<strong>基準一次エネルギー消費量</strong>が算出されます。</p>
+    <span class="deliver"><b>成果物：</b>一次エネルギー消費量計算結果</span>
+  </div>
+
+  <h2>STEP 6｜判定して帳票を出力する</h2>
+  <div class="step">
+    <div class="step-h"><span class="step-n">STEP 6</span><span class="step-t">BEIを確認し、提出書類を整える</span></div>
+    <p>省エネ性能の指標<strong>BEI（設計値÷基準値）</strong>を確認します。</p>
+    <ul>
+      <li><strong>省エネ基準</strong>：BEI <strong>1.0以下</strong>で適合</li>
+      <li><strong>誘導基準・ZEH水準・長期優良住宅など</strong>：BEI <strong>0.8以下</strong>が求められます</li>
+    </ul>
+    <p>適合を確認したら計算書を出力し、外皮計算書・一次エネルギー計算結果・各種性能証明をまとめて<strong>省エネ適合性判定</strong>に提出します（評価ルート①・③の場合）。</p>
+    <span class="deliver"><b>成果物：</b>提出書類一式</span>
+  </div>
+
+  <h2>初めての人がつまずきやすいポイント</h2>
+  <ul>
+    <li><strong>地域区分の取り違え</strong>：県名で判断してしまう。区分は市町村単位です</li>
+    <li><strong>方位別に拾っていない</strong>：面積だけ集計して後戻りになる、最も多い手戻り</li>
+    <li><strong>熱橋の扱い</strong>：一般部だけで計算してしまい、実際よりU値が良く出てしまう</li>
+    <li><strong>土間・基礎の入力</strong>：新旧の計算法があり、選択を誤ると値が変わる</li>
+    <li><strong>性能証明の不足</strong>：品番は分かるが根拠資料が手元になく、申請で差し戻される</li>
+    <li><strong>仕様変更後の再計算漏れ</strong>：サッシや断熱材を変更したのに計算書が古いまま</li>
+  </ul>
+
+  <h2>工数の目安（外注を判断する材料に）</h2>
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th>状況</th><th class="c">所要期間の目安</th><th>内訳</th></tr></thead>
+      <tbody>
+        <tr><th>初めて／資料が未整備</th><td class="c">約7日</td><td>資料集め・図面の整備・仕様確定を含む。制度や入力方法の習得時間も必要</td></tr>
+        <tr><th>資料が揃っている</th><td class="c">1〜2日</td><td>面積の拾い・U値計算・入力・帳票出力に集中できる状態</td></tr>
+      </tbody>
+    </table>
+    <p class="tnote">※ 戸建住宅1棟あたりの目安です。建物の複雑さ・仕様変更の回数によって変動します。</p>
+  </div>
+  <p>ポイントは、<span class="hl">時間の大半が「計算そのもの」ではなく「資料集めと図面の整備」に費やされる</span>ことです。逆に言えば、資料さえ揃っていれば工程は一気に短縮できます。</p>
+
+  <h2>どこまで自社でやり、どこを外注するか</h2>
+  <p>すべてを自社で抱える必要はありません。実務では次の3パターンに分かれます。</p>
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th>パターン</th><th>自社で行うこと</th><th>向いているケース</th></tr></thead>
+      <tbody>
+        <tr><th>全部を外注</th><td>図面・仕様の共有のみ</td><td>担当者を置けない／件数が読めない／急ぎの案件</td></tr>
+        <tr><th>一部を外注</th><td>設備の仕様決定など。外皮計算や面積の拾いを外注</td><td>手間のかかる部分だけ切り出したい</td></tr>
+        <tr><th>質疑のみ相談</th><td>計算は自社。判断に迷う点だけ確認</td><td>基本は内製化したいが、確認先が欲しい</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>特に<strong>「STEP 2の面積の拾い」と「STEP 3の部位U値計算」</strong>は手間と経験を要する一方、切り出しやすい工程です。ここだけ外注して、設計判断は自社に残すという分担も有効です。</p>
+
+  <div class="cta">
+    <h2>省エネ計算、まるごと外注できます。</h2>
+    <p>外皮計算＋一次エネルギー計算を、一級建築士が直接対応。全国対応・寒冷地（地域区分1・2）の実績多数。<br>「計算して終わり」ではなく、基準クリアに向けた仕様提案まで伴走します。質疑のみのご相談も歓迎です。</p>
+    <a href="/#contact" class="btn">無料で見積もりを依頼する →</a>
+  </div>
+
+  <div class="related">
+    <h3>関連情報</h3>
+    <a href="/column/shoene-keisan-mikata.html">→ 省エネ計算書の見方（実例つき）</a>
+    <a href="/#services">→ サービス・料金を見る</a>
+    <a href="/#faq">→ よくあるご質問</a>
+  </div>
+
+  <p class="disc"><strong>【出典】</strong>本記事の基準値・評価方法に関する記述は、国土交通省補助事業「<strong>住宅の省エネルギー基準の解説 評価方法2024（戸建住宅編：木造、鉄筋コンクリート造）</strong>」（表1.2.1／表1.2.2／表6.3.1／表7.1.1／図1.2.7／図6.3.1）に基づいています。地域の区分は建築研究所の公開情報（<a href="https://www.kenken.go.jp/becc/house.html" target="_blank" rel="noopener">https://www.kenken.go.jp/becc/house.html</a>）もあわせてご参照ください。制度・基準は改正される場合がありますので、実際の設計・申請時は最新の告示・公式資料をご確認ください。工数の目安は当方の実務経験に基づく参考値です。</p>
+</article>
+
+<footer>
+  <div class="fl">horo</div>
+  <p>horo省エネ住宅設計 ― 省エネ計算・長期優良住宅申請補助・WEBPRO入力代行<br>
+  全国対応・オンライン完結 ／ <a href="/">サイトトップ</a> ・ <a href="/column/">コラム一覧</a> ・ <a href="/#contact">お問い合わせ</a></p>
+  <p style="margin-top:14px;font-size:11px;color:rgba(247,248,250,0.4)">© 2026 horo省エネ住宅設計</p>
+</footer>
+
+</body>
+</html>

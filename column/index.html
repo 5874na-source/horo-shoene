@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHNBB4097Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WHNBB4097Z');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>コラム｜省エネ計算の実務解説｜horo省エネ住宅設計</title>
+<meta name="description" content="住宅の省エネ計算に関する実務解説コラム。省エネ計算書の見方、計算の手順、外皮計算（UA値）や一次エネルギー計算の考え方を、一級建築士が工務店・設計事務所向けに解説します。">
+<meta name="keywords" content="省エネ計算 コラム,省エネ計算書 見方,省エネ計算 やり方,外皮計算,一次エネルギー計算,省エネ計算 外注">
+<meta property="og:title" content="コラム｜省エネ計算の実務解説｜horo省エネ住宅設計">
+<meta property="og:description" content="省エネ計算書の見方や計算の手順を、一級建築士が工務店・設計事務所向けに解説するコラム一覧。">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://horo-shoene.com/column/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%230e1f3a'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='42' font-weight='900' fill='%23f7f8fa' text-anchor='middle' letter-spacing='-2'%3Eh%3C/text%3E%3Crect x='46' y='46' width='6' height='6' fill='%236ea3ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --color-bg:#eef0f3; --color-bg-pure:#f7f8fa; --color-bg-deep:#e1e4ea;
+  --color-navy:#0e1f3a; --color-navy-deep:#08152a; --color-blue-accent:#1d4ed8;
+  --color-blue-light:#6ea3ff; --color-ink:#1a2332; --color-ink-soft:#4a5568;
+  --color-ink-mute:#8b95a3; --color-line:#c8cdd5; --color-card:#ffffff;
+  --font-display:'Noto Sans JP',sans-serif; --font-sans:'Noto Sans JP',sans-serif;
+  --font-en:'Inter',sans-serif; --max:880px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);color:var(--color-ink);background:var(--color-bg);
+  line-height:1.9;font-feature-settings:"palt";-webkit-font-smoothing:antialiased}
+a{color:var(--color-blue-accent);text-decoration:none}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(238,240,243,0.92);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--color-line)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo .horo{font-family:var(--font-en);font-weight:800;font-size:22px;color:var(--color-navy);letter-spacing:-0.03em}
+.nav-logo .divider{width:1px;height:18px;background:var(--color-blue-accent)}
+.nav-logo .sub{font-size:11px;color:var(--color-ink-soft);letter-spacing:0.1em}
+.nav-cta{font-size:12px;padding:9px 18px;background:var(--color-navy);color:var(--color-bg-pure);border-radius:2px}
+.nav-cta:hover{background:var(--color-blue-accent);text-decoration:none}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:48px 24px 40px}
+.crumb{font-size:12px;color:var(--color-ink-mute);margin-bottom:24px;font-family:var(--font-en)}
+.crumb a{color:var(--color-ink-mute)}
+.tag{display:inline-block;font-family:var(--font-en);font-size:11px;letter-spacing:0.2em;
+  color:var(--color-blue-accent);font-weight:700;text-transform:uppercase;margin-bottom:14px}
+h1{font-family:var(--font-display);font-weight:900;font-size:clamp(26px,4vw,36px);
+  line-height:1.45;color:var(--color-navy);margin-bottom:14px;text-wrap:balance}
+.lead{font-size:15px;line-height:2.05;color:var(--color-ink-soft);max-width:680px;margin-bottom:40px}
+
+.list{display:grid;gap:20px}
+.card{background:var(--color-card);border:1px solid var(--color-line);border-radius:8px;
+  padding:26px 28px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+  position:relative;overflow:hidden;display:block}
+.card::before{content:'';position:absolute;top:0;left:0;width:4px;height:0;
+  background:var(--color-blue-accent);transition:height .35s ease}
+.card:hover::before{height:100%}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(14,31,58,.09);
+  border-color:var(--color-navy);text-decoration:none}
+.card-meta{display:flex;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.badge{font-size:11px;font-weight:700;padding:3px 11px;border-radius:20px;
+  background:#e7edfb;color:var(--color-blue-accent);letter-spacing:.02em}
+.date{font-family:var(--font-en);font-size:11.5px;color:var(--color-ink-mute);letter-spacing:.06em}
+.card h2{font-family:var(--font-display);font-weight:700;font-size:clamp(17px,2.5vw,21px);
+  color:var(--color-navy);line-height:1.55;margin-bottom:10px}
+.card p{font-size:14px;color:var(--color-ink-soft);line-height:1.9;margin-bottom:14px}
+.card .more{font-size:13.5px;font-weight:700;color:var(--color-blue-accent)}
+.card .more::after{content:' →'}
+
+.cta{background:var(--color-navy);border-radius:8px;padding:34px 30px;margin:48px 0 0;text-align:center;color:#f7f8fa}
+.cta h2{font-family:var(--font-display);font-weight:700;font-size:clamp(18px,3vw,23px);color:#fff;margin-bottom:10px}
+.cta p{color:rgba(247,248,250,.82);font-size:14px;margin-bottom:22px}
+.cta a.btn{display:inline-block;background:var(--color-blue-accent);color:#fff;font-weight:700;
+  padding:15px 34px;border-radius:3px;font-size:14px;letter-spacing:.04em}
+.cta a.btn:hover{background:#2a5ae6;text-decoration:none}
+
+footer{background:var(--color-navy-deep);color:rgba(247,248,250,.6);padding:36px 24px;margin-top:40px;
+  text-align:center;font-size:12px}
+footer a{color:rgba(247,248,250,.7)}
+footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8fa;letter-spacing:-.02em;margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="horo">horo</span><span class="divider"></span><span class="sub">省エネ住宅設計</span>
+    </a>
+    <a href="/#contact" class="nav-cta">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="crumb"><a href="/">HOME</a> ／ COLUMN</div>
+  <span class="tag">Column</span>
+  <h1>省エネ計算の実務コラム</h1>
+  <p class="lead">住宅の省エネ計算に関する実務的な情報を、一級建築士が工務店・設計事務所の方向けにまとめています。計算書の読み方から、実際の進め方まで。日々の業務のご参考にしてください。</p>
+
+  <div class="list">
+
+    <a class="card" href="/column/shoene-keisan-tejun.html">
+      <div class="card-meta">
+        <span class="badge">計算の進め方</span>
+        <span class="date">2026.07.22</span>
+      </div>
+      <h2>省エネ計算のやり方｜初めての実務者向けに手順を6ステップで解説</h2>
+      <p>2025年の義務化で初めて省エネ計算に向き合う方向けに、地域区分の確認から外皮計算・一次エネルギー計算・判定までの全体像を6ステップで整理。必要な資料、つまずきやすい点、工数の目安（初めてなら約7日／資料が揃っていれば1〜2日）まで解説します。</p>
+      <span class="more">記事を読む</span>
+    </a>
+
+    <a class="card" href="/column/shoene-keisan-mikata.html">
+      <div class="card-meta">
+        <span class="badge">計算書の読み方</span>
+        <span class="date">2026.07.22</span>
+      </div>
+      <h2>省エネ計算書の見方｜外皮計算＋一次エネ計算の中身を実例で解説</h2>
+      <p>受け取った省エネ計算書のどこを見ればよいのか。外皮計算（U<sub>A</sub>値）と一次エネルギー計算の中身を、サンプルの計算書を使って解説します。地域区分ごとの基準値一覧、サンプル計算書（全12ページ・PDF）のダウンロードつき。</p>
+      <span class="more">記事を読む</span>
+    </a>
+
+  </div>
+
+  <div class="cta">
+    <h2>省エネ計算は、外注できます。</h2>
+    <p>外皮計算＋一次エネルギー計算を、一級建築士が直接対応。全国対応・寒冷地（地域区分1・2）の実績多数。<br>お急ぎ対応可・質疑のみのご相談も歓迎です。</p>
+    <a href="/#contact" class="btn">無料で見積もりを依頼する →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="fl">horo</div>
+  <p>horo省エネ住宅設計 ― 省エネ計算・長期優良住宅申請補助・WEBPRO入力代行<br>
+  全国対応・オンライン完結 ／ <a href="/">サイトトップ</a> ・ <a href="/#contact">お問い合わせ</a></p>
+  <p style="margin-top:14px;font-size:11px;color:rgba(247,248,250,.4)">© 2026 horo省エネ住宅設計</p>
+</footer>
+
+</body>
+</html>

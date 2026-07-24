@@ -191,7 +191,7 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
       <div class="kpis">
         <div class="kpi"><div class="l">外皮平均熱貫流率 U<sub>A</sub></div><div class="v">0.28<small>W/㎡K</small></div><div class="n">基準0.28に適合</div><span class="badge">断熱等級6</span></div>
         <div class="kpi"><div class="l">一次エネルギー（設計値）</div><div class="v">110,281<small>MJ</small></div><div class="n">基準177,303MJ 未満</div><span class="badge">基準比 約42%減</span></div>
-        <div class="kpi"><div class="l">BEI（一次エネの指標）</div><div class="v">0.58</div><div class="n">1.0未満で適合</div><span class="badge">省エネ性 良好</span></div>
+        <div class="kpi"><div class="l">BEI（一次エネの指標）</div><div class="v">0.58</div><div class="n">1.0以下で適合</div><span class="badge">省エネ性 良好</span></div>
       </div>
     </div>
     <figcaption>※ 説明用サンプル。物件名・寸法・識別情報を除いた架空モデルの表示です。</figcaption>
@@ -215,7 +215,11 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   <p>この2つが揃って、はじめて省エネ基準に適合しているかを判定できます。計算書もこの2部構成になっているので、まずは「今どちらを見ているか」を意識すると、ぐっと読みやすくなります。</p>
 
   <h2>① 外皮計算 ―「UA値」で断熱性能を表す</h2>
-  <p>外皮計算の主役が <strong>U<sub>A</sub>値（外皮平均熱貫流率）</strong>です。建物全体から逃げる熱の量を床面積あたりで表した数値で、<span class="hl">値が小さいほど熱が逃げにくい＝高断熱</span>を意味します。</p>
+  <p>外皮計算の主役が <strong>U<sub>A</sub>値（外皮平均熱貫流率）</strong>です。屋根・天井・外壁・床・開口部などを通って外部へ逃げる熱量（外皮熱損失量）を、<strong>外皮面積の合計で割った</strong>値で、<span class="hl">値が小さいほど熱が逃げにくい＝高断熱</span>を意味します。</p>
+  <div class="callout" style="border-left-color:var(--color-ink-mute)">
+    <b>U<sub>A</sub> ＝ 外皮熱損失量 q ［W/K］ ÷ 外皮面積の合計 ΣA ［㎡］</b><br>
+    ※ 床面積ではなく「外皮面積」で割る点に注意。単位は W/(㎡・K)。
+  </div>
   <p>あわせて、日射の入りやすさを表す <strong>η（イータ）値</strong>も算出します（冷房期 η<sub>AC</sub>・暖房期 η<sub>AH</sub>）。夏は日射を入れすぎない、冬は取り込む、というバランスを見る指標です。</p>
   <div class="callout">
     <b>地域区分で基準が変わります。</b> 省エネ基準では全国を<strong>地域区分1〜8</strong>に分け、寒冷地ほど厳しい基準を課しています（数値が小さいほど高断熱）。北海道は<strong>1・2地域</strong>にまたがり、全国で最も厳しい水準です。同じ断熱仕様でも、地域が違えば合否が変わります。
@@ -226,17 +230,20 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
     <table class="dtable">
       <thead><tr><th class="c">地域区分</th><th>主な地域（例）</th><th class="c">省エネ基準（等級4）<br>の U<sub>A</sub>基準</th></tr></thead>
       <tbody>
-        <tr><td class="c">1</td><td>北海道（名寄 など）</td><td class="c">0.46</td></tr>
-        <tr><td class="c">2</td><td>北海道（札幌 など）</td><td class="c">0.46</td></tr>
-        <tr><td class="c">3</td><td>岩手（盛岡）、青森・秋田 など</td><td class="c">0.56</td></tr>
-        <tr><td class="c">4</td><td>長野、宮城・山形・福島 など</td><td class="c">0.75</td></tr>
-        <tr><td class="c">5</td><td>新潟、関東・中部の山沿い など</td><td class="c">0.87</td></tr>
-        <tr><td class="c">6</td><td>東京、関東・近畿の平野部 など</td><td class="c">0.87</td></tr>
-        <tr><td class="c">7</td><td>鹿児島・宮崎、九州南部 など</td><td class="c">0.87</td></tr>
-        <tr><td class="c">8</td><td>沖縄・奄美 など</td><td class="c">―</td></tr>
+        <tr><td class="c">1</td><td>名寄</td><td class="c">0.46</td></tr>
+        <tr><td class="c">2</td><td>札幌</td><td class="c">0.46</td></tr>
+        <tr><td class="c">3</td><td>盛岡</td><td class="c">0.56</td></tr>
+        <tr><td class="c">4</td><td>長野</td><td class="c">0.75</td></tr>
+        <tr><td class="c">5</td><td>新潟</td><td class="c">0.87</td></tr>
+        <tr><td class="c">6</td><td>東京</td><td class="c">0.87</td></tr>
+        <tr><td class="c">7</td><td>鹿児島</td><td class="c">0.87</td></tr>
+        <tr><td class="c">8</td><td>沖縄・奄美</td><td class="c">―</td></tr>
       </tbody>
     </table>
-    <p class="tnote">※ 地域区分は建設地の市町村で決まります。U<sub>A</sub>は省エネ基準（断熱等性能等級4）の基準値［W/㎡K］で、数値が小さいほど高断熱。等級5・6・7ではさらに小さい値が求められます。8地域はU<sub>A</sub>基準がなく、日射遮蔽（η<sub>AC</sub>）で評価します。</p>
+    <p class="tnote">
+      ※ 表の地域名は<strong>代表的な都市の例</strong>です。地域区分は<strong>市町村単位</strong>で定められており、<strong>同じ県内でも区分が分かれます</strong>（例：福島県は2〜5地域、千葉県は5〜7地域にまたがります）。必ず建設地の市町村でご確認ください。<br>
+      ※ U<sub>A</sub>は省エネ基準（外皮基準）の基準値［W/(㎡・K)］で、この値<strong>以下</strong>であることが求められます。数値が小さいほど高断熱で、誘導基準（ZEH水準相当）では1・2地域0.40／3地域0.50／4〜7地域0.60とさらに小さい値が必要です。8地域はU<sub>A</sub>の基準がなく、冷房期の日射熱取得率（η<sub>AC</sub>）で評価します。
+    </p>
   </div>
 
   <figure>
@@ -260,7 +267,13 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
 
   <p>なお、この結果を出すまでには<strong>外皮面積の「拾い」</strong>（各部位の面積計算）と<strong>部位ごとのU値計算</strong>が必要です。図面から一つひとつ面積を拾い、断熱材・サッシの仕様から熱の通しやすさを積み上げる――ここが実務でいちばん手間と経験を要する部分です。</p>
   <div class="callout">
-    <b>計算方法は一つではありません。</b> 省エネ性能の評価には、部位ごとに積み上げる<strong>標準計算ルート</strong>のほか、簡易な<strong>仕様ルート・モデル住宅法</strong>などもあります。本記事は、最も一般的で数値が明確に出る標準計算ルートに沿って説明しています。
+    <b>評価方法には3つのルートがあります。</b>
+    <ul style="margin:10px 0 6px">
+      <li>① 外皮性能・一次エネルギー性能の<strong>両方を標準計算ルート</strong>で行う</li>
+      <li>② 両方を<strong>仕様ルート</strong>（仕様で判断する方法）で行う</li>
+      <li>③ <strong>外皮は仕様ルート・一次エネは標準計算ルート</strong>で行う（2023年10月から）</li>
+    </ul>
+    ③は外皮面積を図面から計算する必要がない一方、省エネ適合性判定は①同様に必要です。本記事は、数値が明確に出る<strong>①標準計算ルート</strong>に沿って説明しています。
   </div>
 
   <figure>
@@ -285,7 +298,7 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
 
   <h2>② 一次エネルギー計算 ― 設備も含めた消費量を評価</h2>
   <p>もう一方の一次エネルギー計算では、<strong>暖房・冷房・換気・給湯・照明</strong>など設備ごとのエネルギー消費を、共通のものさし「一次エネルギー量［MJ］」に換算して合計します。</p>
-  <p>ポイントはシンプルで、<span class="hl">設計値が基準値を下回れば適合</span>。省エネ性能の指標 <strong>BEI</strong>（設計値÷基準値）が 1.0 未満なら基準クリア、数値が小さいほど高性能です。</p>
+  <p>ポイントはシンプルで、<span class="hl">設計値が基準値を上回らなければ適合</span>。省エネ性能の指標 <strong>BEI</strong>（設計値÷基準値）が <strong>1.0以下</strong>なら省エネ基準クリア、数値が小さいほど高性能です。</p>
 
   <figure>
     <div class="sample">
@@ -329,7 +342,7 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   <ul>
     <li><strong>地域区分は合っているか</strong>：建設地の区分（北海道なら1・2地域）で基準値が決まります</li>
     <li><strong>UA値が目標等級の基準を満たすか</strong>：等級6・7など、狙う等級の基準値と見比べる</li>
-    <li><strong>一次エネは設計値＜基準値か</strong>：BEIが1.0未満（＝省エネ基準に適合）かを確認。ただしZEH・長期優良住宅などは<strong>より厳しいBEI</strong>が求められるため、狙う水準に応じて確認が必要です</li>
+    <li><strong>一次エネは設計値が基準値以下か</strong>：BEIが1.0以下（＝省エネ基準に適合）かを確認。ただし誘導基準・ZEH水準・長期優良住宅などは<strong>BEI 0.8以下</strong>が求められるため、狙う水準に応じて確認が必要です</li>
     <li><strong>仕様の根拠がそろっているか</strong>：断熱材・サッシ・設備の性能値の出どころ（試験成績書等）</li>
   </ul>
   <div class="callout">
@@ -357,6 +370,8 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
     <a href="/#cold">→ 寒冷地対応について</a>
     <a href="/#faq">→ よくあるご質問</a>
   </div>
+
+  <p class="disc"><strong>【出典】</strong>本記事の基準値・評価方法に関する記述は、国土交通省補助事業「<strong>住宅の省エネルギー基準の解説 評価方法2024（戸建住宅編：木造、鉄筋コンクリート造）</strong>」（表1.2.1／表1.2.2／表6.3.1／表7.1.1／図1.2.7／図6.3.1）に基づいています。地域の区分は建築研究所の公開情報（<a href="https://www.kenken.go.jp/becc/house.html" target="_blank" rel="noopener">https://www.kenken.go.jp/becc/house.html</a>）もあわせてご参照ください。制度・基準は改正される場合がありますので、実際の設計・申請時は最新の告示・公式資料をご確認ください。</p>
 
   <p class="disc">※ 掲載しているサンプルは、実案件の計算結果をもとに物件名・入力責任者・QRコード・XML ID・再出力コード等を除去し、名称を架空のモデルプランに置き換えた説明用の表示です。実在の物件・顧客とは関係ありません。実際の計算書の様式・数値は案件ごとに異なります。</p>
 </article>

@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="horo省エネ住宅設計">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%230e1f3a'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='42' font-weight='900' fill='%23f7f8fa' text-anchor='middle' letter-spacing='-2'%3Eh%3C/text%3E%3Crect x='46' y='46' width='6' height='6' fill='%236ea3ff'/%3E%3C/svg%3E">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"horo省エネ住宅設計","description":"省エネ計算代行サービス。全国対応。長期優良住宅・BELS・WEBPRO入力に対応。","areaServed":{"@type":"Country","name":"日本"},"serviceType":["省エネ計算代行","外皮計算","長期優良住宅申請補助","BELS申請補助","WEBPRO入力代行","共同住宅の省エネ計算"],"priceRange":"¥15,000 - ¥50,000","provider":{"@type":"Person","jobTitle":"一級建築士"}}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"horo省エネ住宅設計","description":"省エネ計算代行サービス。全国対応。長期優良住宅・BELS・WEBPRO入力に対応。","areaServed":{"@type":"Country","name":"日本"},"serviceType":["省エネ計算代行","外皮計算","長期優良住宅申請補助","BELS申請補助","WEBPRO入力代行","共同住宅の省エネ計算"],"priceRange":"¥15,000 - ¥115,000","provider":{"@type":"Person","jobTitle":"一級建築士"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"省エネ計算を外注するのは初めてですが、大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、初めて省エネ計算を外注される工務店・設計事務所様も多くご利用いただいています。外皮計算・一次エネルギー消費量計算・長期優良住宅やBELSの申請書類まで、必要な範囲だけを外注いただけます。図面と仕様をご共有いただければ、一級建築士が不足資料や進め方をご案内しますので、外注に不慣れでも安心してお任せください。"}},{"@type":"Question","name":"北海道以外の地域でも対応可能ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、全国対応です。地域区分1〜8まですべて対応可能です。図面と仕様のご共有はオンラインで完結するため、場所を問わずご依頼いただけます。"}},{"@type":"Question","name":"納期はどのくらいですか？","acceptedAnswer":{"@type":"Answer","text":"住宅の省エネ計算は5〜7営業日、申請書類フルサポートは5〜10営業日、非住宅WEBPRO入力は7〜14営業日が目安です。お急ぎの場合はご相談ください。"}},{"@type":"Question","name":"継続的な発注を検討しています。割引はありますか？","acceptedAnswer":{"@type":"Answer","text":"月2件以上の継続発注をご検討の場合、月額契約プランをご用意できます。御社専用の仕様マスター・入力テンプレートを作成し、2件目以降の発注を効率化します。詳細はお問い合わせください。"}}]}
@@ -531,7 +531,7 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
             <h3 class="service-title">共同住宅の省エネ計算<br>アパート・小規模マンション</h3>
           </div>
         </div>
-        <p class="service-desc">2〜3階建・10戸程度までの共同住宅に対応します。共同住宅の計算量は「戸数」ではなく<strong>住戸タイプ数</strong>（間取り × 階の位置 × 方位の組み合わせ）でほぼ決まるため、タイプ数に応じた個別のお見積りとしています。まずは平面図をお送りください。</p>
+        <p class="service-desc">2〜3階建・10戸程度までの共同住宅に対応します。共同住宅の計算量は「戸数」ではなく<strong>住戸タイプ数</strong>（間取り × 階の位置 × 方位の組み合わせ）でほぼ決まるため、タイプ数による単価制としています。平面図をお送りいただければ、こちらでタイプ数を数えてお見積りします。</p>
         <ul class="service-features">
           <li>住戸ごとの外皮計算（UA値・ηAC値）</li>
           <li>住戸ごとの一次エネルギー消費量計算</li>
@@ -542,12 +542,11 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
         </ul>
       </div>
       <div class="service-price">
-        <div class="price-label">PRICE — 個別見積り</div>
-        <div class="price-amount" style="font-size:26px">お見積り</div>
-        <p class="price-note">お見積りに必要な情報：<br>
-        ① 階数・総戸数　② 住戸の間取り種類　③ 共用部の有無<br>
-        ④ 目標水準（省エネ基準・ZEH-M 等）　⑤ 希望納期<br><br>
-        平面図をいただければ、こちらで住戸タイプ数を数えてお見積りします。<br>
+        <div class="price-label">PRICE — by 住戸タイプ</div>
+        <div class="price-tier"><span class="price-tier-label">基本料</span><span class="price-tier-value">¥25,000</span></div>
+        <div class="price-tier"><span class="price-tier-label">＋ 住戸1タイプにつき</span><span class="price-tier-value">¥15,000</span></div>
+        <p class="price-note">（例）2タイプ ¥55,000／4タイプ ¥85,000／6タイプ ¥115,000<br>
+        2階建でも1階（土間・床あり）と最上階（屋根あり）で条件が変わるため、最小構成は2タイプです。<br>
         4階建以上・11戸以上もご相談ください。</p>
       </div>
     </div>

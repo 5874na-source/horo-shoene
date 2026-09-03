@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="horo省エネ住宅設計">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%230e1f3a'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='42' font-weight='900' fill='%23f7f8fa' text-anchor='middle' letter-spacing='-2'%3Eh%3C/text%3E%3Crect x='46' y='46' width='6' height='6' fill='%236ea3ff'/%3E%3C/svg%3E">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"horo省エネ住宅設計","description":"省エネ計算代行サービス。全国対応。長期優良住宅・BELS・WEBPRO入力に対応。","areaServed":{"@type":"Country","name":"日本"},"serviceType":["省エネ計算代行","外皮計算","長期優良住宅申請補助","BELS申請補助","WEBPRO入力代行","共同住宅の省エネ計算"],"priceRange":"¥15,000 - ¥115,000","provider":{"@type":"Person","jobTitle":"一級建築士"}}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"horo省エネ住宅設計","description":"省エネ計算代行サービス。全国対応。長期優良住宅・BELS・WEBPRO入力に対応。","areaServed":{"@type":"Country","name":"日本"},"serviceType":["省エネ計算代行","外皮計算","長期優良住宅申請補助","BELS申請補助","WEBPRO入力代行","共同住宅の省エネ計算"],"priceRange":"¥25,000 - ¥115,000","provider":{"@type":"Person","jobTitle":"一級建築士"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"省エネ計算を外注するのは初めてですが、大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、初めて省エネ計算を外注される工務店・設計事務所様も多くご利用いただいています。外皮計算・一次エネルギー消費量計算・長期優良住宅やBELSの申請書類まで、必要な範囲だけを外注いただけます。図面と仕様をご共有いただければ、一級建築士が不足資料や進め方をご案内しますので、外注に不慣れでも安心してお任せください。"}},{"@type":"Question","name":"北海道以外の地域でも対応可能ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、全国対応です。地域区分1〜8まですべて対応可能です。図面と仕様のご共有はオンラインで完結するため、場所を問わずご依頼いただけます。"}},{"@type":"Question","name":"納期はどのくらいですか？","acceptedAnswer":{"@type":"Answer","text":"住宅の省エネ計算は5〜7営業日、申請書類フルサポートは5〜10営業日、非住宅WEBPRO入力は7〜14営業日が目安です。お急ぎの場合はご相談ください。"}},{"@type":"Question","name":"継続的な発注を検討しています。割引はありますか？","acceptedAnswer":{"@type":"Answer","text":"月2件以上の継続発注をご検討の場合、月額契約プランをご用意できます。御社専用の仕様マスター・入力テンプレートを作成し、2件目以降の発注を効率化します。詳細はお問い合わせください。"}}]}
@@ -157,6 +157,15 @@ a{color:inherit;text-decoration:none}
 .price-tier:last-of-type{border-bottom:none}
 .price-tier-label{color:var(--color-ink-soft);font-weight:500}
 .price-tier-value{font-family:var(--font-en);color:var(--color-navy);font-weight:700}
+.price-detail{margin-top:56px;background:var(--color-bg-pure);border:1px solid var(--color-line);border-radius:3px;padding:clamp(24px,4vw,40px)}
+.price-detail-title{font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--color-navy);letter-spacing:0.02em;margin-bottom:28px;display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
+.price-detail-tax{font-family:var(--font-sans);font-size:12px;font-weight:500;color:var(--color-ink-mute);letter-spacing:0.08em}
+.pd-group{margin-bottom:28px}
+.pd-group:last-child{margin-bottom:0}
+.price-detail .price-tier{align-items:flex-start;gap:16px}
+.price-detail .price-tier-value{text-align:right}
+.pd-sub{display:block;font-size:12px;color:var(--color-ink-mute);margin-top:4px;line-height:1.7}
+.pd-eq{margin-top:16px;font-size:12px;color:var(--color-ink-mute);line-height:1.8}
 @media(max-width:900px){
   .service-card{grid-template-columns:1fr;padding:28px 20px;gap:24px}
 }
@@ -430,7 +439,7 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
 <section class="section" id="services">
   <div class="section-label">Services</div>
   <h2 class="section-title">4つのサービス</h2>
-  <p class="section-lead">戸建・共同住宅・非住宅、計算から申請書類整備まで、必要な部分だけ柔軟に対応します。すべてオンラインで完結。図面と仕様のご共有のみでご依頼いただけます。</p>
+  <p class="section-lead">戸建・共同住宅・非住宅、計算から申請書類整備まで、必要な部分だけ柔軟に対応します。すべてオンラインで完結。図面と仕様のご共有のみでご依頼いただけます。表示価格はすべて税抜です。</p>
 
   <div class="service-grid">
     <div class="service-card">
@@ -458,7 +467,9 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
       <div class="service-price">
         <div class="price-label">PRICE</div>
         <div class="price-amount"><span class="yen">¥</span>35,000<span class="unit">／件</span></div>
-        <p class="price-note">納期：5〜7営業日<br>質疑対応（2回程度まで）を含む<br>プラン段階の検討も対応可<br>部分計算（外皮のみ等）はご相談</p>
+        <div class="price-tier"><span class="price-tier-label">外皮計算のみ</span><span class="price-tier-value">¥25,000</span></div>
+        <div class="price-tier"><span class="price-tier-label">＋ 一次エネルギー消費量計算</span><span class="price-tier-value">¥10,000</span></div>
+        <p class="price-note">納期：5〜7営業日<br>質疑対応（2回程度まで）を含む<br>プラン段階の検討も対応可<br>外皮計算のみの料金・オプションは下記「料金詳細」をご覧ください</p>
       </div>
     </div>
 
@@ -552,6 +563,38 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
       </div>
     </div>
   </div>
+
+  <!-- 外皮計算 料金詳細 -->
+  <div class="price-detail">
+    <div class="price-detail-title">外皮計算（木造戸建て住宅）料金詳細<span class="price-detail-tax">表示はすべて税抜</span></div>
+
+    <div class="pd-group">
+      <div class="price-label">基本</div>
+      <div class="price-tier"><span class="price-tier-label">木造戸建て住宅 外皮計算<span class="pd-sub">部位U値計算シート／外皮計算書／外皮面積求積図・計算表（床・天井屋根・外壁）</span></span><span class="price-tier-value">¥25,000</span></div>
+      <div class="price-tier"><span class="price-tier-label">基本に含むもの<span class="pd-sub">延床130㎡まで／仕様変更1回／質疑応答（当方の責によるもの）</span></span><span class="price-tier-value">込み</span></div>
+    </div>
+
+    <div class="pd-group">
+      <div class="price-label">オプション</div>
+      <div class="price-tier"><span class="price-tier-label">一次エネルギー消費量計算</span><span class="price-tier-value">＋¥10,000</span></div>
+      <div class="price-tier"><span class="price-tier-label">自己適合宣言書等の整備<span class="pd-sub">自己適合宣言書・附属書</span></span><span class="price-tier-value">＋¥5,000</span></div>
+      <div class="price-tier"><span class="price-tier-label">BELS申請書作成</span><span class="price-tier-value">＋¥10,000</span></div>
+      <div class="price-tier"><span class="price-tier-label">長期優良住宅申請書作成</span><span class="price-tier-value">＋¥10,000</span></div>
+      <div class="price-tier"><span class="price-tier-label">お急ぎ対応<span class="pd-sub">資料到着の翌日から3日以内に納品</span></span><span class="price-tier-value">＋¥5,000</span></div>
+      <div class="price-tier"><span class="price-tier-label">面積超過<span class="pd-sub">〜200㎡</span></span><span class="price-tier-value">＋¥5,000</span></div>
+      <div class="price-tier"><span class="price-tier-label">面積超過<span class="pd-sub">200㎡〜</span></span><span class="price-tier-value">ご相談</span></div>
+      <div class="price-tier"><span class="price-tier-label">仕様変更 再計算<span class="pd-sub">2〜3回目まで</span></span><span class="price-tier-value">＋¥5,000</span></div>
+      <div class="price-tier"><span class="price-tier-label">他社作成 外皮計算書のセカンドオピニオン<span class="pd-sub">再計算による検証</span></span><span class="price-tier-value">¥25,000</span></div>
+      <p class="pd-eq">外皮計算 ¥25,000 ＋ 一次エネルギー消費量計算 ¥10,000 ＝ ¥35,000（SERVICE 01 の一式料金）</p>
+    </div>
+
+    <div class="pd-group">
+      <div class="price-label">その他</div>
+      <div class="price-tier"><span class="price-tier-label">木造以外（RC造・S造）／既存住宅の改修・増築</span><span class="price-tier-value">ご相談</span></div>
+      <div class="price-tier"><span class="price-tier-label">審査機関の審査料</span><span class="price-tier-value">クライアント様ご負担</span></div>
+      <div class="price-tier"><span class="price-tier-label">代理申請</span><span class="price-tier-value">原則実施しません</span></div>
+    </div>
+  </div>
 </section>
 
 <!-- 定額外注プラン -->
@@ -570,7 +613,7 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
         <div style="display:flex;align-items:baseline;gap:4px;margin:20px 0 8px">
           <span style="font-family:var(--font-en);font-size:14px;color:var(--color-blue-light);font-weight:600">¥</span>
           <span style="font-family:var(--font-en);font-size:52px;font-weight:800;color:var(--color-bg-pure);line-height:1;letter-spacing:-0.02em">50,000</span>
-          <span style="font-size:14px;color:rgba(247,248,250,0.6)">/月（税別）</span>
+          <span style="font-size:14px;color:rgba(247,248,250,0.6)">/月（税抜）</span>
         </div>
         <p style="font-size:13px;color:rgba(247,248,250,0.55);margin-bottom:28px">月2件まで対応・最低3ヶ月〜</p>
         <div style="display:flex;flex-direction:column;gap:12px;padding-top:24px;border-top:1px solid rgba(247,248,250,0.15)">

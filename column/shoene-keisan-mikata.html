@@ -164,6 +164,10 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   .kpis{grid-template-columns:1fr}
   .sample::after{font-size:64px}
 }
+.mid-cta{border:1px solid var(--color-line);border-left:4px solid var(--color-blue-accent);background:var(--color-bg-deep);border-radius:4px;padding:20px 22px;margin:36px 0}
+.mid-cta p{margin:0 0 14px;font-size:14px;line-height:1.9}
+.mid-cta a.mid-cta-btn{display:inline-block;background:var(--color-navy);color:#fff;font-weight:700;font-size:13px;padding:10px 20px;border-radius:3px;text-decoration:none}
+.mid-cta a.mid-cta-btn:hover{background:var(--color-blue-accent);text-decoration:none}
 </style>
 </head>
 <body>
@@ -296,6 +300,11 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
     <figcaption>方位ごとに、窓・壁の寸法を一つずつ入力して面積と熱損失を積み上げます。<strong>※ 上表は数値をすべてダミーにした記入イメージ</strong>（実在の建物ではありません／説明のため全窓を北面に置いた例）。</figcaption>
   </figure>
 
+  <div class="mid-cta">
+    <p><strong>この外皮計算の部分だけを外注することもできます。</strong>木造戸建て住宅の外皮計算は ¥25,000（税抜）から。求積図・計算表まで納品します。<a href="/#price-detail">料金とオプションを見る</a></p>
+    <a href="/#contact" class="mid-cta-btn">まず相談する（入力は3項目だけ） →</a>
+  </div>
+
   <h2>② 一次エネルギー計算 ― 設備も含めた消費量を評価</h2>
   <p>もう一方の一次エネルギー計算では、<strong>暖房・冷房・換気・給湯・照明</strong>など設備ごとのエネルギー消費を、共通のものさし「一次エネルギー量［MJ］」に換算して合計します。</p>
   <p>ポイントはシンプルで、<span class="hl">設計値が基準値を上回らなければ適合</span>。省エネ性能の指標 <strong>BEI</strong>（設計値÷基準値）が <strong>1.0以下</strong>なら省エネ基準クリア、数値が小さいほど高性能です。</p>
@@ -383,5 +392,36 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   <p style="margin-top:14px;font-size:11px;color:rgba(247,248,250,0.4)">© 2026 horo省エネ住宅設計</p>
 </footer>
 
+<script>
+/* GA4: 問い合わせ導線のクリック計測 */
+(function(){
+  function send(name, params){ if (typeof gtag === 'function') gtag('event', name, params); }
+  function where(el){
+    if (el.closest('header, nav')) return 'header';
+    if (el.closest('.mid-cta')) return 'mid_cta';
+    if (el.closest('.cta')) return 'end_cta';
+    var s = el.closest('[id]'); return s ? s.id : 'other';
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var p = { link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 40), cta_location: where(a) };
+    if (href.indexOf('mailto:') === 0) send('contact_mail_click', p);
+    else if (/#contact(-form)?$/.test(href)) send('contact_cta_click', p);
+    else if (/#price-detail$/.test(href)) send('price_detail_click', p);
+    else if (/coconala\.com|crowdworks\.jp/.test(href)) send('platform_link_click', p);
+  }, true);
+  var frame = document.querySelector('#contact-form iframe');
+  if (frame) {
+    var started = false;
+    window.addEventListener('blur', function(){
+      setTimeout(function(){
+        if (!started && document.activeElement === frame) { started = true; send('contact_form_start', { cta_location: 'contact' }); }
+      }, 0);
+    });
+  }
+})();
+</script>
 </body>
 </html>

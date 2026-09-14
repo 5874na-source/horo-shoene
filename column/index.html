@@ -163,5 +163,36 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   <p style="margin-top:14px;font-size:11px;color:rgba(247,248,250,.4)">© 2026 horo省エネ住宅設計</p>
 </footer>
 
+<script>
+/* GA4: 問い合わせ導線のクリック計測 */
+(function(){
+  function send(name, params){ if (typeof gtag === 'function') gtag('event', name, params); }
+  function where(el){
+    if (el.closest('header, nav')) return 'header';
+    if (el.closest('.mid-cta')) return 'mid_cta';
+    if (el.closest('.cta')) return 'end_cta';
+    var s = el.closest('[id]'); return s ? s.id : 'other';
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var p = { link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 40), cta_location: where(a) };
+    if (href.indexOf('mailto:') === 0) send('contact_mail_click', p);
+    else if (/#contact(-form)?$/.test(href)) send('contact_cta_click', p);
+    else if (/#price-detail$/.test(href)) send('price_detail_click', p);
+    else if (/coconala\.com|crowdworks\.jp/.test(href)) send('platform_link_click', p);
+  }, true);
+  var frame = document.querySelector('#contact-form iframe');
+  if (frame) {
+    var started = false;
+    window.addEventListener('blur', function(){
+      setTimeout(function(){
+        if (!started && document.activeElement === frame) { started = true; send('contact_form_start', { cta_location: 'contact' }); }
+      }, 0);
+    });
+  }
+})();
+</script>
 </body>
 </html>

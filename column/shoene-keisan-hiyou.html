@@ -134,6 +134,10 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   .flowrow{flex-wrap:wrap}
   .fout{text-align:left;min-width:0;width:100%;padding-left:72px}
 }
+.mid-cta{border:1px solid var(--color-line);border-left:4px solid var(--color-blue-accent);background:var(--color-bg-deep);border-radius:4px;padding:20px 22px;margin:36px 0}
+.mid-cta p{margin:0 0 14px;font-size:14px;line-height:1.9}
+.mid-cta a.mid-cta-btn{display:inline-block;background:var(--color-navy);color:#fff;font-weight:700;font-size:13px;padding:10px 20px;border-radius:3px;text-decoration:none}
+.mid-cta a.mid-cta-btn:hover{background:var(--color-blue-accent);text-decoration:none}
 </style>
 </head>
 <body>
@@ -277,6 +281,11 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   <h3>継続発注なら定額プランも</h3>
   <p>月に複数件の発注が見込める場合は、<strong>定額外注プラン ¥50,000/月（税抜・月2件まで・最低3ヶ月〜）</strong>をご用意しています。都度依頼で月2件（¥35,000×2＝¥70,000）と比べて月20,000円分の差になります。御社専用の仕様マスターと入力テンプレートを作成するため、2件目以降のやり取りも短くなります。</p>
 
+  <div class="mid-cta">
+    <p><strong>ご自身の案件がいくらになるか、概算だけでも確認できます。</strong>お見積りは無料です。</p>
+    <a href="/#contact" class="mid-cta-btn">まず相談する（入力は3項目だけ） →</a>
+  </div>
+
   <h2>内製したときの「見えないコスト」</h2>
   <p>外注費を判断するには、<strong>比較対象である内製コストを金額で把握しておく</strong>必要があります。ところが内製の費用は請求書として届かないため、無料のように見えてしまいがちです。実際には<strong>担当者の時間</strong>という形で確実に支払っています。</p>
 
@@ -382,5 +391,36 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   <p style="margin-top:14px;font-size:11px;color:rgba(247,248,250,0.4)">© 2026 horo省エネ住宅設計</p>
 </footer>
 
+<script>
+/* GA4: 問い合わせ導線のクリック計測 */
+(function(){
+  function send(name, params){ if (typeof gtag === 'function') gtag('event', name, params); }
+  function where(el){
+    if (el.closest('header, nav')) return 'header';
+    if (el.closest('.mid-cta')) return 'mid_cta';
+    if (el.closest('.cta')) return 'end_cta';
+    var s = el.closest('[id]'); return s ? s.id : 'other';
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var p = { link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 40), cta_location: where(a) };
+    if (href.indexOf('mailto:') === 0) send('contact_mail_click', p);
+    else if (/#contact(-form)?$/.test(href)) send('contact_cta_click', p);
+    else if (/#price-detail$/.test(href)) send('price_detail_click', p);
+    else if (/coconala\.com|crowdworks\.jp/.test(href)) send('platform_link_click', p);
+  }, true);
+  var frame = document.querySelector('#contact-form iframe');
+  if (frame) {
+    var started = false;
+    window.addEventListener('blur', function(){
+      setTimeout(function(){
+        if (!started && document.activeElement === frame) { started = true; send('contact_form_start', { cta_location: 'contact' }); }
+      }, 0);
+    });
+  }
+})();
+</script>
 </body>
 </html>

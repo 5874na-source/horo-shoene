@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHNBB4097Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WHNBB4097Z');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北海道の外皮計算でつまずく3つの部位｜基礎断熱・風除室・玄関土間の扱い</title>
+<meta name="description" content="寒冷地（地域区分1・2）の外皮計算でつまずきやすい基礎断熱・土間床等の外周部・風除室の扱いを整理。2021年4月に変わった基礎の評価方法、線熱貫流率ψの表、風除室に面する開口部の補正式、玄関土間の省略可否まで、公的な評価方法資料に基づいて解説します。">
+<meta name="keywords" content="基礎断熱 外皮計算,風除室 熱貫流率,土間床 線熱貫流率,北海道 外皮計算,地域区分 1地域 2地域,玄関土間 断熱,外皮計算 外注,寒冷地 省エネ計算">
+<meta property="og:title" content="北海道の外皮計算でつまずく3つの部位｜基礎断熱・風除室・玄関土間">
+<meta property="og:description" content="基礎断熱の新旧評価方法、土間床等の外周部の線熱貫流率、風除室に面する開口部の補正。寒冷地の外皮計算で手が止まる3部位を実務目線で整理しました。">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://horo-shoene.com/column/kanreichi-gaihi-keisan.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%230e1f3a'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='42' font-weight='900' fill='%23f7f8fa' text-anchor='middle' letter-spacing='-2'%3Eh%3C/text%3E%3Crect x='46' y='46' width='6' height='6' fill='%236ea3ff'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"北海道の外皮計算でつまずく3つの部位｜基礎断熱・風除室・玄関土間の扱い","description":"基礎断熱の新旧評価方法、土間床等の外周部の線熱貫流率、風除室に面する開口部の補正。寒冷地の外皮計算で手が止まる3部位を実務目線で整理しました。","datePublished":"2026-09-16","dateModified":"2026-09-16","author":{"@type":"Organization","name":"horo省エネ住宅設計"},"publisher":{"@type":"Organization","name":"horo省エネ住宅設計"},"mainEntityOfPage":"https://horo-shoene.com/column/kanreichi-gaihi-keisan.html"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --color-bg:#eef0f3; --color-bg-pure:#f7f8fa; --color-bg-deep:#e1e4ea;
+  --color-navy:#0e1f3a; --color-navy-deep:#08152a; --color-blue-accent:#1d4ed8;
+  --color-blue-light:#6ea3ff; --color-ink:#1a2332; --color-ink-soft:#4a5568;
+  --color-ink-mute:#8b95a3; --color-line:#c8cdd5; --color-card:#ffffff;
+  --font-display:'Noto Sans JP',sans-serif; --font-sans:'Noto Sans JP',sans-serif;
+  --font-en:'Inter',sans-serif; --max:760px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);color:var(--color-ink);background:var(--color-bg);
+  line-height:1.95;font-feature-settings:"palt";-webkit-font-smoothing:antialiased}
+a{color:var(--color-blue-accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(238,240,243,0.92);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--color-line)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo .horo{font-family:var(--font-en);font-weight:800;font-size:22px;color:var(--color-navy);letter-spacing:-0.03em}
+.nav-logo .divider{width:1px;height:18px;background:var(--color-blue-accent)}
+.nav-logo .sub{font-size:11px;color:var(--color-ink-soft);letter-spacing:0.1em}
+.nav-cta{font-size:12px;padding:9px 18px;background:var(--color-navy);color:var(--color-bg-pure);border-radius:2px}
+.nav-cta:hover{background:var(--color-blue-accent);text-decoration:none}
+
+.article{max-width:var(--max);margin:0 auto;padding:48px 24px 40px}
+.crumb{font-size:12px;color:var(--color-ink-mute);margin-bottom:24px;font-family:var(--font-en)}
+.crumb a{color:var(--color-ink-mute)}
+.tag{display:inline-block;font-family:var(--font-en);font-size:11px;letter-spacing:0.2em;
+  color:var(--color-blue-accent);font-weight:700;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:var(--font-display);font-weight:900;font-size:clamp(24px,4vw,34px);
+  line-height:1.5;color:var(--color-navy);letter-spacing:0.01em;text-wrap:balance;margin-bottom:12px}
+.subtitle{font-family:var(--font-display);font-weight:700;font-size:clamp(15px,2.2vw,18px);
+  color:var(--color-ink-soft);line-height:1.7;margin:0 0 20px;text-wrap:balance}
+.lead{font-size:15px;line-height:2.05;color:var(--color-ink-soft);margin-bottom:8px}
+
+h2{font-family:var(--font-display);font-weight:700;font-size:clamp(19px,3vw,24px);
+  color:var(--color-navy);line-height:1.5;margin:52px 0 18px;padding-top:20px;
+  border-top:1px solid var(--color-line)}
+h3{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--color-navy);margin:28px 0 10px}
+.article p{font-size:15px;margin-bottom:16px}
+.article ul{margin:0 0 18px 0;padding-left:0;list-style:none}
+.article ul li{font-size:15px;padding-left:22px;position:relative;margin-bottom:9px;line-height:1.85}
+.article ul li::before{content:'';position:absolute;left:2px;top:13px;width:6px;height:6px;
+  background:var(--color-blue-accent);border-radius:50%}
+strong{color:var(--color-navy);font-weight:700}
+.hl{background:linear-gradient(transparent 62%,#cfe0ff 62%);font-weight:700}
+
+.callout{background:var(--color-card);border:1px solid var(--color-line);border-left:3px solid var(--color-blue-accent);
+  border-radius:3px;padding:18px 20px;margin:22px 0;font-size:14px;color:var(--color-ink-soft);line-height:1.9}
+.callout b{color:var(--color-navy)}
+
+/* flow overview */
+.flowbox{background:var(--color-card);border:1px solid var(--color-line);border-radius:8px;padding:22px;margin:26px 0}
+.flowbox h3{margin:0 0 14px;font-size:14px;text-align:center}
+.flowrow{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--color-line)}
+.flowrow:last-child{border-bottom:none}
+.fnum{flex-shrink:0;width:62px;font-family:var(--font-en);font-weight:800;font-size:11px;
+  color:#fff;background:var(--color-navy);border-radius:3px;text-align:center;padding:5px 0;letter-spacing:0.05em}
+.fnum.s0{background:var(--color-ink-mute)}
+.ftext{flex:1;font-size:13.5px;line-height:1.7}
+.ftext b{color:var(--color-navy)}
+.fout{flex-shrink:0;font-size:11.5px;color:var(--color-blue-accent);font-weight:700;text-align:right;min-width:96px}
+
+/* step blocks */
+.step{background:var(--color-card);border:1px solid var(--color-line);border-radius:8px;padding:24px;margin:24px 0}
+.step-h{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.step-n{font-family:var(--font-en);font-weight:800;font-size:11px;color:#fff;background:var(--color-blue-accent);
+  padding:5px 12px;border-radius:20px;letter-spacing:0.08em;white-space:nowrap}
+.step-t{font-family:var(--font-display);font-weight:700;font-size:17px;color:var(--color-navy);line-height:1.5}
+.step p{font-size:14.5px;margin-bottom:12px}
+.step ul li{font-size:14px}
+.deliver{display:inline-block;font-size:12px;background:var(--color-bg-deep);color:var(--color-ink-soft);
+  padding:5px 12px;border-radius:3px;margin-top:6px}
+.deliver b{color:var(--color-navy)}
+
+.dtable-wrap{overflow-x:auto;margin:20px 0}
+table.dtable{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6}
+.dtable th,.dtable td{border:1px solid var(--color-line);padding:9px 11px;text-align:left;vertical-align:top}
+.dtable thead th{background:var(--color-bg-deep);font-weight:700;color:var(--color-navy);white-space:nowrap}
+.dtable td.c,.dtable th.c{text-align:center;font-family:var(--font-en);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dtable tbody th{background:var(--color-bg-pure);font-weight:700;color:var(--color-navy);white-space:nowrap}
+.tnote{font-size:12px;color:var(--color-ink-mute);line-height:1.75;margin-top:8px}
+
+.cta{background:var(--color-navy);border-radius:8px;padding:34px 30px;margin:48px 0 20px;text-align:center;color:#f7f8fa}
+.cta h2{border:none;color:#fff;margin:0 0 10px;padding:0}
+.cta p{color:rgba(247,248,250,0.82);font-size:14px;margin-bottom:22px}
+.cta a.btn{display:inline-block;background:var(--color-blue-accent);color:#fff;font-weight:700;
+  padding:15px 34px;border-radius:3px;font-size:14px;letter-spacing:0.04em}
+.cta a.btn:hover{background:#2a5ae6;text-decoration:none}
+
+.related{margin-top:28px;padding-top:20px;border-top:1px solid var(--color-line)}
+.related h3{margin-top:0}
+.related a{display:inline-block;margin-right:20px;font-size:14px;font-weight:600}
+
+.disc{font-size:11.5px;color:var(--color-ink-mute);line-height:1.8;margin-top:26px;
+  padding:14px 16px;background:var(--color-bg-deep);border-radius:4px}
+
+footer{background:var(--color-navy-deep);color:rgba(247,248,250,0.6);padding:36px 24px;margin-top:40px;
+  text-align:center;font-size:12px}
+footer a{color:rgba(247,248,250,0.7)}
+footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8fa;letter-spacing:-0.02em;margin-bottom:8px}
+
+@media(max-width:560px){
+  .flowrow{flex-wrap:wrap}
+  .fout{text-align:left;min-width:0;width:100%;padding-left:72px}
+}
+.mid-cta{border:1px solid var(--color-line);border-left:4px solid var(--color-blue-accent);background:var(--color-bg-deep);border-radius:4px;padding:20px 22px;margin:36px 0}
+.mid-cta p{margin:0 0 14px;font-size:14px;line-height:1.9}
+.mid-cta a.mid-cta-btn{display:inline-block;background:var(--color-navy);color:#fff;font-weight:700;font-size:13px;padding:10px 20px;border-radius:3px;text-decoration:none}
+.mid-cta a.mid-cta-btn:hover{background:var(--color-blue-accent);text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="horo">horo</span><span class="divider"></span><span class="sub">省エネ住宅設計</span>
+    </a>
+    <a href="/#contact" class="nav-cta">お問い合わせ</a>
+  </div>
+</nav>
+
+<article class="article">
+  <div class="crumb"><a href="/">HOME</a> ／ <a href="/column/">COLUMN</a> ／ 北海道の外皮計算でつまずく3つの部位</div>
+  <span class="tag">Column</span>
+  <h1>北海道の外皮計算でつまずく3つの部位</h1>
+  <p class="subtitle">基礎断熱・土間床等の外周部・風除室。寒冷地特有の「拾い方」を、評価方法の原文にあたって整理します。</p>
+
+  <p class="lead">北海道（地域区分1・2）の住宅で外皮計算をすると、道外向けの解説記事には出てこない部位で手が止まります。<strong>基礎断熱・土間床等の外周部・風除室</strong>の3つです。いずれも<span class="hl">拾い方ひとつでU<sub>A</sub>値が動く</span>うえ、基礎断熱については2021年4月に評価方法そのものが変わり、新旧2つのやり方が併存しています。この記事では、公的な評価方法資料に基づいて、この3部位の扱いを実務目線で整理しました。</p>
+
+  <div class="flowbox">
+    <h3>この記事で整理する3部位</h3>
+    <div class="flowrow"><span class="fnum">部位 1</span><span class="ftext"><b>基礎断熱</b>／2021年4月に評価方法が変更。基礎壁の面積算入が必要に</span><span class="fout">新旧2方式</span></div>
+    <div class="flowrow"><span class="fnum">部位 2</span><span class="ftext"><b>土間床等の外周部</b>／線熱貫流率ψと、基礎の周長の拾い分け</span><span class="fout">ψ・温度差係数</span></div>
+    <div class="flowrow"><span class="fnum">部位 3</span><span class="ftext"><b>風除室・玄関土間</b>／開口部の補正と、断熱構造としなくてよい部分</span><span class="fout">U値の補正</span></div>
+  </div>
+
+  <h2>部位1｜基礎断熱 ― 2021年4月に評価方法が変わった</h2>
+
+  <p>まず押さえるべきは、<strong>基礎断熱の場合の「基礎及び土間床等の外周部の熱損失」の評価方法が、2021年4月から変更されている</strong>ことです。従来は土間床等の外周部の熱損失と基礎の熱損失を<strong>一体で</strong>評価していましたが、現行の方法では<strong>別々に</strong>評価します。</p>
+
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th>　</th><th>従来の評価方法</th><th>現行の評価方法（2021年4月〜）</th></tr></thead>
+      <tbody>
+        <tr><th>考え方</th><td>土間床等の外周部と基礎の熱損失を一体で評価</td><td>土間床等の外周部と基礎の熱損失を別々に評価</td></tr>
+        <tr><th>線熱貫流率ψ</th><td>土間床等の外周部の熱損失に加え、<strong>地盤面から400mmまでの基礎</strong>の熱損失を含む</td><td>土間床等の外周部の熱損失<strong>のみ</strong>を含む</td></tr>
+        <tr><th>基礎立上りの扱い</th><td>基礎高さがGL＋400mmを超える場合、<strong>400mmより高い部分だけ</strong>を外壁と同様に計算</td><td>基礎の高さに関わらず<strong>全て</strong>を外壁と同様に計算（＝基礎壁として面積算入）</td></tr>
+      </tbody>
+    </table>
+    <p class="tnote">※ 従来の「土間床等の外周部の熱損失及び基礎壁の熱損失を一体として評価する方法」は、<strong>当面の間、用いることができる</strong>とされています。したがって現在は、新旧どちらの計算書も出回っています。</p>
+  </div>
+
+  <h3>現行方式での面積の起点</h3>
+  <p>現行方式では基礎壁の面積を拾う必要があるため、外壁・基礎壁の面積の起点が床断熱とは変わります。</p>
+  <ul>
+    <li><strong>外壁面積</strong>：基礎断熱の場合、<strong>基礎天端から上側</strong>が外壁の面積（床断熱の場合は床仕上面から上側）</li>
+    <li><strong>基礎壁面積</strong>：<strong>土間床上端から上側</strong>にある基礎壁の部分</li>
+    <li><strong>地下室など土間床上端が地盤面より低い場合</strong>：地盤面から上側にある基礎の壁部分。ただしドライエリア（空堀）に面する基礎壁は、地上階と同様に土間床上端から上側</li>
+    <li><strong>玄関などで仕上面が土間床上端より上部にある場合</strong>：土間床上端より上側を基礎壁面積とする</li>
+  </ul>
+
+  <div class="callout">
+    <b>実務上の注意：1棟の中で新旧を混在させないこと。</b>どちらの方法も認められていますが、同じ建物で部位によって使い分けると、計算根拠の説明がつかなくなります。外注で計算書を受け取る側も、<b>基礎壁の行があるかどうか</b>で新旧を見分けられます。増改築などで過去の計算書に合わせる必要があるときは、着手前に方式を確認してください。
+  </div>
+
+  <div class="mid-cta">
+    <p><strong>この基礎まわりの拾いだけを、切り出して外注できます。</strong>北海道で実務を続けてきた一級建築士が、外皮面積求積図・計算表まで作成して納品します。木造戸建て住宅の外皮計算は ¥25,000（税抜）から。<a href="/#price-detail">料金とオプションを見る</a></p>
+    <a href="/#contact" class="mid-cta-btn">まず相談する（入力は3項目だけ） →</a>
+  </div>
+
+  <h2>部位2｜土間床等の外周部 ― ψは断熱材の厚さでは変わらない</h2>
+
+  <p>土間床等の外周部は、面積ではなく<strong>周長1m（水平長さ）当たりの線熱貫流率ψ［W/(m・K)］</strong>で評価します。このψの求め方は3通りあります。</p>
+  <ul>
+    <li>① 基礎形状によらない値を用いる方法</li>
+    <li>② 定常二次元伝熱計算により算出した、代表的な仕様の値を用いる方法</li>
+    <li>③ 土間床等の外周部の線熱貫流率の算出プログラムにより計算する方法</li>
+  </ul>
+
+  <p>実務で最も多く使われるのは①です。①では、<strong>基礎形状・断熱材の有無・断熱材の厚さに関係なく</strong>、土間床上端と地盤面の高さの差だけでψが決まります。</p>
+
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th>条件</th><th class="c">土間床上端と地盤面の高さの差［m］</th><th class="c">ψ［W/(m・K)］</th></tr></thead>
+      <tbody>
+        <tr><th>土間床上端が地盤面と同じか高い</th><td class="c">問わない</td><td class="c">0.99</td></tr>
+        <tr><th rowspan="6">土間床上端が地盤面より低い</th><td class="c">0.05 以下</td><td class="c">0.98</td></tr>
+        <tr><td class="c">0.05 超過 0.50 以下</td><td class="c">1.47</td></tr>
+        <tr><td class="c">0.50 超過 1.00 以下</td><td class="c">1.70</td></tr>
+        <tr><td class="c">1.00 超過 2.00 以下</td><td class="c">1.95</td></tr>
+        <tr><td class="c">2.00 超過 5.00 以下</td><td class="c">2.43</td></tr>
+        <tr><td class="c">5.00 超過</td><td class="c">3.24</td></tr>
+        <tr><th>基礎近傍に崖等がある場合</th><td class="c">土間床上端と崖の底部の差が1m以上</td><td class="c">1.58</td></tr>
+      </tbody>
+    </table>
+    <p class="tnote">※ 地盤面は、設計地盤面又は建築基準法における地盤面とします。</p>
+  </div>
+
+  <div class="callout">
+    <b>「基礎の断熱材を厚くしたのにU<sub>A</sub>値が変わらない」</b>という相談をよく受けますが、それは①の方法を使っているためです。①は断熱材の仕様を見ない値なので、厚みを増やしても計算上のψは動きません。<b>基礎断熱の強化を数値に反映させたい場合は、②または③で評価する</b>必要があります。もちろん、計算に出ないだけで、実際の熱性能・凍上対策・防露上の効果は別の話です。
+  </div>
+
+  <h3>基礎の周長は「外気に接する」と「床下に接する」で分けて拾う</h3>
+  <p>土間床における基礎（無断熱を含む）は、周長の算出が必要です。このとき、<strong>隣接する空間によって温度差係数Hが異なる</strong>ため、周長を2種類に分けて拾います。</p>
+
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th>隣接する空間</th><th class="c">温度差係数 H</th></tr></thead>
+      <tbody>
+        <tr><th>外気又は外気に通じる空間（小屋裏・天井裏等）</th><td class="c">1.0</td></tr>
+        <tr><th>外気に通じる床下</th><td class="c">0.7</td></tr>
+      </tbody>
+    </table>
+    <p class="tnote">※ 床断熱の住戸で玄関や浴室だけが部分的に基礎断熱になっている場合、その基礎には「外気に接する部分」と「床下に接する部分」が同時に生じます。基礎壁の面積・基礎の周長とも、この2つを分けて集計してください。</p>
+  </div>
+
+  <p>なお、<strong>基礎断熱のように土間床等に熱的境界がある場合、床下および床下地盤面は熱的境界の内側</strong>として扱います（屋根断熱のときに小屋裏空間を内側として扱うのと同じ考え方です）。全体が基礎断熱の住宅では床下が室内側になるため、「床下に接する部位」という区分自体が出てきません。</p>
+
+  <h2>部位3｜風除室と玄関土間 ― 補正できるもの・省略できるもの</h2>
+
+  <h3>風除室は熱的境界の外側。補正できるのは開口部だけ</h3>
+  <p>風除室は、<strong>熱的境界の外部に存する空間</strong>として扱います。そのうえで、<strong>風除室に面する開口部の熱貫流率は補正できます</strong>。補正式は次のとおりです。</p>
+
+  <div class="callout">
+    <b>風除室に面する開口部の熱貫流率</b>　U'<sub>i</sub> ＝ 1 ÷ ( 1 ／ U<sub>d</sub> ＋ 0.1 )<br>
+    U<sub>d</sub>：窓等又はドア等の熱貫流率［W/(㎡・K)］<br>
+    <b>※ 壁の補正はできません。</b>あくまで開口部だけの補正です。
+  </div>
+
+  <p>評価方法資料の開口部熱貫流率の表には、はじめから「風除室あり」の列が用意されています。北海道でよく使う仕様を抜き出すと、次のようになります。</p>
+
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th>開口部の仕様</th><th class="c">付属部材なし</th><th class="c">風除室あり</th></tr></thead>
+      <tbody>
+        <tr><th>樹脂製建具＋三層複層（Low-E2枚・ガス入・中空層13mm以上）</th><td class="c">1.60</td><td class="c">1.38</td></tr>
+        <tr><th>樹脂製建具＋二層複層（Low-E・ガス入・中空層10mm以上）</th><td class="c">2.15</td><td class="c">1.77</td></tr>
+        <tr><th>樹脂製建具＋単板ガラス</th><td class="c">6.51</td><td class="c">3.95</td></tr>
+        <tr><th>玄関ドア（金属製熱遮断構造の枠＋金属製高断熱フラッシュ構造・ドア内ガラスなし）</th><td class="c">1.60</td><td class="c">1.38</td></tr>
+      </tbody>
+    </table>
+    <p class="tnote">単位はいずれも W/(㎡・K)。表は「付属部材無し／シャッター・雨戸付／紙障子付／風除室あり」の列に分かれており、該当する列の値を用います。上表は評価方法資料の表からの抜粋です。</p>
+  </div>
+
+  <p>玄関ドアで 1.60 → 1.38、単板ガラスの窓では 6.51 → 3.95 と、風除室の有無で無視できない差が出ます。<strong>設計上は当たり前についている風除室が、計算では申告しないと反映されない</strong>典型例です。既存住宅の改修案件では特に効きます。</p>
+
+  <h3>玄関土間・勝手口土間は「断熱構造としなくてもよい部分」</h3>
+  <p>仕様基準では、熱的境界を断熱構造としなければならない一方で、次の部分は除くことができるとされています。</p>
+  <ul>
+    <li>居室に面する部位が断熱構造となっている物置、車庫又はこれらと同様の空間の、居室に面する部位以外の部位</li>
+    <li>外気に通じる床裏、小屋裏又は天井裏に接する外壁</li>
+    <li>断熱構造となっている外壁から突き出した軒、袖壁、ベランダ</li>
+    <li><strong>玄関、勝手口その他これらに類する部分における土間床部分</strong></li>
+    <li><strong>断熱措置がとられている浴室下部における土間床部分</strong></li>
+  </ul>
+
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th>土間床の部分</th><th>地盤面に垂直な基礎壁部分</th><th>地盤面に水平な土間部分</th></tr></thead>
+      <tbody>
+        <tr><th>① 玄関土間、勝手口土間</th><td>断熱構造としなくてもよい</td><td>断熱構造としなくてもよい</td></tr>
+        <tr><th>② ①に繋がる非居室の土間</th><td>断熱構造としなくてもよい</td><td>断熱構造としなくてもよい</td></tr>
+        <tr><th>③ 上記以外の土間</th><td>断熱構造とする</td><td>断熱構造とする</td></tr>
+      </tbody>
+    </table>
+    <p class="tnote">※ 仕様基準における土間床の断熱の考え方です。標準計算ルートで計算する場合も、どこまでを断熱構造とするかの判断の目安になります。</p>
+  </div>
+
+  <p>あわせて、<strong>床断熱の住戸で浴室や玄関などが部分的に基礎断熱になっている場合</strong>は、通常は基礎断熱と同様に外壁面積を取りますが、その部分が全体の熱損失に与える影響は小さいため、<strong>外壁面積を床断熱と同じ取り方にして、計算を簡略化することもできる</strong>とされています。北海道の木造住宅で頻出する納まりなので、覚えておくと拾いが速くなります。</p>
+
+  <h2>補足｜「北海道＝基礎断熱」ではない</h2>
+  <p>道外の設計者から「北海道なら基礎断熱ですよね」と言われることがありますが、統計を見ると実態は違います。1〜3地域版の公的テキストに掲載された調査結果では、北海道の木造住宅の断熱工法の内訳は次のとおりです。</p>
+
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th>部位</th><th>工法・仕様の割合</th></tr></thead>
+      <tbody>
+        <tr><th>床・基礎</th><td>床断熱 <strong>66%</strong>／基礎断熱 <strong>34%</strong>（うち両面断熱 8.6%・外面断熱 24%・内面断熱 1.4%）</td></tr>
+        <tr><th>外壁</th><td>充填断熱＋付加断熱 <strong>66%</strong>／充填断熱のみ 30%／外張断熱のみ 4%</td></tr>
+        <tr><th>天井・屋根</th><td>天井断熱 <strong>70%</strong>（うち98%が吹込み断熱材）／屋根断熱 30%</td></tr>
+        <tr><th>窓ガラス</th><td>トリプルガラス <strong>75%</strong>／ペアガラス 25%</td></tr>
+      </tbody>
+    </table>
+    <p class="tnote">※ 資料には、この調査に年間建設棟数100棟以上のハウスメーカーが含まれるため、トリプルガラスの割合を押し上げた可能性がある旨が付記されています。</p>
+  </div>
+
+  <p>つまり北海道でも<strong>床断熱のほうが多数派</strong>で、玄関や浴室だけ基礎断熱という混在パターンが実務では最も多く出てきます。この記事で挙げた「基礎の周長を外気側と床下側に分けて拾う」話が効いてくるのは、まさにこのパターンです。</p>
+
+  <h2>まとめ｜寒冷地の外皮計算チェックリスト</h2>
+  <ul>
+    <li>基礎断熱は、<strong>現行方式（別々に評価）か従来方式（一体評価）か</strong>を決めてから着手する。1棟の中で混在させない</li>
+    <li>現行方式なら、<strong>基礎壁の面積</strong>（土間床上端から上側）を必ず拾う</li>
+    <li>ψを①の方法で出す場合、<strong>断熱材の厚さは計算に反映されない</strong>。強化を数値に出したいなら②か③</li>
+    <li>基礎の周長は、<strong>外気に接する部分（H＝1.0）と床下に接する部分（H＝0.7）を分けて</strong>集計する</li>
+    <li>風除室に面する<strong>開口部は熱貫流率を補正できる</strong>（壁は不可）。建具表に風除室の有無を書いておく</li>
+    <li>玄関土間・勝手口土間・浴室下部の土間は、<strong>断熱構造としなくてもよい部分</strong>に該当するか確認する</li>
+  </ul>
+
+  <p>いずれも「知っていれば数分、知らないと止まる」種類の論点です。判断に迷う部分だけを確認したい、というご相談も承っています。</p>
+
+  <div class="cta">
+    <h2>寒冷地の外皮計算、お任せください。</h2>
+    <p>北海道（地域区分1・2）での実務10年以上。基礎断熱・風除室・混在納まりも含めて、外皮面積求積図・計算表まで作成して納品します。<br>外皮計算 ¥25,000〜（税抜）／一次エネルギー消費量計算 ＋¥10,000。質疑のみのご相談も歓迎です。</p>
+    <a href="/#contact" class="btn">無料で見積もりを依頼する →</a>
+  </div>
+
+  <div class="related">
+    <h3>関連情報</h3>
+    <a href="/column/shoene-keisan-tejun.html">→ 省エネ計算のやり方（6ステップ）</a>
+    <a href="/column/shoene-keisan-mikata.html">→ 省エネ計算書の見方</a>
+    <a href="/#sample">→ 納品物のサンプルを見る</a>
+  </div>
+
+  <p class="disc"><strong>【出典】</strong>基礎及び土間床等の外周部の評価方法・線熱貫流率・温度差係数・開口部の熱貫流率・土間床の断熱に関する記述は、〈改正〉平成28年省エネルギー基準対応「<strong>住宅の省エネルギー基準と評価方法2024 戸建住宅版（木造、鉄筋コンクリート造）</strong>」（一般財団法人 住宅・建築SDGs推進センター）の第2部（外皮面積・線熱貫流率・開口部・温度差係数）および第3部（仕様基準による外皮性能の評価方法）に基づいています。北海道の断熱工法の割合は、令和5年度 国土交通省補助事業「<strong>住宅の省エネルギー 設計と施工2023【1〜3地域版（主に北海道）】</strong>」（一般社団法人 木を活かす建築推進協議会）第2章の調査結果によります。本記事の表は、出典資料の数値をもとに当方で作成したものです。制度・基準は改正される場合がありますので、実際の設計・申請時は最新の告示・公式資料をご確認ください。</p>
+</article>
+
+<footer>
+  <div class="fl">horo</div>
+  <p>horo省エネ住宅設計 ― 省エネ計算・長期優良住宅申請補助・WEBPRO入力代行<br>
+  全国対応・オンライン完結 ／ <a href="/">サイトトップ</a> ・ <a href="/column/">コラム一覧</a> ・ <a href="/#contact">お問い合わせ</a></p>
+  <p style="margin-top:14px;font-size:11px;color:rgba(247,248,250,0.4)">© 2026 horo省エネ住宅設計</p>
+</footer>
+
+<script>
+/* GA4: 問い合わせ導線のクリック計測 */
+(function(){
+  function send(name, params){ if (typeof gtag === 'function') gtag('event', name, params); }
+  function where(el){
+    if (el.closest('header, nav')) return 'header';
+    if (el.closest('.mid-cta')) return 'mid_cta';
+    if (el.closest('.cta')) return 'end_cta';
+    var s = el.closest('[id]'); return s ? s.id : 'other';
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var p = { link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 40), cta_location: where(a) };
+    if (href.indexOf('mailto:') === 0) send('contact_mail_click', p);
+    else if (/#contact(-form)?$/.test(href)) send('contact_cta_click', p);
+    else if (/#price-detail$/.test(href)) send('price_detail_click', p);
+    else if (/coconala\.com|crowdworks\.jp/.test(href)) send('platform_link_click', p);
+  }, true);
+  var frame = document.querySelector('#contact-form iframe');
+  if (frame) {
+    var started = false;
+    window.addEventListener('blur', function(){
+      setTimeout(function(){
+        if (!started && document.activeElement === frame) { started = true; send('contact_form_start', { cta_location: 'contact' }); }
+      }, 0);
+    });
+  }
+})();
+</script>
+</body>
+</html>

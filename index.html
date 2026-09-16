@@ -207,6 +207,17 @@ a{color:inherit;text-decoration:none}
 .result-attrs .k{color:var(--color-ink-mute);width:72px;flex-shrink:0}
 .result-attrs .v{color:var(--color-navy);font-weight:500}
 .result-note{padding-top:14px;border-top:1px solid var(--color-line);font-size:13px;color:var(--color-ink-soft);line-height:1.7}
+.voice-head{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:10px}
+.voice-title{font-family:var(--font-display);font-weight:800;font-size:20px;color:var(--color-navy);letter-spacing:0.02em}
+.voice-badge{font-size:12px;font-weight:700;color:var(--color-navy);background:var(--color-bg-pure);border:1px solid var(--color-line);border-radius:999px;padding:6px 14px;white-space:nowrap}
+.voice-badge .st{color:#e8a12c;margin-right:6px}
+.voice-lead{font-size:14px;color:var(--color-ink-soft);line-height:1.9}
+.voice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:20px;margin-top:24px}
+.voice-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:4px;padding:24px;display:flex;flex-direction:column}
+.voice-stars{color:#e8a12c;font-size:13px;letter-spacing:0.14em;margin-bottom:12px}
+.voice-text{font-size:14px;line-height:1.95;color:var(--color-ink);flex-grow:1}
+.voice-meta{margin-top:16px;padding-top:14px;border-top:1px solid var(--color-line);font-size:12px;color:var(--color-ink-mute);line-height:1.7}
+.voice-note{margin-top:18px;font-size:12px;color:var(--color-ink-mute);line-height:1.8}
 .result-review{margin-top:36px;font-size:14px;color:var(--color-ink-soft)}
 .result-review-lead{margin-bottom:12px}
 .result-review-lead strong{color:var(--color-blue-accent);font-weight:700}
@@ -813,10 +824,38 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
       </div>
     </div>
     <div class="result-review">
-      <p class="result-review-lead">外部プラットフォームでも高評価をいただいています（総合評価 <strong>★5.0</strong>）。</p>
+      <div class="voice-head">
+        <span class="voice-title">お客様の声</span>
+        <span class="voice-badge"><span class="st">★</span>5.0　ココナラ（4件）</span>
+        <span class="voice-badge"><span class="st">★</span>5.0　クラウドワークス（3件）</span>
+      </div>
+      <p class="voice-lead">ココナラ・クラウドワークスでいただいた評価から抜粋しています。いずれも7件すべてが満点評価です。</p>
+      <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-stars">★★★★★</div>
+        <p class="voice-text">「迅速かつ丁寧にご対応頂きありがとうございました。また今後とも宜しくお願い致します。」</p>
+        <p class="voice-meta">ココナラ<br>外皮計算のご依頼（2026年9月）</p>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">★★★★★</div>
+        <p class="voice-text">「専門性が高い質疑にも対応して頂けました。……本案件を通して、技術的な面でとても勉強になりました。」</p>
+        <p class="voice-meta">ココナラ<br>外皮＋一次エネルギー計算のご依頼（2026年6月）</p>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">★★★★★</div>
+        <p class="voice-text">「業務確認、修正等についても速やかにご対応いただきました。またお願いしたいと思います。」</p>
+        <p class="voice-meta">クラウドワークス<br>非住宅WEBPRO入力のご依頼（2026年4月）</p>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">★★★★★</div>
+        <p class="voice-text">「業務開始時から終了まで非常に迅速な対応をしていただきました。ありがとうございました。またお願いしたいと思います。」</p>
+        <p class="voice-meta">クラウドワークス<br>非住宅WEBPRO入力のご依頼（2026年3月）</p>
+      </div>
+      </div>
+      <p class="voice-note">※ ご依頼者のユーザー名は伏せています。原文は各プラットフォームでご確認いただけます。</p>
       <div class="result-review-links">
-        <a href="https://coconala.com/users/5193402" target="_blank" rel="noopener">ココナラのプロフィールを見る →</a>
-        <a href="https://crowdworks.jp/public/employees/6798722" target="_blank" rel="noopener">クラウドワークスのプロフィールを見る →</a>
+        <a href="https://coconala.com/users/5193402" target="_blank" rel="noopener">ココナラで評価の原文を見る →</a>
+        <a href="https://crowdworks.jp/public/employees/6798722" target="_blank" rel="noopener">クラウドワークスで評価の原文を見る →</a>
       </div>
     </div>
   </div>

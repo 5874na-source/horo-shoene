@@ -137,6 +137,9 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
 .mid-cta p{margin:0 0 14px;font-size:14px;line-height:1.9}
 .mid-cta a.mid-cta-btn{display:inline-block;background:var(--color-navy);color:#fff;font-weight:700;font-size:13px;padding:10px 20px;border-radius:3px;text-decoration:none}
 .mid-cta a.mid-cta-btn:hover{background:var(--color-blue-accent);text-decoration:none}
+.mid-cta-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.mid-cta a.mid-cta-sub{font-size:13px;font-weight:700;color:var(--color-blue-accent);text-decoration:none}
+.mid-cta a.mid-cta-sub:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -268,8 +271,11 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   </div>
 
   <div class="mid-cta">
-    <p><strong>STEP 2〜4の外皮計算だけ、一次エネルギー計算まで、など必要な範囲だけを外注できます。</strong>外皮計算 ¥25,000、一次エネルギー消費量計算 ＋¥10,000（いずれも税抜）。<a href="/#price-detail">料金とオプションを見る</a></p>
-    <a href="/#contact" class="mid-cta-btn">まず相談する（入力は3項目だけ） →</a>
+    <p><strong>STEP 2〜4の外皮計算だけ、一次エネルギー計算まで、など必要な範囲だけを外注できます。</strong>外皮計算 ¥25,000、一次エネルギー消費量計算 ＋¥10,000（いずれも税抜）。</p>
+    <div class="mid-cta-actions">
+      <a href="/#price-detail" class="mid-cta-btn">料金とオプションを見る →</a>
+      <a href="/#contact" class="mid-cta-sub">見積り・ご相談はこちら（入力は3項目だけ）→</a>
+    </div>
   </div>
 
   <h2>初めての人がつまずきやすいポイント</h2>
@@ -349,7 +355,7 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
     var p = { link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 40), cta_location: where(a) };
     if (href.indexOf('mailto:') === 0) send('contact_mail_click', p);
     else if (/#contact(-form)?$/.test(href)) send('contact_cta_click', p);
-    else if (/#price-detail$/.test(href)) send('price_detail_click', p);
+    else if (/#(price-detail|services)$/.test(href)) send('price_detail_click', p);
     else if (/coconala\.com|crowdworks\.jp/.test(href)) send('platform_link_click', p);
   }, true);
   var frame = document.querySelector('#contact-form iframe');

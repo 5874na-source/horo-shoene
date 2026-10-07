@@ -210,7 +210,7 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
     var p = { link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 40), cta_location: where(a) };
     if (href.indexOf('mailto:') === 0) send('contact_mail_click', p);
     else if (/#contact(-form)?$/.test(href)) send('contact_cta_click', p);
-    else if (/#price-detail$/.test(href)) send('price_detail_click', p);
+    else if (/#(price-detail|services)$/.test(href)) send('price_detail_click', p);
     else if (/coconala\.com|crowdworks\.jp/.test(href)) send('platform_link_click', p);
   }, true);
   var frame = document.querySelector('#contact-form iframe');

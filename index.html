@@ -179,17 +179,22 @@ a{color:inherit;text-decoration:none}
   .service-card{grid-template-columns:1fr;padding:28px 20px;gap:24px}
 }
 
-/* 数値バナー */
-.stats-bar{background:var(--color-navy);padding:clamp(40px,6vw,80px) 32px}
-.stats-bar-inner{max-width:var(--max-width);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:40px;text-align:center}
-.stat-item{}
-.stat-val{font-family:var(--font-en);font-size:clamp(40px,5vw,64px);font-weight:700;color:var(--color-blue-light);line-height:1;letter-spacing:-0.03em;margin-bottom:10px}
-.stat-lab{font-size:12px;letter-spacing:0.15em;color:rgba(247,248,250,0.7);font-weight:500;text-transform:uppercase}
+/* 実績サマリー */
+.facts{background:var(--color-bg-pure);padding:clamp(44px,5vw,64px) 32px;border-top:1px solid var(--color-line);border-bottom:1px solid var(--color-line)}
+.facts-inner{max-width:var(--max-width);margin:0 auto}
+.facts-intro{font-size:14px;color:var(--color-ink-soft);line-height:1.9;margin-bottom:24px}
+.facts-intro strong{color:var(--color-navy);font-weight:700}
+.facts-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--color-line)}
+.facts-list li{display:grid;grid-template-columns:140px 148px 1fr;align-items:baseline;gap:18px;padding:18px 2px;border-bottom:1px solid var(--color-line)}
+.f-num{font-family:var(--font-en);font-size:30px;font-weight:700;color:var(--color-navy);letter-spacing:-0.02em;line-height:1.3}
+.f-num .u{font-size:0.52em;margin-left:3px;font-family:var(--font-sans);letter-spacing:0}
+.f-main{font-size:15px;font-weight:700;color:var(--color-navy)}
+.f-note{font-size:13.5px;color:var(--color-ink-soft);line-height:1.85}
 @media(max-width:768px){
-  .stats-bar{padding:clamp(40px,6vw,80px) 20px}
-  .stats-bar-inner{grid-template-columns:repeat(2,1fr);gap:32px 14px}
-  .stat-val{font-size:38px}
-  .stat-lab{font-size:11px;letter-spacing:0.05em}
+  .facts{padding:40px 20px}
+  .facts-list li{grid-template-columns:auto 1fr;gap:4px 14px;padding:16px 2px}
+  .f-num{font-size:26px}
+  .f-note{grid-column:1/-1;font-size:13px;margin-top:4px}
 }
 
 /* 実績 */
@@ -415,15 +420,18 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
   </div>
 </section>
 
-<!-- 数値バナー -->
-<div class="stats-bar">
-  <div class="stats-bar-inner">
-    <div class="stat-item"><div class="stat-val">9<span style="font-size:0.5em;margin-left:2px;">社</span></div><div class="stat-lab">取引事業者</div></div>
-    <div class="stat-item"><div class="stat-val">12<span style="font-size:0.5em;margin-left:2px;">件</span></div><div class="stat-lab">継続のご依頼（18件中）</div></div>
-    <div class="stat-item"><div class="stat-val">10<span style="font-size:0.5em;margin-left:2px;">都府県</span></div><div class="stat-lab">対応エリア</div></div>
-    <div class="stat-item"><div class="stat-val">10<span style="font-size:0.5em;margin-left:2px;">年+</span></div><div class="stat-lab">北海道での実務</div></div>
+<!-- 実績サマリー -->
+<section class="facts">
+  <div class="facts-inner">
+    <p class="facts-intro"><strong>2026年1月にご依頼の受付を始めて、9か月。</strong>これまでの実績です（2026年10月現在）。</p>
+    <ul class="facts-list">
+      <li><span class="f-num">9<span class="u">社</span></span><span class="f-main">取引事業者</span><span class="f-note">工務店・設計事務所が中心です。新しいご依頼が続いており、取引先は増え続けています。</span></li>
+      <li><span class="f-num">12<span class="u">件</span></span><span class="f-main">継続のご依頼</span><span class="f-note">ご依頼18件のうち12件。一度お任せいただいた方から、続けてご依頼をいただいています。</span></li>
+      <li><span class="f-num">10<span class="u">都府県</span></span><span class="f-main">実績エリア</span><span class="f-note">山形から福岡まで。オンラインで完結するため、所在地を問わずご依頼いただけます。</span></li>
+      <li><span class="f-num">10<span class="u">年+</span></span><span class="f-main">北海道での実務</span><span class="f-note">寒冷地（地域区分1・2）での設計実務。基礎断熱や防露など、寒冷地特有の納まりにも対応します。</span></li>
+    </ul>
   </div>
-</div>
+</section>
 
 <!-- お悩み -->
 <section class="section-alt">

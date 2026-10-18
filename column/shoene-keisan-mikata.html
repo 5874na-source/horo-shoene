@@ -178,6 +178,8 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
 .mid-cta-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
 .mid-cta a.mid-cta-sub{font-size:13px;font-weight:700;color:var(--color-blue-accent);text-decoration:none}
 .mid-cta a.mid-cta-sub:hover{text-decoration:underline}
+.mid-cta.top-cta{margin:24px 0 32px;padding:16px 20px}
+.mid-cta.top-cta p{margin-bottom:12px}
 </style>
 </head>
 <body>
@@ -218,6 +220,14 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
       <div class="dl-d">実際に納品される計算書と同じ様式のサンプルです（架空のモデルプラン／QR・ID等は除去済み）。</div>
     </div>
     <a class="dl-btn" href="/column/shoene-keisan-sample.pdf" target="_blank" rel="noopener" download>ダウンロード →</a>
+  </div>
+
+  <div class="mid-cta top-cta">
+    <p><strong>省エネ計算書の作成は外注できます。</strong>外皮計算のみ ¥25,000、外皮＋一次エネルギー計算 ¥35,000（いずれも税抜）。上のサンプルと同じ様式で納品します。</p>
+    <div class="mid-cta-actions">
+      <a href="/#price-detail" class="mid-cta-btn">料金とオプションを見る →</a>
+      <a href="/#contact" class="mid-cta-sub">見積り・ご相談はこちら（入力は3項目だけ）→</a>
+    </div>
   </div>
 
   <h2>省エネ計算書は大きく2つ ― 外皮計算と一次エネルギー計算</h2>
@@ -411,6 +421,7 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   function send(name, params){ if (typeof gtag === 'function') gtag('event', name, params); }
   function where(el){
     if (el.closest('header, nav')) return 'header';
+    if (el.closest('.top-cta')) return 'top_cta';
     if (el.closest('.mid-cta')) return 'mid_cta';
     if (el.closest('.cta')) return 'end_cta';
     var s = el.closest('[id]'); return s ? s.id : 'other';

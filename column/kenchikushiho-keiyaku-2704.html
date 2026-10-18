@@ -147,6 +147,8 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
 .mid-cta-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
 .mid-cta a.mid-cta-sub{font-size:13px;font-weight:700;color:var(--color-blue-accent);text-decoration:none}
 .mid-cta a.mid-cta-sub:hover{text-decoration:underline}
+.mid-cta.top-cta{margin:24px 0 32px;padding:16px 20px}
+.mid-cta.top-cta p{margin-bottom:12px}
 </style>
 </head>
 <body>
@@ -167,6 +169,14 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   <p class="subtitle">2027年4月1日施行。見積書の作成も努力義務になります。</p>
 
   <p class="lead">2026年10月6日、改正建築士法の一部の施行期日を定める政令が閣議決定されました。<span class="hl">2027年4月1日から、建築士が行う設計・工事監理の受託契約は、延べ面積にかかわらずすべて書面での契約が義務</span>になります。これまで対象外だった<strong>300㎡以下の戸建住宅の設計契約も含まれる</strong>ため、住宅を中心に手がける工務店・設計事務所ほど影響の大きい改正です。</p>
+
+  <div class="mid-cta top-cta">
+    <p><strong>省エネ計算は外注できます。</strong>業務内容・料金・お支払い条件をメールで先にお送りし、ご承認後に着手します。外皮計算のみ ¥25,000、外皮＋一次エネルギー計算 ¥35,000（いずれも税抜）。</p>
+    <div class="mid-cta-actions">
+      <a href="/#price-detail" class="mid-cta-btn">料金とオプションを見る →</a>
+      <a href="/#contact" class="mid-cta-sub">見積り・ご相談はこちら（入力は3項目だけ）→</a>
+    </div>
+  </div>
 
   <h2>何が決まったのか｜スケジュール</h2>
 
@@ -277,6 +287,7 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   function send(name, params){ if (typeof gtag === 'function') gtag('event', name, params); }
   function where(el){
     if (el.closest('header, nav')) return 'header';
+    if (el.closest('.top-cta')) return 'top_cta';
     if (el.closest('.mid-cta')) return 'mid_cta';
     if (el.closest('.cta')) return 'end_cta';
     var s = el.closest('[id]'); return s ? s.id : 'other';

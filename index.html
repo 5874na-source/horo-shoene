@@ -202,7 +202,7 @@ a{color:inherit;text-decoration:none}
 .result-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:48px}
 .result-stat{background:var(--color-navy);border-radius:4px;padding:28px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:128px}
 .result-stat .rs-val{font-family:var(--font-en);font-weight:700;color:var(--color-blue-light);letter-spacing:-0.02em;font-size:clamp(32px,3.2vw,40px);height:48px;line-height:48px;margin-bottom:10px}
-.result-stat .rs-val.rs-text{font-family:var(--font-display);font-size:clamp(24px,2.6vw,30px);letter-spacing:0.04em}
+.result-stat .rs-val.rs-text{font-family:var(--font-display);font-size:clamp(24px,2.6vw,30px);letter-spacing:0.04em;height:auto;min-height:48px;line-height:1.3;display:flex;align-items:center}
 .result-stat .rs-lab{font-size:12px;letter-spacing:0.14em;color:rgba(247,248,250,0.72);font-weight:500}
 .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:20px}
 .result-card{background:var(--color-card);border:1px solid var(--color-line);border-radius:3px;padding:26px;transition:all 0.3s;position:relative;overflow:hidden}
@@ -426,8 +426,8 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
   <div class="facts-inner">
     <p class="facts-intro"><strong>2026年1月にご依頼の受付を始めて、9か月。</strong>これまでの実績です（2026年10月現在）。</p>
     <ul class="facts-list">
-      <li><span class="f-num">9<span class="u">社</span></span><span class="f-main">取引事業者</span><span class="f-note">工務店・設計事務所が中心です。新しいご依頼が続いており、取引先は増え続けています。</span></li>
-      <li><span class="f-num">12<span class="u">件</span></span><span class="f-main">継続のご依頼</span><span class="f-note">ご依頼18件のうち12件。一度お任せいただいた方から、続けてご依頼をいただいています。</span></li>
+      <li><span class="f-num">10<span class="u">社</span></span><span class="f-main">取引事業者</span><span class="f-note">工務店・設計事務所が中心です。新しいご依頼が続いており、取引先は増え続けています。</span></li>
+      <li><span class="f-num">15<span class="u">件</span></span><span class="f-main">リピーターからのご依頼</span><span class="f-note">ご依頼22件のうち15件。一度お任せいただいた方から、続けてご依頼をいただいています。</span></li>
       <li><span class="f-num">10<span class="u">都府県</span></span><span class="f-main">実績エリア</span><span class="f-note">山形から福岡まで。オンラインで完結するため、所在地を問わずご依頼いただけます。</span></li>
       <li><span class="f-num">10<span class="u">年+</span></span><span class="f-main">北海道での実務</span><span class="f-note">寒冷地（地域区分1・2）での設計実務。基礎断熱や防露など、寒冷地特有の納まりにも対応します。</span></li>
     </ul>
@@ -779,11 +779,11 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
   <div class="section-inner">
     <div class="section-label">Track Record</div>
     <h2 class="section-title">実績</h2>
-    <p class="section-lead">ココナラ・クラウドワークス等を含む累計実績です（2026年10月現在）。<strong>ご依頼18件のうち12件は、一度ご依頼いただいたお客様からの継続のご依頼です。</strong>守秘のため、各案件は用途・構造・地域区分などの属性のみを掲載しています（企業名・物件名は非公開）。住宅から非住宅まで、全国対応・オンライン完結でご依頼いただけます。</p>
+    <p class="section-lead">ココナラ・クラウドワークス等を含む累計実績です（2026年10月現在）。<strong>ご依頼22件のうち15件は、繰り返しご依頼いただいているお客様からのご依頼です。</strong>守秘のため、各案件は用途・構造・地域区分などの属性のみを掲載しています（企業名・物件名は非公開）。住宅から非住宅まで、全国対応・オンライン完結でご依頼いただけます。</p>
     <div class="result-summary">
-      <div class="result-stat"><div class="rs-val">27<span style="font-size:0.5em;margin-left:2px;">棟</span></div><div class="rs-lab">実施棟数</div></div>
-      <div class="result-stat"><div class="rs-val">9<span style="font-size:0.5em;margin-left:2px;">社</span></div><div class="rs-lab">対応事業者</div></div>
-      <div class="result-stat"><div class="rs-val">12<span style="font-size:0.5em;margin-left:2px;">件</span></div><div class="rs-lab">継続発注</div></div>
+      <div class="result-stat"><div class="rs-val">31<span style="font-size:0.5em;margin-left:2px;">棟</span></div><div class="rs-lab">実施棟数</div></div>
+      <div class="result-stat"><div class="rs-val">10<span style="font-size:0.5em;margin-left:2px;">社</span></div><div class="rs-lab">対応事業者</div></div>
+      <div class="result-stat"><div class="rs-val">15<span style="font-size:0.5em;margin-left:2px;">件</span></div><div class="rs-lab">リピート依頼</div></div>
       <div class="result-stat"><div class="rs-val rs-text">住宅・非住宅</div><div class="rs-lab">対応領域</div></div>
     </div>
     <div class="result-grid">
@@ -831,6 +831,15 @@ details[open] .faq-icon::after{transform:translateX(-50%) rotate(90deg)}
           <li><span class="k">依頼元</span><span class="v">設計事務所</span></li>
         </ul>
         <div class="result-note">改修案件のWEBPRO入力を継続対応</div>
+      </div>
+      <div class="result-card">
+        <div class="result-card-head"><span class="result-case">CASE 06</span><span class="result-badge">BELS申請</span></div>
+        <ul class="result-attrs">
+          <li><span class="k">建物</span><span class="v">木造平屋・2階建て 戸建住宅</span></li>
+          <li><span class="k">地域区分</span><span class="v">4地域</span></li>
+          <li><span class="k">依頼元</span><span class="v">設計事務所</span></li>
+        </ul>
+        <div class="result-note">外皮・一次エネ＋BELS申請書類を継続対応</div>
       </div>
     </div>
     <div class="result-review">

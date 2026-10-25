@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHNBB4097Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WHNBB4097Z');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>壁量基準の見直し｜断熱材・トリプルガラス・太陽光の重さで必要壁量が決まる</title>
+<meta name="description" content="2025年4月の改正で木造の壁量基準・柱の小径の基準が見直され、「軽い屋根・重い屋根」の区分が廃止に。断熱材・高断熱窓・太陽光発電設備の荷重も含めて必要壁量を算定します。準耐力壁等の算入、壁倍率7倍、階高3.2m超の扱い、2026年3月で終わった経過措置まで国交省資料に基づいて整理しました。">
+<meta name="keywords" content="壁量基準 見直し,必要壁量 算定式,軽い屋根 重い屋根 廃止,壁量計算 太陽光,準耐力壁 算入,柱の小径 見直し,壁量 経過措置">
+<meta property="og:title" content="壁量基準の見直し｜断熱材・トリプルガラス・太陽光の重さで必要壁量が決まる">
+<meta property="og:description" content="「軽い屋根・重い屋根」は廃止。断熱材・トリプルガラス・太陽光の重さも必要壁量に入ります。壁量基準・柱の小径の見直しと、省エネ仕様との関係を整理しました。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://horo-shoene.com/column/heki-ryo-kijun-minaoshi.html">
+<meta property="og:image" content="https://horo-shoene.com/og-hekiryo.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="壁量基準の見直し：断熱材・トリプルガラス・太陽光の重さで必要壁量が決まる">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="horo省エネ住宅設計">
+<link rel="canonical" href="https://horo-shoene.com/column/heki-ryo-kijun-minaoshi.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%230e1f3a'/%3E%3Ctext x='32' y='44' font-family='Inter,sans-serif' font-size='42' font-weight='900' fill='%23f7f8fa' text-anchor='middle' letter-spacing='-2'%3Eh%3C/text%3E%3Crect x='46' y='46' width='6' height='6' fill='%236ea3ff'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"壁量基準の見直し｜断熱材・トリプルガラス・太陽光の重さで必要壁量が決まる","description":"「軽い屋根・重い屋根」は廃止。断熱材・トリプルガラス・太陽光の重さも必要壁量に入ります。壁量基準・柱の小径の見直しと、省エネ仕様との関係を整理しました。","datePublished":"2026-10-26","dateModified":"2026-10-26","author":{"@type":"Organization","name":"horo省エネ住宅設計"},"publisher":{"@type":"Organization","name":"horo省エネ住宅設計"},"mainEntityOfPage":"https://horo-shoene.com/column/heki-ryo-kijun-minaoshi.html"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --color-bg:#eef0f3; --color-bg-pure:#f7f8fa; --color-bg-deep:#e1e4ea;
+  --color-navy:#0e1f3a; --color-navy-deep:#08152a; --color-blue-accent:#1d4ed8;
+  --color-blue-light:#6ea3ff; --color-ink:#1a2332; --color-ink-soft:#4a5568;
+  --color-ink-mute:#8b95a3; --color-line:#c8cdd5; --color-card:#ffffff;
+  --font-display:'Noto Sans JP',sans-serif; --font-sans:'Noto Sans JP',sans-serif;
+  --font-en:'Inter',sans-serif; --max:760px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-sans);color:var(--color-ink);background:var(--color-bg);
+  line-height:1.95;font-feature-settings:"palt";-webkit-font-smoothing:antialiased}
+a{color:var(--color-blue-accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(238,240,243,0.92);
+  backdrop-filter:blur(14px);border-bottom:1px solid var(--color-line)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo .horo{font-family:var(--font-en);font-weight:800;font-size:22px;color:var(--color-navy);letter-spacing:-0.03em}
+.nav-logo .divider{width:1px;height:18px;background:var(--color-blue-accent)}
+.nav-logo .sub{font-size:11px;color:var(--color-ink-soft);letter-spacing:0.1em}
+.nav-cta{font-size:12px;padding:9px 18px;background:var(--color-navy);color:var(--color-bg-pure);border-radius:2px}
+.nav-cta:hover{background:var(--color-blue-accent);text-decoration:none}
+
+.article{max-width:var(--max);margin:0 auto;padding:48px 24px 40px}
+.crumb{font-size:12px;color:var(--color-ink-mute);margin-bottom:24px;font-family:var(--font-en)}
+.crumb a{color:var(--color-ink-mute)}
+.tag{display:inline-block;font-family:var(--font-en);font-size:11px;letter-spacing:0.2em;
+  color:var(--color-blue-accent);font-weight:700;text-transform:uppercase;margin-bottom:16px}
+h1{font-family:var(--font-display);font-weight:900;font-size:clamp(24px,4vw,34px);
+  line-height:1.5;color:var(--color-navy);letter-spacing:0.01em;text-wrap:balance;margin-bottom:12px}
+.subtitle{font-family:var(--font-display);font-weight:700;font-size:clamp(15px,2.2vw,18px);
+  color:var(--color-ink-soft);line-height:1.7;margin:0 0 20px;text-wrap:balance}
+.lead{font-size:15px;line-height:2.05;color:var(--color-ink-soft);margin-bottom:8px}
+
+h2{font-family:var(--font-display);font-weight:700;font-size:clamp(19px,3vw,24px);
+  color:var(--color-navy);line-height:1.5;margin:52px 0 18px;padding-top:20px;
+  border-top:1px solid var(--color-line)}
+h3{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--color-navy);margin:28px 0 10px}
+.article p{font-size:15px;margin-bottom:16px}
+.article ul{margin:0 0 18px 0;padding-left:0;list-style:none}
+.article ul li{font-size:15px;padding-left:22px;position:relative;margin-bottom:9px;line-height:1.85}
+.article ul li::before{content:'';position:absolute;left:2px;top:13px;width:6px;height:6px;
+  background:var(--color-blue-accent);border-radius:50%}
+strong{color:var(--color-navy);font-weight:700}
+.hl{background:linear-gradient(transparent 62%,#cfe0ff 62%);font-weight:700}
+
+.callout{background:var(--color-card);border:1px solid var(--color-line);border-left:3px solid var(--color-blue-accent);
+  border-radius:3px;padding:18px 20px;margin:22px 0;font-size:14px;color:var(--color-ink-soft);line-height:1.9}
+.callout b{color:var(--color-navy)}
+
+/* flow overview */
+.flowbox{background:var(--color-card);border:1px solid var(--color-line);border-radius:8px;padding:22px;margin:26px 0}
+.flowbox h3{margin:0 0 14px;font-size:14px;text-align:center}
+.flowrow{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--color-line)}
+.flowrow:last-child{border-bottom:none}
+.fnum{flex-shrink:0;width:62px;font-family:var(--font-en);font-weight:800;font-size:11px;
+  color:#fff;background:var(--color-navy);border-radius:3px;text-align:center;padding:5px 0;letter-spacing:0.05em}
+.fnum.s0{background:var(--color-ink-mute)}
+.ftext{flex:1;font-size:13.5px;line-height:1.7}
+.ftext b{color:var(--color-navy)}
+.fout{flex-shrink:0;font-size:11.5px;color:var(--color-blue-accent);font-weight:700;text-align:right;min-width:96px}
+
+/* step blocks */
+.step{background:var(--color-card);border:1px solid var(--color-line);border-radius:8px;padding:24px;margin:24px 0}
+.step-h{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.step-n{font-family:var(--font-en);font-weight:800;font-size:11px;color:#fff;background:var(--color-blue-accent);
+  padding:5px 12px;border-radius:20px;letter-spacing:0.08em;white-space:nowrap}
+.step-t{font-family:var(--font-display);font-weight:700;font-size:17px;color:var(--color-navy);line-height:1.5}
+.step p{font-size:14.5px;margin-bottom:12px}
+.step ul li{font-size:14px}
+.deliver{display:inline-block;font-size:12px;background:var(--color-bg-deep);color:var(--color-ink-soft);
+  padding:5px 12px;border-radius:3px;margin-top:6px}
+.deliver b{color:var(--color-navy)}
+
+.dtable-wrap{overflow-x:auto;margin:20px 0}
+table.dtable{width:100%;border-collapse:collapse;font-size:13px;line-height:1.6}
+.dtable th,.dtable td{border:1px solid var(--color-line);padding:9px 11px;text-align:left;vertical-align:top}
+.dtable thead th{background:var(--color-bg-deep);font-weight:700;color:var(--color-navy);white-space:nowrap}
+.dtable td.c,.dtable th.c{text-align:center;font-family:var(--font-en);font-variant-numeric:tabular-nums;white-space:nowrap}
+.dtable tbody th{background:var(--color-bg-pure);font-weight:700;color:var(--color-navy);white-space:nowrap}
+.tnote{font-size:12px;color:var(--color-ink-mute);line-height:1.75;margin-top:8px}
+
+.cta{background:var(--color-navy);border-radius:8px;padding:34px 30px;margin:48px 0 20px;text-align:center;color:#f7f8fa}
+.cta h2{border:none;color:#fff;margin:0 0 10px;padding:0}
+.cta p{color:rgba(247,248,250,0.82);font-size:14px;margin-bottom:22px}
+.cta a.btn{display:inline-block;background:var(--color-blue-accent);color:#fff;font-weight:700;
+  padding:15px 34px;border-radius:3px;font-size:14px;letter-spacing:0.04em}
+.cta a.btn:hover{background:#2a5ae6;text-decoration:none}
+
+.related{margin-top:28px;padding-top:20px;border-top:1px solid var(--color-line)}
+.related h3{margin-top:0}
+.related a{display:inline-block;margin-right:20px;font-size:14px;font-weight:600}
+
+.disc{font-size:11.5px;color:var(--color-ink-mute);line-height:1.8;margin-top:26px;
+  padding:14px 16px;background:var(--color-bg-deep);border-radius:4px}
+
+footer{background:var(--color-navy-deep);color:rgba(247,248,250,0.6);padding:36px 24px;margin-top:40px;
+  text-align:center;font-size:12px}
+footer a{color:rgba(247,248,250,0.7)}
+footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8fa;letter-spacing:-0.02em;margin-bottom:8px}
+
+@media(max-width:560px){
+  .flowrow{flex-wrap:wrap}
+  .fout{text-align:left;min-width:0;width:100%;padding-left:72px}
+}
+.mid-cta{border:1px solid var(--color-line);border-left:4px solid var(--color-blue-accent);background:var(--color-bg-deep);border-radius:4px;padding:20px 22px;margin:36px 0}
+.mid-cta p{margin:0 0 14px;font-size:14px;line-height:1.9}
+.mid-cta a.mid-cta-btn{display:inline-block;background:var(--color-navy);color:#fff;font-weight:700;font-size:13px;padding:10px 20px;border-radius:3px;text-decoration:none}
+.mid-cta a.mid-cta-btn:hover{background:var(--color-blue-accent);text-decoration:none}
+.mid-cta-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.mid-cta a.mid-cta-sub{font-size:13px;font-weight:700;color:var(--color-blue-accent);text-decoration:none}
+.mid-cta a.mid-cta-sub:hover{text-decoration:underline}
+.mid-cta.top-cta{margin:24px 0 32px;padding:16px 20px}
+.mid-cta.top-cta p{margin-bottom:12px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="horo">horo</span><span class="divider"></span><span class="sub">省エネ住宅設計</span>
+    </a>
+    <a href="/#contact" class="nav-cta">お問い合わせ</a>
+  </div>
+</nav>
+
+<article class="article">
+  <div class="crumb"><a href="/">HOME</a> ／ <a href="/column/">COLUMN</a> ／ 壁量基準の見直し</div>
+  <span class="tag">Column</span>
+  <h1>壁量基準の見直し｜断熱材・トリプルガラス・太陽光の重さで必要壁量が決まる</h1>
+  <p class="subtitle">「軽い屋根・重い屋根」の区分は廃止。経過措置も2026年3月末で終わりました。</p>
+
+  <p class="lead">2025年4月の建築基準法施行令の改正で、木造建築物の<strong>壁量基準と柱の小径の基準</strong>が見直されました。これまでの「軽い屋根」「重い屋根」の区分をやめ、<span class="hl">建物の荷重の実態に応じて必要壁量を算定する</span>方式に変わっています。荷重には<strong>断熱材・高断熱窓・太陽光発電設備の重さ</strong>も入ります。改正前の基準を使える経過措置は2026年3月31日に着工するものまでで、現在の新しい案件はすべて新基準です。</p>
+
+  <h2>なぜ見直されたか｜省エネ化で建物が重くなった</h2>
+
+  <p>改正前の基準は、屋根が「軽い」か「重い」かの区分で必要壁量や柱の小径を決めていました。国交省は見直しの理由として、次の点を挙げています。</p>
+  <ul>
+    <li>木造建築物の仕様が多様化し、屋根の区分だけでは必要壁量・柱の小径を適切に算定できないおそれがある</li>
+    <li>省エネ性能へのニーズが高まり、<strong>断熱性能の向上、階高の引き上げ、トリプルガラスサッシ、太陽光発電設備</strong>などで建物が従来より重くなり、地震時の影響に配慮が必要</li>
+  </ul>
+
+  <h2>何が変わったか</h2>
+
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th>項目</th><th>改正前</th><th>改正後</th></tr></thead>
+      <tbody>
+        <tr><th>必要壁量</th><td>「軽い屋根」「重い屋根」の区分で算定</td><td><strong>建物の荷重の実態に応じて算定式で算定</strong></td></tr>
+        <tr><th>存在壁量</th><td>耐力壁のみ</td><td>耐力壁に加え、<strong>腰壁・垂れ壁などの準耐力壁等</strong>も考慮できる</td></tr>
+        <tr><th>壁倍率の上限</th><td>5倍以下</td><td><strong>7倍以下</strong>（高耐力壁が使える）</td></tr>
+        <tr><th>構造計算する場合</th><td>壁量計算も必要</td><td>所定の構造計算による場合は<strong>壁量計算は不要</strong></td></tr>
+        <tr><th>柱の小径</th><td>階高に屋根の区分に応じた割合を乗じて算定</td><td>荷重の実態に応じて<strong>算定式で算定</strong>、または小径別に柱が負担できる床面積を算定</td></tr>
+        <tr><th>基礎</th><td>無筋コンクリート基礎も可</td><td>無筋コンクリート基礎は廃止。地盤の種別にかかわらず<strong>鉄筋コンクリート</strong>の基礎</td></tr>
+      </tbody>
+    </table>
+    <p class="tnote">※ このほか、筋かいの対象拡大（木材・鉄筋以外の材料、K型・多段筋かい。当面は大臣認定が必要）、階高3.2m超の場合の取扱いの整理なども行われています。</p>
+  </div>
+
+  <h2>必要壁量に入る荷重｜省エネ仕様がそのまま効く</h2>
+
+  <p>新しい算定式では、各階が地震時に負担する荷重から必要壁量を求めます。在来軸組構法の場合、算入する荷重は次のとおりです。</p>
+
+  <div class="dtable-wrap">
+    <table class="dtable">
+      <thead><tr><th>区分</th><th>算入する荷重</th></tr></thead>
+      <tbody>
+        <tr><th>建物本体</th><td>屋根・外壁・内壁・床の荷重、積載荷重</td></tr>
+        <tr><th>省エネ関連</th><td><strong>天井（屋根）断熱材</strong>の荷重、<strong>外壁断熱材</strong>の荷重、<strong>高断熱窓</strong>の荷重、<strong>太陽光発電設備等</strong>の荷重</td></tr>
+      </tbody>
+    </table>
+    <p class="tnote">※ 標準せん断力係数C0は0.2（特定行政庁が軟弱地盤として指定した区域では0.3）。</p>
+  </div>
+
+  <p>つまり、<strong>断熱材を厚くする、窓をトリプルガラスにする、太陽光パネルを載せる</strong>といった省エネのための仕様変更は、必要壁量を増やす方向に働きます。</p>
+
+  <div class="callout">
+    <b>省エネ計算と構造で仕様をそろえる。</b>断熱材の種類・厚さ、窓の仕様、太陽光発電設備の有無は、省エネ計算と壁量の検討の両方に使う情報です。設計途中で断熱仕様や窓を変えたら、<b>省エネ計算だけでなく壁量の検討も見直す</b>必要があります。
+  </div>
+
+  <h2>必要壁量の求め方｜算定式・早見表・表計算ツール</h2>
+  <ul>
+    <li><strong>算定式</strong>で直接計算する</li>
+    <li><strong>試算例（早見表）</strong>：階高、2階と1階の床面積の比、屋根・外壁の仕様、太陽光発電設備の有無などの組合せから、必要壁量を確認できる</li>
+    <li><strong>表計算ツール</strong>：階高・床面積・屋根や外壁の仕様・断熱材・太陽光発電設備等の諸元を入力すると、床面積あたりの必要壁量が算出される</li>
+  </ul>
+  <p>早見表と表計算ツールは、日本住宅・木材技術センターのホームページで公開されています。柱の小径にも同様の早見表と表計算ツールがあります。確認申請では、基本的に早見表や表計算ツールの出力結果の提出までは求めないとされています。</p>
+
+  <div class="mid-cta">
+    <p><strong>断熱仕様が決まったら、省エネ計算はこちらで。</strong>外皮計算・一次エネルギー消費量計算の計算書を、確認申請・省エネ適判に出せる形で作成します。仕様の変更にも合わせて対応します。外皮計算 ¥25,000（税抜）〜、一次エネルギー消費量計算 ＋¥10,000。</p>
+    <div class="mid-cta-actions">
+      <a href="/#price-detail" class="mid-cta-btn">料金とオプションを見る →</a>
+      <a href="/#contact" class="mid-cta-sub">見積り・ご相談はこちら（入力は3項目だけ）→</a>
+    </div>
+  </div>
+
+  <h2>準耐力壁等と、階高3.2m超の扱い</h2>
+
+  <h3>準耐力壁等（腰壁・垂れ壁など）</h3>
+  <ul>
+    <li>基本的に、存在壁量に<strong>算入できる</strong>ものとして扱う</li>
+    <li>必要壁量の<strong>1/2を超えて</strong>準耐力壁等を算入する場合は、柱の折損などの脆性的な破壊が生じないことの確認が必要</li>
+    <li>仕様・倍率は品確法（住宅性能表示制度）と同様に規定。面材の準耐力壁等の倍率は「0.6×材料の基準倍率×面材の高さの合計／横架材間内法寸法」</li>
+  </ul>
+
+  <h3>階高が3.2mを超える場合</h3>
+  <ul>
+    <li>耐力壁・準耐力壁等の壁倍率に<strong>低減係数</strong>を乗じる（壁量計算だけでなく、四分割法やN値計算法でも低減後の倍率を使う）</li>
+    <li>柱頭・柱脚の接合方法を告示の仕様で決められるのは階高3.2m以下に限られ、3.2m超はN値計算法等で確認する</li>
+  </ul>
+
+  <h2>経過措置は終了</h2>
+  <p>2025年4月1日〜2026年3月31日に工事に着手するものは、一定規模以下の木造で新基準によることが難しい場合に限り、改正前の壁量基準・柱の小径の基準を使えました。<strong>2026年4月以降に着工するものは新基準</strong>によります。確認申請・審査の流れは<a href="/column/yongou-tokurei-shukusho.html">4号特例縮小のその後</a>で整理しています。</p>
+
+  <h2>工務店のチェックリスト</h2>
+  <ul>
+    <li><strong>社内の標準仕様で必要壁量を確認し直す。</strong>「軽い屋根」前提だった壁量の目安は使えません</li>
+    <li><strong>断熱材・窓・太陽光の仕様を早めに決める。</strong>どれも必要壁量に効きます</li>
+    <li><strong>仕様を変えたら、省エネ計算と壁量の両方を見直す</strong></li>
+    <li><strong>階高3.2m超のプランは壁倍率の低減と接合部の確認方法に注意</strong></li>
+    <li><strong>基礎は鉄筋コンクリート</strong>（無筋コンクリート基礎は廃止）</li>
+  </ul>
+
+  <div class="cta">
+    <h2>省エネ計算、まるごと外注できます。</h2>
+    <p>外皮計算＋一次エネルギー消費量計算を、一級建築士が直接対応。制度改正への対応もこちらで引き取ります。<br>外皮計算 ¥25,000〜（税抜）／一次エネルギー消費量計算 ＋¥10,000。質疑のみのご相談も歓迎です。</p>
+    <a href="/#contact" class="btn">無料で見積もりを依頼する →</a>
+  </div>
+
+  <div class="related">
+    <h3>関連情報</h3>
+    <a href="/column/yongou-tokurei-shukusho.html">→ 4号特例縮小のその後（新2号・新3号）</a>
+    <a href="/column/shoene-tekihan-shiyoukijun.html">→ 省エネ適判は必要？仕様基準と計算ルートの違い</a>
+    <a href="/column/shoene-keisan-tejun.html">→ 省エネ計算のやり方（6ステップ）</a>
+  </div>
+
+  <p class="disc"><strong>【出典】</strong>国土交通省 住宅局「<a href="https://www.mlit.go.jp/common/001627103.pdf" target="_blank" rel="noopener">建築基準法・建築物省エネ法 改正法制度説明資料</a>」（PDF・令和6年9月）「Ⅱ．構造規制の合理化等」。早見表・表計算ツールは<a href="https://www.howtec.or.jp/publics/index/411/" target="_blank" rel="noopener">日本住宅・木材技術センター</a>で公開。本記事は2026年10月26日時点の公開情報に基づく要約です。構造の設計・検討にあたっては、最新の法令・告示・技術的助言および申請先の案内をご確認ください。</p>
+</article>
+
+<footer>
+  <div class="fl">horo</div>
+  <p>horo省エネ住宅設計 ― 省エネ計算・長期優良住宅申請補助・WEBPRO入力代行<br>
+  全国対応・オンライン完結 ／ <a href="/">サイトトップ</a> ・ <a href="/column/">コラム一覧</a> ・ <a href="/#contact">お問い合わせ</a></p>
+  <p style="margin-top:14px;font-size:11px;color:rgba(247,248,250,0.4)">© 2026 horo省エネ住宅設計</p>
+</footer>
+
+<script>
+/* GA4: 問い合わせ導線のクリック計測 */
+(function(){
+  function send(name, params){ if (typeof gtag === 'function') gtag('event', name, params); }
+  function where(el){
+    if (el.closest('header, nav')) return 'header';
+    if (el.closest('.top-cta')) return 'top_cta';
+    if (el.closest('.mid-cta')) return 'mid_cta';
+    if (el.closest('.cta')) return 'end_cta';
+    var s = el.closest('[id]'); return s ? s.id : 'other';
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var p = { link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 40), cta_location: where(a) };
+    if (href.indexOf('mailto:') === 0) send('contact_mail_click', p);
+    else if (/#contact(-form)?$/.test(href)) send('contact_cta_click', p);
+    else if (/#(price-detail|services)$/.test(href)) send('price_detail_click', p);
+    else if (/coconala\.com|crowdworks\.jp/.test(href)) send('platform_link_click', p);
+  }, true);
+  var frame = document.querySelector('#contact-form iframe');
+  if (frame) {
+    var started = false;
+    window.addEventListener('blur', function(){
+      setTimeout(function(){
+        if (!started && document.activeElement === frame) { started = true; send('contact_form_start', { cta_location: 'contact' }); }
+      }, 0);
+    });
+  }
+})();
+</script>
+</body>
+</html>

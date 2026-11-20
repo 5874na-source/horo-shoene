@@ -180,6 +180,26 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
 .mid-cta a.mid-cta-sub:hover{text-decoration:underline}
 .mid-cta.top-cta{margin:24px 0 32px;padding:16px 20px}
 .mid-cta.top-cta p{margin-bottom:12px}
+.mid-cta .dtable-wrap{margin:0 0 10px}
+.ptable{background:var(--color-card)}
+.ptable caption{caption-side:top;text-align:left;font-size:12.5px;font-weight:700;color:var(--color-navy);padding:0 0 6px}
+.ptable tbody th{white-space:normal;min-width:9em}
+.ptable td.p{text-align:right;white-space:nowrap;font-family:var(--font-en);font-weight:700;color:var(--color-navy);font-variant-numeric:tabular-nums}
+.ptable .pt-sub{display:block;font-size:11.5px;color:var(--color-ink-mute)}
+.mid-cta .tnote{margin:0 0 14px}
+@media(max-width:560px){
+  .mid-cta.price-cta{padding:18px 14px}
+  .ptable,.ptable tbody{display:block;background:none}
+  .ptable tr{background:var(--color-card)}
+  .ptable tbody th{background:none}
+  .ptable caption{display:block}
+  .ptable tr{display:grid;grid-template-columns:1fr auto;border:1px solid var(--color-line);border-top:none}
+  .ptable tr:first-child{border-top:1px solid var(--color-line)}
+  .ptable th,.ptable td{border:none}
+  .ptable tbody th{grid-column:1;grid-row:1;min-width:0;padding:9px 4px 2px 11px}
+  .ptable td.p{grid-column:2;grid-row:1;padding:9px 11px 2px 4px}
+  .ptable td:not(.p){grid-column:1 / 3;grid-row:2;padding:0 11px 9px;font-size:12.5px;color:var(--color-ink-soft)}
+}
 </style>
 </head>
 <body>
@@ -320,11 +340,25 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
     <figcaption>方位ごとに、窓・壁の寸法を一つずつ入力して面積と熱損失を積み上げます。<strong>※ 上表は数値をすべてダミーにした記入イメージ</strong>（実在の建物ではありません／説明のため全窓を北面に置いた例）。</figcaption>
   </figure>
 
-  <div class="mid-cta">
-    <p><strong>この外皮計算の部分だけを外注することもできます。</strong>木造戸建て住宅の外皮計算は ¥25,000（税抜）から。求積図・計算表まで納品します。</p>
+  <div class="mid-cta price-cta" id="article-price">
+    <p><strong>この外皮計算の部分だけを外注することもできます。</strong>木造戸建て住宅の料金は次のとおりです。</p>
+    <div class="dtable-wrap">
+      <table class="dtable ptable">
+        <caption>木造戸建て住宅の省エネ計算 料金（税抜）</caption>
+        <tbody>
+          <tr><th>外皮計算</th><td>UA値・ηAC値の計算書、外皮面積の求積図・計算表<span class="pt-sub">延床130㎡まで・仕様変更1回・質疑応答を含む</span></td><td class="p">¥25,000</td></tr>
+          <tr><th>＋ 一次エネルギー消費量計算</th><td>外皮計算とセットで <strong>¥35,000</strong></td><td class="p">＋¥10,000</td></tr>
+          <tr><th>＋ BELS／長期優良住宅の申請書作成</th><td>それぞれ</td><td class="p">＋¥10,000</td></tr>
+          <tr><th>＋ 自己適合宣言書等の整備</th><td>自己適合宣言書・附属書</td><td class="p">＋¥5,000</td></tr>
+          <tr><th>＋ お急ぎ対応</th><td>資料到着の翌日から3日以内に納品</td><td class="p">＋¥5,000</td></tr>
+          <tr><th>＋ 面積超過</th><td>延床130〜200㎡</td><td class="p">＋¥5,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tnote">RC造・S造、既存住宅の改修・増築、200㎡を超える住宅はご相談ください。審査機関の審査料はクライアント様のご負担です。</p>
     <div class="mid-cta-actions">
-      <a href="/#price-detail" class="mid-cta-btn">料金とオプションを見る →</a>
-      <a href="/#contact" class="mid-cta-sub">見積り・ご相談はこちら（入力は3項目だけ）→</a>
+      <a href="/#contact" class="mid-cta-btn">この料金で見積りを依頼する →</a>
+      <a href="/#price-detail" class="mid-cta-sub">オプションをすべて見る →</a>
     </div>
   </div>
 
@@ -422,6 +456,7 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
   function where(el){
     if (el.closest('header, nav')) return 'header';
     if (el.closest('.top-cta')) return 'top_cta';
+    if (el.closest('.price-cta')) return 'price_table';
     if (el.closest('.mid-cta')) return 'mid_cta';
     if (el.closest('.cta')) return 'end_cta';
     var s = el.closest('[id]'); return s ? s.id : 'other';
@@ -436,6 +471,15 @@ footer .fl{font-family:var(--font-en);font-weight:800;font-size:20px;color:#f7f8
     else if (/#(price-detail|services)$/.test(href)) send('price_detail_click', p);
     else if (/coconala\.com|crowdworks\.jp/.test(href)) send('platform_link_click', p);
   }, true);
+  var pt = document.getElementById('article-price');
+  if (pt && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) { send('price_table_view', { cta_location: 'price_table' }); io.disconnect(); }
+      });
+    }, { threshold: 0.5 });
+    io.observe(pt);
+  }
   var frame = document.querySelector('#contact-form iframe');
   if (frame) {
     var started = false;
